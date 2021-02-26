@@ -10,4 +10,8 @@ For example, to symlink files which are located on the $HOME/ directory, I first
 stow home
 ```
 This command takes everything inside the home directory and symlinks it to the $HOME/ directory of my user.
-I also do the same with the configurations directory. This symlinks the .config directory withit configurations to the $HOME/.config/ directory of my user.
+I also do the same with the configurations directory.
+```bash
+stow configurations
+```
+This symlinks the .config directory withit configurations to the $HOME/.config/ directory of my user.

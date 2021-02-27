@@ -35,6 +35,7 @@ fi
 if [ -f $HOME/.functions ]; then
 	. $HOME/.functions
 fi
-	
+
+# Prompt
 #PS1="[\e[0;36m\u\e[0m@\e[0;36m\H\e[0m] \w \@ \d\n\$ "
 PS1="[\e[0;36m\u\e[0m@\e[0;36m\H\e[0m] \w \n\$ "

@@ -1,0 +1,4 @@
+shortgithelp (){
+	echo 'git checkout -b anewbranch'
+	echo 'git checkout master; git merge development'
+}

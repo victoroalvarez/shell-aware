@@ -65,8 +65,10 @@ bindsym $mod+Return exec xfce4-terminal #gnome-terminal #i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run # show list of all programs, including cli
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop # show list of gui programs which include a .desktop file
+# List all programs
+bindsym $mod+d exec --no-startup-id dmenu_run 
+# List GUI programs
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left

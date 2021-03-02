@@ -13,3 +13,5 @@ alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
 #alias myupdate='sudo apt update && sudo apt upgrade && sudo flatpak update'
 alias myupdate='sudo dnf update && sudo flatpak update' # Update software packages and flatpaks
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
+alias mynetbsd='ssh voa@192.168.122.162'
+

@@ -1,17 +1,14 @@
-#alias aptupdate='sudo apt update && sudo apt upgrade'
+
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
 #alias ibniz='swallow ibniz'
 alias la='ls -a' # show all directories including hidden ones
 #alias linssid='swallow sudo linssid'
 alias ll='ls -la' # show all directories and their permissions
-#alias myclean='sudo apt autoremove --purge'
 alias myi3='vim ~/.config/i3/config' # edit i3wm's configuration
+alias mynetbsd='ssh voa@192.168.122.162'
 alias myos='cat /etc/os-release' # show OS version
 alias mypicom='vim ~/.config/picom/picom.conf' # edit picom's configuration
 alias myr='ssh voa@raspberrypi' # connect to server through ssh
 alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
-#alias myupdate='sudo apt update && sudo apt upgrade && sudo flatpak update'
 alias myupdate='sudo dnf update && sudo flatpak update' # Update software packages and flatpaks
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
-alias mynetbsd='ssh voa@192.168.122.162'
-

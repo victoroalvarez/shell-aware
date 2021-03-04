@@ -328,10 +328,13 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym $mod+p exec thunar
 
 # Launch Midnight Commander
-bindsym $mod+Shift+p exec xfce4-terminal -e mc 
+#bindsym $mod+Shift+p exec xfce4-terminal -e mc 
 
 # Launch Nautilus
 bindsym $mod+p exec nautilus
+
+# Launch Thunar
+bindsym $mod+Shift+p exec thunar
 
 # Launch FireFox
 #bindsym $mod+Shift+v exec firefox-esr

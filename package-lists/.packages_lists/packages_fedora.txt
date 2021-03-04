@@ -29,6 +29,7 @@ thunar
 tlp
 tlp-rdw
 vlc
+wireless-tools
 xbacklight
 xfburn
 xfce4-terminal

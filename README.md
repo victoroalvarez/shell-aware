@@ -1,5 +1,5 @@
 # dotfiles
-These are a collection of dotfiles for Fedora Linux, managed with GNU Stow. These files work for me and can selve as an example to you.
+These are a collection of dotfiles for Fedora and Debian Linux, managed with GNU Stow. These files work for me and can selve as an example to you.
 ## Directories
 * home - Contains my .alias file which is normally located under the $HOME/ directory.
 * configurations - Contains configuration files which are normally stored in my home directory under the $HOME/.config/ directory. i3wm configurations, dunst and picom.

@@ -1,7 +1,7 @@
 
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
 #alias ibniz='swallow ibniz'
-alias la='ls -a' # show all directories including hidden ones
+alias la='ls -AX' # show all directories including hidden ones and sort by extension
 #alias linssid='swallow sudo linssid'
 alias ll='ls -la' # show all directories and their permissions
 alias myi3='vim ~/.config/i3/config' # edit i3wm's configuration

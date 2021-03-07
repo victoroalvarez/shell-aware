@@ -35,7 +35,7 @@ general {
 	#SILVER #DDDDDD
 }
 
-order += "ipv6"
+#order += "ipv6"
 order += "disk /"
 order += "wireless _first_"
 order += "ethernet _first_"
@@ -58,7 +58,7 @@ ethernet _first_ {
 
 battery all {
 	#format = "%status %percentage %remaining"
-	format = "%percentage"
+	format = "B: %percentage"
 }
 
 tztime local {
@@ -67,7 +67,7 @@ tztime local {
 }
 
 load {
-        format = "%1min"
+        format = "Load: %1min"
 }
 
 disk "/" {

@@ -4,7 +4,8 @@ Xft.dpi: 125
 !192
 !144
 !135 
-! default 125
+! default is 125
+
 ! These might also be useful depending on your monitor and personal preference:
 !Xft.autohint: 0
 !Xft.lcdfilter:  lcddefault

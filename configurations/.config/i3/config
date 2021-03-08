@@ -336,14 +336,17 @@ bindsym $mod+Shift+backslash exec nautilus
 bindsym $mod+backslash exec thunar
 
 # Launch FireFox
-#bindsym $mod+Shift+v exec firefox-esr
-bindsym $mod+Shift+v exec firefox
+#bindsym $mod+o exec firefox-esr
+bindsym $mod+o exec firefox
+
+# Open Private Firefox session
+bindsym $mod+p exec firefox --private-window
 
 # Launch Chromium
-bindsym $mod+Shift+z exec chromium-browser
+bindsym $mod+Shift+b exec chromium-browser
 
 # Launch Google Chrome
-bindsym $mod+Shift+b exec google-chrome
+bindsym $mod+Shift+o exec google-chrome
 
 # Launch WICD without a tray for Network Management
 #bindsym $mod+c exec wicd-gtk --no-tray

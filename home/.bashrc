@@ -27,8 +27,8 @@ export PATH
 # User specific aliases and functions
 
 # Source aliases
-if [ -f $HOME/.alias ]; then
-	. $HOME/.alias
+if [ -f $HOME/.bash_alias ]; then
+	. $HOME/.bash_alias
 fi
 
 # Source functions

@@ -12,3 +12,4 @@ alias myr='ssh voa@raspberrypi' # connect to server through ssh
 alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
 alias myupdate='sudo dnf update && sudo flatpak update' # Update software packages and flatpaks
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
+alias mytraffic='vnstat --query' # Show network data consumption

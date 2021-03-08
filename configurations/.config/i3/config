@@ -54,6 +54,8 @@ set $mod Mod4
 
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Shift+Return exec gnome-terminal
+#bindsym $mod+backslash exec terminator
 #gnome-terminal #i3-sensible-terminal
 
 # start dmenu (program launcher)
@@ -61,7 +63,6 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+d exec --no-startup-id dmenu_run 
 # List GUI programs
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
-
 
 
 #xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
@@ -327,10 +328,12 @@ bindsym $mod+Shift+n exec /home/voa/.screenlayout/tcl.sh
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 
 
 # Launch Nautilus
-bindsym $mod+p exec nautilus
+#bindsym $mod+p exec nautilus
+bindsym $mod+Shift+backslash exec nautilus
 
 # Launch Thunar
-bindsym $mod+Shift+p exec thunar
+#bindsym $mod+Shift+p exec thunar
+bindsym $mod+backslash exec thunar
 
 # Launch FireFox
 #bindsym $mod+Shift+v exec firefox-esr

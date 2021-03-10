@@ -28,7 +28,6 @@
 # See https://i3wm.org/docs/userguide.html for a complete reference
 ########
 
-
 ########
 # APPEARANCE: FONTS, COLORS and  BORDER
 ########
@@ -55,7 +54,7 @@ set $mod Mod4
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+Return exec gnome-terminal
-#bindsym $mod+backslash exec terminator
+bindsym $mod+backslash exec terminator
 #gnome-terminal #i3-sensible-terminal
 
 # start dmenu (program launcher)
@@ -286,9 +285,16 @@ exec --no-startup-id blueman-applet
 # Execute dunst
 exec --no-startup-id dunst
 
-# Set Background with feh
-exec --no-startup-id feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg
+# Launch clipit
+exec --no-startup-id clipit
 
+# Set Background with feh
+#exec --no-startup-id feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg
+
+#exec --no-startup-id feh --bg-fill /home/voa/Pictures/colin-carter-w1g2o4J_4Dg-unsplash.jpg
+exec --no-startup-id feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif
+
+#exec feh --bg-fill /home/voa/Pictures/$mywallpaper
 # Execute NetworkManager applet
 exec --no-startup-id nm-applet
 
@@ -329,11 +335,13 @@ bindsym $mod+Shift+n exec /home/voa/.screenlayout/tcl.sh
 
 # Launch Nautilus
 #bindsym $mod+p exec nautilus
-bindsym $mod+Shift+backslash exec nautilus
+#bindsym $mod+Shift+backslash exec nautilus
+bindsym $mod+Shift+BackSpace exec nautilus
 
 # Launch Thunar
 #bindsym $mod+Shift+p exec thunar
-bindsym $mod+backslash exec thunar
+#bindsym $mod+backslash exec thunar
+bindsym $mod+BackSpace exec thunar
 
 # Launch FireFox
 #bindsym $mod+o exec firefox-esr

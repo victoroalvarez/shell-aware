@@ -1,8 +1,10 @@
+
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
+alias gitstat='git status'
 #alias ibniz='swallow ibniz'
 alias la='ls -AX' # show all directories including hidden ones and sort by extension
 #alias linssid='swallow sudo linssid'
-alias ll='ls -la' # show all directories and their permissions
+alias ll='ls -lAX' # show all directories and their permissions
 alias myi3status='vim ~/.config/i3status/config' # Edit i3status config
 alias myi3='vim ~/.config/i3/config' # edit i3wm's configuration
 alias mynetbsd='ssh voa@192.168.122.162'
@@ -13,3 +15,4 @@ alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
 alias mytraffic='vnstat --query' # Show network data consumption
 alias myupdate='sudo dnf update && sudo flatpak update' # Update software packages and flatpaks
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
+alias dcu='sudo dnf check-update'

@@ -23,15 +23,16 @@
         #SILVER #DDDDDD
 
 
-########
+################
 # i3 CONFIG FILE
 # See https://i3wm.org/docs/userguide.html for a complete reference
-########
+################
 
-########
+################
 # APPEARANCE: FONTS, COLORS and  BORDER
-########
+################
 
+set $BLACK #111111
 # Focused window Colors 
 client.focused #0074D9 #0074D9 #FFFFFF ##0074D9 #0074D9
 
@@ -44,9 +45,9 @@ for_window [class=".*"] border pixel 1
 # for_window [class=".*"] border pixel 0
 
 
-########
+################
 # GUI CONTROL
-########
+################
 
 # Mod Key
 set $mod Mod4
@@ -264,10 +265,10 @@ bar {
 }
 
 
-########
+################
 # STARTUP PROGRAMS
 # Execute programs at startup
-########
+################
 
 # Set background color black
 #exec xsetroot -solid "#000000"
@@ -311,24 +312,54 @@ exec --no-startup-id picom -CGb -m 1.0
 #exec --no-startup-id xfce4-power-manager
 
 
-########
-# PROGRAMS KEYBINDS
+################
+# KEYBINDS FOR PROGRAMS
 # Run programs and scripts by keypress
-########
+################
 
-# Lock screen
+# CONTROL SCREEN
+
+# CONTROL BRIGHTNESS
+# Increase brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+#bindsym $mod+Shift+plus exec xbacklight -inc 5
+
+# Decrease brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+#bindsym $mod+Shift+minus exec xbacklight -dec 5
+
+# LOCK SCREEN
 # Lock screen with i3lock
 bindsym $mod+Shift+w exec "i3lock & sleep 5 && xset dpms force off"
 
 # Lock screen with lightdm
 #bindsym $mod+Shift+w exec "dm-tool lock"
 
-# Set laptop screen 
+# MONITOR
+# #Set default monitor. 
 bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto && feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"
 #bindsym $mod+m exec "xrandr --output eDP1 --off"
 
-# Run screen config script
+# Run screen config script for monitor
 bindsym $mod+Shift+n exec /home/voa/.screenlayout/tcl.sh
+
+# Screen Shots
+bindsym $mod+Print exec gnome-screenshot
+bindsym Ctrl+Print exec gnome-screenshot -w
+bindsym Print exec gnome-screenshot -i
+
+# Launch Chromium
+bindsym $mod+Shift+b exec chromium-browser
+
+# Launch Google Chrome
+bindsym $mod+Shift+o exec google-chrome
+
+# Launch FireFox
+#bindsym $mod+o exec firefox-esr
+bindsym $mod+o exec firefox
+
+# Open Private Firefox session
+bindsym $mod+p exec firefox --private-window
 
 # Launch Midnight Commander
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 
@@ -343,26 +374,12 @@ bindsym $mod+Shift+BackSpace exec nautilus
 #bindsym $mod+backslash exec thunar
 bindsym $mod+BackSpace exec thunar
 
-# Launch FireFox
-#bindsym $mod+o exec firefox-esr
-bindsym $mod+o exec firefox
 
-# Open Private Firefox session
-bindsym $mod+p exec firefox --private-window
 
-# Launch Chromium
-bindsym $mod+Shift+b exec chromium-browser
-
-# Launch Google Chrome
-bindsym $mod+Shift+o exec google-chrome
+# OLD CONFIGS
 
 # Launch WICD without a tray for Network Management
 #bindsym $mod+c exec wicd-gtk --no-tray
-
-# Screen Shots
-#bindsym Print exec gnome-screenshot
-#bindsym Ctrl+Print exec gnome-screenshot -w
-#bindsym Print exec gnome-screenshot -i
 
 # Python automation
 # bindsym $mod+Shift+h exec python3 /home/voa/workspace/bullets.py
@@ -392,11 +409,3 @@ bindsym $mod+Shift+o exec google-chrome
 #bindsym $mod+Shift+BackSpace exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 #bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-# CONTROL BRIGHTNESS
-# Increase brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-#bindsym $mod+Shift+plus exec xbacklight -inc 5
-
-# Decrease brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-#bindsym $mod+Shift+minus exec xbacklight -dec 5

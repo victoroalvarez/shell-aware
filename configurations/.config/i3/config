@@ -41,7 +41,7 @@ font pango:monospace 8
 
 # Window Border
 # 1 pixel border
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 # for_window [class=".*"] border pixel 0
 
 
@@ -367,14 +367,15 @@ bindsym $mod+p exec firefox --private-window
 # Launch Nautilus
 #bindsym $mod+p exec nautilus
 #bindsym $mod+Shift+backslash exec nautilus
-bindsym $mod+Shift+BackSpace exec nautilus
+bindsym $mod+BackSpace exec nautilus
 
 # Launch Thunar
 #bindsym $mod+Shift+p exec thunar
 #bindsym $mod+backslash exec thunar
-bindsym $mod+BackSpace exec thunar
+#bindsym $mod+BackSpace exec thunar
 
-
+# Launch Syncthing
+bindsym $mod+Shift+s exec syncthing --browser-only
 
 # OLD CONFIGS
 

@@ -1,4 +1,5 @@
 
+
 alias dcu='sudo dnf check-update'
 alias dnfsearch='dnf search '
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
@@ -16,4 +17,5 @@ alias myr='ssh voa@raspberrypi' # connect to server through ssh
 alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
 alias mytraffic='vnstat --query' # Show network data consumption
 alias myupdate='sudo dnf update && sudo flatpak update' # Update software packages and flatpaks
+alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications

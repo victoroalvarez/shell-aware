@@ -293,7 +293,7 @@ exec --no-startup-id clipit
 #exec --no-startup-id feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg
 
 #exec --no-startup-id feh --bg-fill /home/voa/Pictures/colin-carter-w1g2o4J_4Dg-unsplash.jpg
-exec --no-startup-id feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif
+#exec --no-startup-id feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif
 
 #exec feh --bg-fill /home/voa/Pictures/$mywallpaper
 # Execute NetworkManager applet
@@ -337,7 +337,8 @@ bindsym $mod+Shift+w exec "i3lock & sleep 5 && xset dpms force off"
 
 # MONITOR
 # #Set default monitor. 
-bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto && feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"
+bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto 
+#&& feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"
 #bindsym $mod+m exec "xrandr --output eDP1 --off"
 
 # Run screen config script for monitor

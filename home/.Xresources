@@ -17,5 +17,5 @@ Xft.dpi: 125
 ! Set cursor theme name and size
 !Cursor theme name
 Xcursor.theme: Adwaita
-!Cursor size
-Xcursor.size: 32
+!Cursor size 32
+Xcursor.size: 36

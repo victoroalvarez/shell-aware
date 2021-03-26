@@ -21,6 +21,13 @@ then
 fi
 export PATH
 
+# Gradle
+if ! [[ "$PATH" =~ "/opt/gradle/gradle-6.8.3/bin:" ]]
+then
+	PATH="/opt/gradle/gradle-6.8.3/bin:$PATH"
+fi
+export PATH
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 

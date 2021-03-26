@@ -17,3 +17,5 @@ alias mytraffic='vnstat --query' # Show network data consumption
 alias myupdate='sudo dnf update && sudo flatpak update' # Update software packages and flatpaks
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
+alias idea='~/bin/idea-IC-203.7717.56/bin/./idea.sh'
+

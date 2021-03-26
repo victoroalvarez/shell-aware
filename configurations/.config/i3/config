@@ -32,7 +32,6 @@
 # APPEARANCE: FONTS, COLORS and  BORDER
 ################
 
-set $BLACK #111111
 # Focused window Colors 
 client.focused #0074D9 #0074D9 #FFFFFF ##0074D9 #0074D9
 
@@ -358,6 +357,9 @@ bindsym $mod+Shift+o exec google-chrome
 # Launch FireFox
 #bindsym $mod+o exec firefox-esr
 bindsym $mod+o exec firefox
+
+# Launch Idea IDE
+bindsym $mod+i exec /opt/idea/bin/idea.sh
 
 # Open Private Firefox session
 bindsym $mod+p exec firefox --private-window

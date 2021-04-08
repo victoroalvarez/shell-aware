@@ -43,6 +43,10 @@ font pango:monospace 8
 for_window [class=".*"] border pixel 2
 # for_window [class=".*"] border pixel 0
 
+# Gaps
+#smart_gaps on
+#gaps inner 5
+#gaps outer 3
 
 ################
 # GUI CONTROL
@@ -53,13 +57,14 @@ set $mod Mod4
 
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Shift+Return exec gnome-terminal
+#bindsym $mod+Shift+Return exec gnome-terminal
 bindsym $mod+backslash exec terminator
 #gnome-terminal #i3-sensible-terminal
 
 # start dmenu (program launcher)
 # List all programs
 bindsym $mod+d exec --no-startup-id dmenu_run 
+
 # List GUI programs
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
@@ -83,7 +88,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+j focus left
@@ -260,7 +265,7 @@ bar {
 	tray_output primary
 	
 	# 12px or 16px size
-	font pango:monospace 12px
+	font pango:monospace 14px
 }
 
 
@@ -286,7 +291,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id dunst
 
 # Launch clipit
-exec --no-startup-id clipit
+#exec --no-startup-id clipit
 
 # Set Background with feh
 #exec --no-startup-id feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg
@@ -295,6 +300,7 @@ exec --no-startup-id clipit
 #exec --no-startup-id feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif
 
 #exec feh --bg-fill /home/voa/Pictures/$mywallpaper
+
 # Execute NetworkManager applet
 exec --no-startup-id nm-applet
 
@@ -348,6 +354,9 @@ bindsym $mod+Print exec gnome-screenshot
 bindsym Ctrl+Print exec gnome-screenshot -w
 bindsym Print exec gnome-screenshot -i
 
+# Launch Arandr
+bindsym $mod+p exec arandr
+
 # Launch Chromium
 bindsym $mod+Shift+b exec chromium-browser
 
@@ -359,10 +368,10 @@ bindsym $mod+Shift+o exec google-chrome
 bindsym $mod+o exec firefox
 
 # Launch Idea IDE
-bindsym $mod+i exec /opt/idea/bin/idea.sh
+#bindsym $mod+i exec /opt/idea/bin/idea.sh
 
 # Open Private Firefox session
-bindsym $mod+p exec firefox --private-window
+# bindsym $mod+p exec firefox --private-window
 
 # Launch Midnight Commander
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 
@@ -370,12 +379,15 @@ bindsym $mod+p exec firefox --private-window
 # Launch Nautilus
 #bindsym $mod+p exec nautilus
 #bindsym $mod+Shift+backslash exec nautilus
-bindsym $mod+BackSpace exec nautilus
+#bindsym $mod+BackSpace exec nautilus
 
 # Launch Thunar
 #bindsym $mod+Shift+p exec thunar
 #bindsym $mod+backslash exec thunar
 #bindsym $mod+BackSpace exec thunar
+
+# Launch pcmanfm
+bindsym $mod+BackSpace exec pcmanfm
 
 # Launch Syncthing
 bindsym $mod+Shift+s exec syncthing --browser-only

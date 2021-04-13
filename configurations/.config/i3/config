@@ -55,30 +55,31 @@ for_window [class=".*"] border pixel 2
 # Mod Key
 set $mod Mod4
 
-# start a terminal
+# start a Terminal
 bindsym $mod+Return exec xfce4-terminal
-#bindsym $mod+Shift+Return exec gnome-terminal
-bindsym $mod+backslash exec terminator
-#gnome-terminal #i3-sensible-terminal
+bindsym $mod+Shift+Return exec terminator
 
-# start dmenu (program launcher)
-# List all programs
+# start file manager
+bindsym $mod+backslash exec nautilus
+bindsym $mod+Shift+backslash exec pcmanfm
+bindsym $mod+z exec nautilus
+bindsym $mod+Shift+z exec pcmanfm
+
+# run dmenu (program launcher)
+# list all programs
 bindsym $mod+d exec --no-startup-id dmenu_run 
-
-# List GUI programs
+# list GUI programs
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
-
-#xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
 
 # Mouse+$mod used to drag around floating windows
 floating_modifier $mod
 
 
-# Use pactl to adjust volume in PulseAudio.
+# use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -307,6 +308,9 @@ exec --no-startup-id nm-applet
 # Pasystray for PulseAudio
 exec --no-startup-id pasystray
 
+# Clipboard manager
+exec --no-startup-id parcellite
+
 # Picom
 exec --no-startup-id picom -CGb -m 1.0
 
@@ -323,38 +327,30 @@ exec --no-startup-id picom -CGb -m 1.0
 ################
 
 # CONTROL SCREEN
-
 # CONTROL BRIGHTNESS
 # Increase brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 #bindsym $mod+Shift+plus exec xbacklight -inc 5
-
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym $mod+Shift+minus exec xbacklight -dec 5
-
 # LOCK SCREEN
 # Lock screen with i3lock
-bindsym $mod+Shift+w exec "i3lock & sleep 5 && xset dpms force off"
-
-# Lock screen with lightdm
+bindsym $mod+Shift+w exec "i3lock && sleep 5 && xset dpms force off"
+# lock screen with lightdm
 #bindsym $mod+Shift+w exec "dm-tool lock"
-
 # MONITOR
 # #Set default monitor. 
 bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto 
 #&& feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"
 #bindsym $mod+m exec "xrandr --output eDP1 --off"
-
-# Run screen config script for monitor
+# run config script for monitor
 bindsym $mod+Shift+n exec /home/voa/.screenlayout/tcl.sh
-
-# Screen Shots
+# screen shots
 bindsym $mod+Print exec gnome-screenshot
 bindsym Ctrl+Print exec gnome-screenshot -w
 bindsym Print exec gnome-screenshot -i
-
-# Launch Arandr
+# launch arandr
 bindsym $mod+p exec arandr
 
 # Launch Chromium
@@ -371,26 +367,14 @@ bindsym $mod+o exec firefox
 #bindsym $mod+i exec /opt/idea/bin/idea.sh
 
 # Open Private Firefox session
-# bindsym $mod+p exec firefox --private-window
+bindsym $mod+i exec firefox --private-window
 
 # Launch Midnight Commander
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 
 
-# Launch Nautilus
-#bindsym $mod+p exec nautilus
-#bindsym $mod+Shift+backslash exec nautilus
-#bindsym $mod+BackSpace exec nautilus
-
-# Launch Thunar
-#bindsym $mod+Shift+p exec thunar
-#bindsym $mod+backslash exec thunar
-#bindsym $mod+BackSpace exec thunar
-
-# Launch pcmanfm
-bindsym $mod+BackSpace exec pcmanfm
-
 # Launch Syncthing
 bindsym $mod+Shift+s exec syncthing --browser-only
+
 
 # OLD CONFIGS
 
@@ -414,10 +398,10 @@ bindsym $mod+Shift+s exec syncthing --browser-only
 #bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ +10%
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
 
-# Set volume to 100%
+# set volume to 100%
 #bindsym $mod+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ 100%
 
-# Decrease volume
+# decrease volume
 #bindsym $mod+Shift+minus exec pactl set-sink-volume @DEFAULT_SINK@ -10%
 #bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
 

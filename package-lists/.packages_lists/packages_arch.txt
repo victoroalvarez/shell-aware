@@ -1,2 +1,8 @@
-traceroute
+
+feh
 mtr
+qbittorrent
+traceroute
+zathura
+zathura-djvu
+zathura-pdf-mupdf

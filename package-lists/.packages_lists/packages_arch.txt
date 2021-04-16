@@ -1,5 +1,6 @@
 
 feh
+intel-ucode
 mtr
 qbittorrent
 traceroute

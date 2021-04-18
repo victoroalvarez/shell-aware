@@ -1,6 +1,6 @@
 # dotfiles
 
-These are a collection of dotfiles for Arch Linux, and some past files for Fedora and Debian Linux. These files are managed with GNU Stow. These files work for me and can selve as an example to you.
+These are a collection of dotfiles for Arch Linux, and some past files for Fedora and Debian Linux. These files are managed with GNU Stow. These files work for me and can selve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
 ## Directories
 

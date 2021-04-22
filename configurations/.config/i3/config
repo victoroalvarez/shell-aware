@@ -32,18 +32,18 @@
 # APPEARANCE: FONTS, COLORS and  BORDER
 ################
 
-# Focused window Colors 
+# focused window Colors 
 client.focused #0074D9 #0074D9 #FFFFFF ##0074D9 #0074D9
 
-# Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
+# font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
 font pango:monospace 8
 
-# Window Border
+# window Border
 # 1 pixel border
 for_window [class=".*"] border pixel 2
 # for_window [class=".*"] border pixel 0
 
-# Gaps
+# gaps
 #smart_gaps on
 #gaps inner 5
 #gaps outer 3
@@ -52,7 +52,7 @@ for_window [class=".*"] border pixel 2
 # GUI CONTROL
 ################
 
-# Mod Key
+# mod Key
 set $mod Mod4
 
 # start a Terminal
@@ -246,7 +246,7 @@ bindsym $mod+r mode "resize"
 
 
 # i3bar
-# Start i3bar to display a workspace bar (plus the system information i3status
+# start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         position top
@@ -275,26 +275,26 @@ bar {
 # Execute programs at startup
 ################
 
-# Set background color gray
+# set background color gray
 #exec xsetroot -solid "#000000"
 exec hsetroot -solid '#4A5459'
 
-# Blueman Applet
+# blueman Applet
 exec --no-startup-id blueman-applet
 
-# Compton
+# compton
 #exec --no-startup-id compton --vsync opengl-swc --backend glx -f -G -I 0.09 -O 0.09 
 
-# Launch conky
+# launch conky
 #exec conky -b
 
-# Execute dunst
+# execute dunst
 exec --no-startup-id dunst
 
-# Launch clipit
+# launch clipit
 #exec --no-startup-id clipit
 
-# Set Background with feh
+# set Background with feh
 #exec --no-startup-id feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg
 
 #exec --no-startup-id feh --bg-fill /home/voa/Pictures/colin-carter-w1g2o4J_4Dg-unsplash.jpg
@@ -302,22 +302,22 @@ exec --no-startup-id dunst
 
 #exec feh --bg-fill /home/voa/Pictures/$mywallpaper
 
-# Execute NetworkManager applet
+# execute NetworkManager applet
 exec --no-startup-id nm-applet
 
-# Pasystray for PulseAudio
+# pasystray for PulseAudio
 exec --no-startup-id pasystray
 
-# Clipboard manager
+# clipboard manager
 exec --no-startup-id parcellite
 
-# Picom
+# picom
 exec --no-startup-id picom -CGb -m 1.0
 
-# Execute wicd tray for Network Management
+# execute wicd tray for Network Management
 #exec --no-startup-id wicd-gtk --tray
 
-# XFCE4 Power Manager
+# XFCE4 power manager
 #exec --no-startup-id xfce4-power-manager
 
 
@@ -328,19 +328,19 @@ exec --no-startup-id picom -CGb -m 1.0
 
 # CONTROL SCREEN
 # CONTROL BRIGHTNESS
-# Increase brightness
+# increase brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 #bindsym $mod+Shift+plus exec xbacklight -inc 5
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym $mod+Shift+minus exec xbacklight -dec 5
 # LOCK SCREEN
-# Lock screen with i3lock
+# lock screen with i3lock
 bindsym $mod+Shift+w exec "i3lock && sleep 5 && xset dpms force off"
 # lock screen with lightdm
 #bindsym $mod+Shift+w exec "dm-tool lock"
 # MONITOR
-# #Set default monitor. 
+# set default monitor. 
 bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto 
 #&& feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"
 #bindsym $mod+m exec "xrandr --output eDP1 --off"
@@ -353,48 +353,48 @@ bindsym Print exec gnome-screenshot -i
 # launch arandr
 bindsym $mod+p exec arandr
 
-# Launch Chromium
+# launch Chromium
 bindsym $mod+Shift+b exec chromium-browser
 
-# Launch Google Chrome
+# launch Google Chrome
 bindsym $mod+Shift+o exec google-chrome
 
-# Launch FireFox
+# launch FireFox
 #bindsym $mod+o exec firefox-esr
 bindsym $mod+o exec firefox
 
-# Launch Idea IDE
+# launch Idea IDE
 #bindsym $mod+i exec /opt/idea/bin/idea.sh
 
-# Open Private Firefox session
+# open Private Firefox session
 bindsym $mod+i exec firefox --private-window
 
-# Launch Midnight Commander
+# launch Midnight Commander
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 
 
-# Launch Syncthing
+# launch Syncthing
 bindsym $mod+Shift+s exec syncthing --browser-only
 
 
 # OLD CONFIGS
 
-# Launch WICD without a tray for Network Management
+# launch WICD without a tray for Network Management
 #bindsym $mod+c exec wicd-gtk --no-tray
 
-# Python automation
+# python automation
 # bindsym $mod+Shift+h exec python3 /home/voa/workspace/bullets.py
 
-# Launch Android Studio
+# launch Android Studio
 #bindsym $mod+Shift+s exec /opt/android-studio/bin/studio.sh
 
-# Use amixer to control audio
+# use amixer to control audio
 ##bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 sset Master 5%+ && $refresh_i3status
 ##bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 sset Master 5%- && $refresh_i3status
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 #bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # CONTROL Sound VOLUME
-# Increase volume
+# increase volume
 #bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ +10%
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
 

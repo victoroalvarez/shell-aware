@@ -1,13 +1,17 @@
-alias dcu='sudo dnf check-update'
-alias dnfsearch='dnf search '
+#alias ibniz='swallow ibniz'
+#alias linssid='swallow sudo linssid'
+#alias dcu='sudo dnf check-update'
+#alias dnfsearch='dnf search '
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
 alias gitstat='git status'
-#alias ibniz='swallow ibniz'
+alias gp='git pull'
+alias idea='~/bin/idea-IC-203.7717.56/bin/./idea.sh'
+alias installaur='sudo pacman -U' # use pacman to install an individual package from an aur build
 alias la='ls -AX' # show all directories including hidden ones and sort by extension
-#alias linssid='swallow sudo linssid'
 alias ll='ls -lAX' # show all directories and their permissions
-alias myi3status='vim ~/.config/i3status/config' # Edit i3status config
+alias makeaur='makepkg -s'
 alias myi3='vim ~/.config/i3/config' # edit i3wm's configuration
+alias myi3status='vim ~/.config/i3status/config' # Edit i3status config
 alias mynetbsd='ssh voa@192.168.122.162'
 alias myos='cat /etc/os-release' # show OS version
 alias mypicom='vim ~/.config/picom/picom.conf' # edit picom's configuration
@@ -16,6 +20,5 @@ alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
 alias mytraffic='vnstat --query' # Show network data consumption
 alias myupdate='sudo dnf update && sudo flatpak update' # Update software packages and flatpaks
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
+alias myyoutube='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
-alias idea='~/bin/idea-IC-203.7717.56/bin/./idea.sh'
-

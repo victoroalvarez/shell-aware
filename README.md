@@ -9,14 +9,17 @@ These are a collection of dotfiles for Arch Linux, and some past files for Fedor
 
 ## How are these files managed?
 
-To manage these files I use GNU Stow.
-For example, to symlink files which are located on the $HOME/ directory, I first go to the root of this repository and type
+To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.
+For example, to symlink files which located on the home/ directory to the $HOME/ directory, I first go to the root of this repository and type
 ```bash
 stow home
 ```
-This command takes everything inside the home/ directory and symlinks it to the $HOME/ directory of my user.
+
+This command takes everything inside home/ directory and symlinks it to the $HOME/ directory of my user.
 I also do the same with the configurations directory.
+
 ```bash
 stow configurations
 ```
-This symlinks the .config/ directory within configurations/ to the $HOME/.config/ directory of my user.
+
+This symlinks the files within configurations/ to the $HOME/ directory of my user.

@@ -7,3 +7,4 @@ traceroute
 zathura
 zathura-djvu
 zathura-pdf-mupdf
+nautilus

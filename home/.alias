@@ -22,3 +22,5 @@ alias myupdate='sudo dnf update && sudo flatpak update' # Update software packag
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
 alias myyoutube='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
+alias mydrives='cd /run/media/voa' # change directory to /run/media/voa/
+alias mydisk='sudo gnome-disks' # run Gnome Disk

@@ -36,7 +36,7 @@
 client.focused #0074D9 #0074D9 #FFFFFF ##0074D9 #0074D9
 
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 10
 
 # window Border
 # 1 pixel border
@@ -194,8 +194,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 
-# Key combinations for Lock, Shutdown and Restart. Press mod+Pause
-# Lock
+# Key combinations for Lock, Shutdown and Restart. Press mod+Pause for menu. Press mod+BackSpace for lock only.
+# lock
 set $Locker i3lock && sleep 1
 
 # Shutdown, Restart and Lock
@@ -213,9 +213,11 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# Keyboard bind for Shutdown, Restart and Lock
+# keyboard bind for Shutdown, Restart and Lock
 bindsym $mod+Pause mode "$mode_system"
 
+# keyboard bind for Lock
+bindsym $mod+BackSpace exec --no-startup-id $Locker
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

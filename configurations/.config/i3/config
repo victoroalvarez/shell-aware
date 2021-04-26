@@ -55,6 +55,13 @@ for_window [class=".*"] border pixel 2
 # mod Key
 set $mod Mod4
 
+# change gaps in realtime. Increase or decrease gaps
+bindsym $mod+Shift+plus gaps inner current plus 5
+bindsym $mod+Shift+minus gaps inner current minus 5
+
+# disable gaps. Reset value to zero
+bindsym $mod+Shift+BackSpace gaps inner current toggle 0
+
 # start a Terminal
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+Return exec terminator

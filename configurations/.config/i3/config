@@ -366,7 +366,7 @@ bindsym $mod+p exec arandr
 bindsym $mod+Shift+b exec chromium-browser
 
 # launch Google Chrome
-bindsym $mod+Shift+o exec google-chrome
+bindsym $mod+Shift+o exec google-chrome-stable
 
 # launch FireFox
 #bindsym $mod+o exec firefox-esr

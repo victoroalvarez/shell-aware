@@ -367,6 +367,9 @@ bindsym Print exec gnome-screenshot -i
 # launch arandr
 bindsym $mod+p exec arandr
 
+# launch Brave
+bindsym $mod+b exec brave
+
 # launch Chromium
 bindsym $mod+Shift+b exec chromium-browser
 
@@ -376,6 +379,9 @@ bindsym $mod+Shift+o exec google-chrome-stable
 # launch FireFox
 #bindsym $mod+o exec firefox-esr
 bindsym $mod+o exec firefox
+
+# Visual Studio Code
+bindsym $mod+bracketleft exec code
 
 # launch Idea IDE
 #bindsym $mod+i exec /opt/idea/bin/idea.sh

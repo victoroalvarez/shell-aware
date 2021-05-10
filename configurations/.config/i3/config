@@ -296,13 +296,17 @@ exec --no-startup-id blueman-applet
 # compton
 #exec --no-startup-id compton --vsync opengl-swc --backend glx -f -G -I 0.09 -O 0.09 
 
-# launch conky
+# conky
 #exec conky -b
 
-# execute dunst
+# dropbox
+#exec --no-startup-id dropbox
+exec "sleep 10; dropbox;"
+
+# dunst
 exec --no-startup-id dunst
 
-# launch clipit
+# clipit clipboard manager
 #exec --no-startup-id clipit
 
 # set Background with feh
@@ -319,7 +323,7 @@ exec --no-startup-id nm-applet
 # pasystray for PulseAudio
 exec --no-startup-id pasystray
 
-# clipboard manager
+# parcellite clipboard manager
 exec --no-startup-id parcellite
 
 # picom
@@ -369,9 +373,11 @@ bindsym $mod+p exec arandr
 
 # launch Brave
 bindsym $mod+b exec brave
+bindsym $mod+Shift+b exec brave --incognito
+#bindsym $mod+b exec brave --incognito --tor
 
 # launch Chromium
-bindsym $mod+Shift+b exec chromium-browser
+#bindsym $mod+Shift+b exec chromium-browser
 
 # launch Google Chrome
 bindsym $mod+Shift+o exec google-chrome-stable

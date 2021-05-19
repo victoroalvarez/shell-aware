@@ -5,12 +5,14 @@
 #alias linssid='swallow sudo linssid'
 #alias mynetbsd='ssh voa@192.168.122.162'
 alias addall='git add .'
+alias archnews='lynx https://archlinux.org/news/'
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
 alias gitc='git commit'
 alias gitstat='git status'
 alias gp='git pull'
 alias installaur='sudo pacman -U' # use pacman to install an individual package from an aur build
 alias la='ls -AX' # show all directories including hidden ones and sort by extension
+alias livetraffic='vnstat --live'
 alias ll='ls -lAX' # show all directories and their permissions
 alias makeaur='makepkg -s'
 alias mydisk='sudo gnome-disks' # run Gnome Disk

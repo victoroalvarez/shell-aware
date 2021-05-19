@@ -1,5 +1,5 @@
 ! Set screen scaling in multiples of 96
-Xft.dpi: 125
+Xft.dpi: 130
 !125
 !192
 !144

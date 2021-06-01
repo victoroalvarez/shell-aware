@@ -299,7 +299,7 @@ exec --no-startup-id blueman-applet
 #exec --no-startup-id compton --vsync opengl-swc --backend glx -f -G -I 0.09 -O 0.09 
 
 # conky
-#exec conky -b
+exec conky -d
 
 # dropbox
 #exec --no-startup-id dropbox

@@ -9,7 +9,7 @@ image/jpeg=feh.desktop
 image/png=feh.desktop
 application/vnd.ms-powerpoint=libreoffice-impress.desktop
 video/mp4=vlc.desktop
-text/plain=vim.desktop
+text/plain=org.gnome.gedit.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura.desktop;org.gnome.Evince.desktop;
@@ -17,4 +17,4 @@ image/jpeg=feh.desktop;
 image/png=feh.desktop;
 application/vnd.ms-powerpoint=chromium-browser.desktop;libreoffice-impress.desktop;
 video/mp4=vlc.desktop;
-text/plain=vim.desktop;
+text/plain=org.gnome.gedit.desktop;vim.desktop;

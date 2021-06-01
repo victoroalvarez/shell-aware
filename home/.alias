@@ -25,9 +25,12 @@ alias myos='cat /etc/os-release' # show OS version
 alias mypicom='vim ~/.config/picom/picom.conf' # edit picom's configuration
 alias myr='ssh voa@raspberrypi' # connect to server through ssh
 alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
+alias myserve='python -m http.server' # run SimpleHTTPServer on current directory
 alias myt='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
 alias mytraffic='vnstat --query' # Show network data consumption
 alias myupdate='yay -Syu' # update all ackages and AURs
 alias myvim='vim $HOME/.vimrc'
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
+alias myconky='vim ~/.config/conky/conky.conf'
+alias restartnetworkmanager='sudo systemctl restart NetworkManager'

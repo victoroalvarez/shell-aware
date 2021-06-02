@@ -1,10 +1,11 @@
+conky
 feh
 intel-ucode
 mtr
+nautilus
 qbittorrent
 tk
 traceroute
 zathura
 zathura-djvu
 zathura-pdf-mupdf
-nautilus

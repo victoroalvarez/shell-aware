@@ -41,7 +41,7 @@ font pango:monospace 8
 
 # window Border
 # 1 pixel border
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 # for_window [class=".*"] border pixel 0
 
 # gaps
@@ -64,8 +64,10 @@ bindsym $mod+Shift+minus gaps inner current minus 5
 bindsym $mod+Shift+BackSpace gaps inner current toggle 0
 
 # start a Terminal
-bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Shift+Return exec terminator
+bindsym $mod+Return exec terminator
+bindsym $mod+Shift+Return exec terminator --working-directory=/home/voa/workspace
+#bindsym $mod+Shift+Return exec xfce4-terminal
+
 
 # start file manager
 bindsym $mod+backslash exec nautilus -w
@@ -297,7 +299,7 @@ exec --no-startup-id blueman-applet
 #exec --no-startup-id compton --vsync opengl-swc --backend glx -f -G -I 0.09 -O 0.09 
 
 # conky
-#exec conky -b
+exec conky -d
 
 # dropbox
 #exec --no-startup-id dropbox

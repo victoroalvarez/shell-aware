@@ -29,3 +29,4 @@ This command takes everything inside home/ directory and symlinks it to their co
 
 * 2021-05-10 08:55 pm AST. Create Change Log to document edits, additions and removals.
 * 2021-05-25 10:48 pm AST. Create Development branch and first commit.
+* 2021-06-01 11:42 pm AST. Add Conky to display system info on desktop.

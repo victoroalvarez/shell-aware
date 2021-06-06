@@ -9,6 +9,8 @@ For example, to symlink files located on the home/ directory to the $HOME/ direc
 stow home
 ```
 
+This command takes everything inside home/ directory and symlinks it to their corresponding locations on the $HOME/ directory of my user.
+
 ## Conventions
 * $HOME denotes the /home/user/ directory on my system.
 
@@ -20,10 +22,6 @@ This is a list of the directories which contain the configuration files of my sy
 * home - Contains my .alias file which is normally located under the $HOME/ directory.
 * package-lists - Lists of packages for Arch, Debian and Fedora systems.
 * vim - VIM editor configuration files.
-
-## Aliases
-
-This command takes everything inside home/ directory and symlinks it to their corresponding locations on the $HOME/ directory of my user.
 
 ## Change Log
 

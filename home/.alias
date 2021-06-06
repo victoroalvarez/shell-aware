@@ -31,3 +31,7 @@ alias myvim='vim $HOME/.vimrc'
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
 alias restartnetworkmanager='sudo systemctl restart NetworkManager'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
+alias phpserver='php -S localhost:8080'
+alias sqllogin='mysql -u root -p'
+alias src='source'
+alias srca='source /home/voa/.alias'

@@ -36,3 +36,7 @@ alias sqllogin='mysql -u root -p'
 alias src='source'
 alias srca='source /home/voa/.alias'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
+alias simpleserver='python -m http.server'
+alias startxampp='sudo /opt/lampp/lampp start'
+alias stopxampp='sudo /opt/lampp/lampp stop'
+

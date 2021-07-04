@@ -79,6 +79,9 @@ bindsym $mod+Shift+backslash exec pcmanfm
 bindsym $mod+z exec nautilus -w
 bindsym $mod+Shift+z exec pcmanfm
 
+# switch to next workspace
+bindsym Mod1+Tab workspace next
+
 # run dmenu (program launcher)
 # list all programs
 bindsym $mod+d exec --no-startup-id dmenu_run 
@@ -294,7 +297,9 @@ bar {
 
 # set background color gray
 #exec xsetroot -solid "#000000"
-exec hsetroot -solid '#4A5459'
+#exec hsetroot -solid '#4A5459'
+#exec hsetroot -solid '#39CCCC'
+exec hsetroot -solid '#000000'
 
 # blueman Applet
 exec --no-startup-id blueman-applet

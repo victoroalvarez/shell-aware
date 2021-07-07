@@ -79,6 +79,9 @@ bindsym $mod+Shift+backslash exec pcmanfm
 bindsym $mod+z exec nautilus -w
 bindsym $mod+Shift+z exec pcmanfm
 
+# switch to next workspace
+bindsym Mod1+Tab workspace next
+
 # run dmenu (program launcher)
 # list all programs
 bindsym $mod+d exec --no-startup-id dmenu_run 
@@ -265,7 +268,7 @@ bindsym $mod+r mode "resize"
 # start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        position top
+        position bottom
         status_command i3status
         colors {
 		statusline	#FFFFFF
@@ -294,7 +297,9 @@ bar {
 
 # set background color gray
 #exec xsetroot -solid "#000000"
-exec hsetroot -solid '#4A5459'
+#exec hsetroot -solid '#4A5459'
+#exec hsetroot -solid '#39CCCC'
+exec hsetroot -solid '#000000'
 
 # blueman Applet
 exec --no-startup-id blueman-applet
@@ -369,6 +374,10 @@ bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto
 #bindsym $mod+m exec "xrandr --output eDP1 --off"
 # run config script for monitor
 bindsym $mod+Shift+n exec /home/voa/.screenlayout/tcl.sh
+
+# launch xampp
+#bindsym $mod+Shift+a exec /opt/lampp/lampp start
+
 
 # screen shots
 bindsym $mod+Print exec gnome-screenshot

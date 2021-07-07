@@ -1,6 +1,10 @@
+
 conky
 feh
 intel-ucode
+java11-openjfx
+java8-openjfx
+ksh
 mtr
 nautilus
 qbittorrent

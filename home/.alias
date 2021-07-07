@@ -1,3 +1,4 @@
+
 #alias ibniz='swallow ibniz'
 #alias idea='~/bin/idea-IC-203.7717.56/bin/./idea.sh'
 #alias linssid='swallow sudo linssid'
@@ -31,8 +32,11 @@ alias myvim='vim $HOME/.vimrc'
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
 alias phpserver='php -S localhost:8080'
 alias restartnetworkmanager='sudo systemctl restart NetworkManager'
+alias simpleserver='python -m http.server'
 alias sortinplace='sort -o'
 alias sqllogin='mysql -u root -p'
 alias src='source'
 alias srca='source /home/voa/.alias'
+alias startxampp='sudo /opt/lampp/lampp start'
+alias stopxampp='sudo /opt/lampp/lampp stop'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications

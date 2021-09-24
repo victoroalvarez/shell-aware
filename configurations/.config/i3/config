@@ -387,8 +387,8 @@ bindsym Print exec gnome-screenshot -i
 bindsym $mod+p exec arandr
 
 # launch Brave
-bindsym $mod+b exec brave
-bindsym $mod+Shift+b exec brave --incognito
+#bindsym $mod+b exec brave
+#bindsym $mod+Shift+b exec brave --incognito
 #bindsym $mod+b exec brave --incognito --tor
 
 # launch Chromium

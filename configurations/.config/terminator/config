@@ -1,15 +1,21 @@
 [global_config]
+  title_font = Monospace 9
 [keybindings]
 [profiles]
   [[default]]
     background_darkness = 0.85
     cursor_color = "#aaaaaa"
-    font = Source Code Pro 12
+    font = Monospace 14
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden
     scroll_on_output = True
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
+  [[Victor]]
+    cursor_color = "#aaaaaa"
+    font = Monospace 16
+    show_titlebar = False
     use_system_font = False
 [layouts]
   [[default]]

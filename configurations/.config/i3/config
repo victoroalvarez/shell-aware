@@ -57,8 +57,8 @@ floating_maximum_size 1024 x 1024
 # GUI CONTROL
 ################
 
-# mod Key. Uses Windows Key
-set $mod Mod4
+# mod Key. Uses Alt Key
+set $mod Mod1
 
 # change gaps in realtime. Increase or decrease gaps
 bindsym $mod+Shift+plus gaps inner current plus 5
@@ -68,10 +68,9 @@ bindsym $mod+Shift+minus gaps inner current minus 5
 bindsym $mod+Shift+BackSpace gaps inner current toggle 0
 
 # start a Terminal
-bindsym $mod+Return exec terminator
-bindsym $mod+Shift+Return exec terminator --working-directory=/home/voa/workspace
-#bindsym $mod+Shift+Return exec xfce4-terminal
-
+#bindsym $mod+Return exec terminator
+#bindsym $mod+Shift+Return exec terminator --working-directory=/home/voa/workspace
+bindsym $mod+Return exec xfce4-terminal
 
 # start file manager
 bindsym $mod+backslash exec nautilus -w

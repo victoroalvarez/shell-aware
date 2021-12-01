@@ -58,14 +58,14 @@ floating_maximum_size 1024 x 1024
 ################
 
 # mod Key. Uses Alt Key
-set $mod Mod1
+set $mod Mod4
 
 # change gaps in realtime. Increase or decrease gaps
-bindsym $mod+Shift+plus gaps inner current plus 5
-bindsym $mod+Shift+minus gaps inner current minus 5
+#bindsym $mod+Shift+plus gaps inner current plus 5
+#bindsym $mod+Shift+minus gaps inner current minus 5
 
 # disable gaps. Reset value to zero
-bindsym $mod+Shift+BackSpace gaps inner current toggle 0
+#bindsym $mod+Shift+BackSpace gaps inner current toggle 0
 
 # start a Terminal
 #bindsym $mod+Return exec terminator
@@ -73,10 +73,11 @@ bindsym $mod+Shift+BackSpace gaps inner current toggle 0
 bindsym $mod+Return exec xfce4-terminal
 
 # start file manager
-bindsym $mod+backslash exec nautilus -w
-bindsym $mod+Shift+backslash exec pcmanfm
-bindsym $mod+z exec nautilus -w
-bindsym $mod+Shift+z exec pcmanfm
+#bindsym $mod+backslash exec nautilus -w
+#bindsym $mod+Shift+backslash exec pcmanfm
+#bindsym $mod+z exec nautilus -w
+#bindsym $mod+Shift+z exec pcmanfm
+bindsym $mod+backslash exec thunar
 
 # switch to next workspace
 bindsym Mod1+Tab workspace next
@@ -230,7 +231,8 @@ mode "$mode_system" {
 }
 
 # keyboard bind for Shutdown, Restart and Lock
-bindsym $mod+Pause mode "$mode_system"
+#bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+Shift+BackSpace mode "$mode_system"
 
 # keyboard bind for Lock
 bindsym $mod+BackSpace exec --no-startup-id $Locker
@@ -298,7 +300,7 @@ bar {
 #exec xsetroot -solid "#000000"
 #exec hsetroot -solid '#4A5459'
 #exec hsetroot -solid '#39CCCC'
-exec hsetroot -solid '#000000'
+#exec hsetroot -solid '#000000'
 
 # blueman Applet
 exec --no-startup-id blueman-applet
@@ -307,14 +309,14 @@ exec --no-startup-id blueman-applet
 #exec --no-startup-id compton --vsync opengl-swc --backend glx -f -G -I 0.09 -O 0.09 
 
 # conky
-exec conky -d
+#exec conky -d
 
 # dropbox
 #exec --no-startup-id dropbox
-exec "sleep 10; dropbox;"
+#exec "sleep 10; dropbox;"
 
 # dunst
-exec --no-startup-id dunst
+#exec --no-startup-id dunst
 
 # clipit clipboard manager
 #exec --no-startup-id clipit
@@ -334,7 +336,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 
 # parcellite clipboard manager
-exec --no-startup-id parcellite
+#exec --no-startup-id parcellite
 
 # picom
 exec --no-startup-id picom -CGb -m 1.0
@@ -354,15 +356,15 @@ exec --no-startup-id picom -CGb -m 1.0
 # CONTROL SCREEN
 # CONTROL BRIGHTNESS
 # increase brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-#bindsym $mod+Shift+plus exec xbacklight -inc 5
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym $mod+Shift+plus exec xbacklight -inc 5
 # Decrease brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-#bindsym $mod+Shift+minus exec xbacklight -dec 5
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym $mod+Shift+minus exec xbacklight -dec 5
 
 # LOCK SCREEN
 # lock screen with i3lock
-bindsym $mod+Shift+w exec "i3lock && sleep 5 && xset dpms force off"
+#bindsym $mod+Shift+w exec "i3lock && sleep 5 && xset dpms force off"
 # lock screen with lightdm
 #bindsym $mod+Shift+w exec "dm-tool lock"
 
@@ -372,16 +374,17 @@ bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto
 #&& feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"
 #bindsym $mod+m exec "xrandr --output eDP1 --off"
 # run config script for monitor
-bindsym $mod+Shift+n exec /home/voa/.screenlayout/tcl.sh
+#bindsym $mod+Shift+n exec /home/voa/.screenlayout/tcl.sh
 
 # launch xampp
 #bindsym $mod+Shift+a exec /opt/lampp/lampp start
 
 
 # screen shots
-bindsym $mod+Print exec gnome-screenshot
-bindsym Ctrl+Print exec gnome-screenshot -w
-bindsym Print exec gnome-screenshot -i
+#bindsym $mod+Print exec gnome-screenshot
+#bindsym Ctrl+Print exec gnome-screenshot -w
+#bindsym Print exec gnome-screenshot -i
+
 # launch arandr
 bindsym $mod+p exec arandr
 
@@ -394,14 +397,14 @@ bindsym $mod+p exec arandr
 #bindsym $mod+Shift+b exec chromium-browser
 
 # launch Google Chrome
-bindsym $mod+Shift+o exec google-chrome-stable
+#bindsym $mod+Shift+o exec google-chrome-stable
 
 # launch FireFox
 #bindsym $mod+o exec firefox-esr
 bindsym $mod+o exec firefox
 
 # Visual Studio Code
-bindsym $mod+bracketleft exec code
+#bindsym $mod+bracketleft exec code
 
 # launch Idea IDE
 #bindsym $mod+i exec /opt/idea/bin/idea.sh
@@ -413,7 +416,7 @@ bindsym $mod+i exec firefox --private-window
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 
 
 # launch Syncthing
-bindsym $mod+Shift+s exec syncthing --browser-only
+#bindsym $mod+Shift+s exec syncthing --browser-only
 
 
 # OLD CONFIGS

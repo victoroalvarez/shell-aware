@@ -43,6 +43,7 @@ font pango:monospace 8
 # 1 pixel border
 for_window [class=".*"] border pixel 1
 # for_window [class=".*"] border pixel 0
+hide_edge_borders smart
 
 # floating windows size
 floating_minimum_size 75 x 50

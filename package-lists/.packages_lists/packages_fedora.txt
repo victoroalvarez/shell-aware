@@ -1,17 +1,21 @@
+
+
 alsamixergui
 arandr
+aria2
 @base-x
 blueman
 chromium
+curl
 @development-tools
 dmenu
 dunst
 feh
+file-roller
 i3
 i3lock
 i3status
 imlib2-devel
-libdvdcss
 libX11-devel
 libXinerama
 libXinerama-devel
@@ -26,6 +30,8 @@ picom
 qbittorrent
 stow
 thunar
+thunar
+thunar-archive-plugin
 tlp
 tlp-rdw
 vlc
@@ -33,4 +39,3 @@ wireless-tools
 xbacklight
 xfburn
 xfce4-terminal
-xorg-x11-apps

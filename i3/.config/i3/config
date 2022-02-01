@@ -1,6 +1,6 @@
 # Victor's i3 configuration
 # Victor O Alvarez - victoroalvarez@protonmail.com
-# 2021
+# 2022
 # NOTES:
 # * All CAPS denote a section of the document
 # Color Scheme:
@@ -107,7 +107,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # kill focused window
 bindsym $mod+Shift+q kill
-bindsym $mod+q kill
+#bindsym $mod+q kill
 
 # change focus
 bindsym $mod+j focus left
@@ -287,7 +287,7 @@ bar {
 	tray_output primary
 	
 	# 12px or 16px size
-	font pango:monospace 14px
+	font pango:monospace 18px
 }
 
 
@@ -340,7 +340,7 @@ exec --no-startup-id pasystray
 #exec --no-startup-id parcellite
 
 # picom
-exec --no-startup-id picom -CGb -m 1.0
+#exec --no-startup-id picom -CGb -m 1.0
 
 # execute wicd tray for Network Management
 #exec --no-startup-id wicd-gtk --tray

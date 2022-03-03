@@ -78,7 +78,7 @@ bindsym $mod+Return exec xfce4-terminal
 #bindsym $mod+Shift+backslash exec pcmanfm
 #bindsym $mod+z exec nautilus -w
 #bindsym $mod+Shift+z exec pcmanfm
-bindsym $mod+backslash exec thunar
+bindsym $mod+backslash exec nautilus
 
 # switch to next workspace
 bindsym Mod1+Tab workspace next
@@ -388,14 +388,6 @@ bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto
 
 # launch arandr
 bindsym $mod+p exec arandr
-
-# launch Brave
-#bindsym $mod+b exec brave
-#bindsym $mod+Shift+b exec brave --incognito
-#bindsym $mod+b exec brave --incognito --tor
-
-# launch Chromium
-#bindsym $mod+Shift+b exec chromium-browser
 
 # launch Google Chrome
 #bindsym $mod+Shift+o exec google-chrome-stable

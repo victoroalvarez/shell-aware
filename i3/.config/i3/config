@@ -75,10 +75,11 @@ bindsym $mod+Return exec xfce4-terminal
 
 # start file manager
 #bindsym $mod+backslash exec nautilus -w
-#bindsym $mod+Shift+backslash exec pcmanfm
+bindsym $mod+Shift+backslash exec pcmanfm
+bindsym $mod+backslash exec pcmanfm
 #bindsym $mod+z exec nautilus -w
 #bindsym $mod+Shift+z exec pcmanfm
-bindsym $mod+backslash exec nautilus
+#bindsym $mod+backslash exec nautilus
 
 # switch to next workspace
 bindsym Mod1+Tab workspace next

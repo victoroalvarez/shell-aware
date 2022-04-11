@@ -1,6 +1,7 @@
-# Victor's i3 configuration
+# i3wm Configuration
 # Victor O Alvarez - victoroalvarez@protonmail.com
-# 2022
+# 2021, 2022
+#
 # NOTES:
 # * All CAPS denote a section of the document
 # Color Scheme:
@@ -23,14 +24,10 @@
         #SILVER #DDDDDD
 
 
-################
 # i3 CONFIG FILE
 # See https://i3wm.org/docs/userguide.html for a complete reference
-################
 
-################
 # APPEARANCE: FONTS, COLORS and  BORDER
-################
 
 # focused window Colors
 # #0074D9 #0074D9 
@@ -54,9 +51,7 @@ floating_maximum_size 1024 x 1024
 #gaps inner 5
 #gaps outer 3
 
-################
 # GUI CONTROL
-################
 
 # mod Key. Uses Alt Key
 set $mod Mod4
@@ -86,9 +81,9 @@ bindsym Mod1+Tab workspace next
 
 # run dmenu (program launcher)
 # list all programs
-bindsym $mod+d exec --no-startup-id dmenu_run 
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'DejaVu Sans Mono:regular:pixelsize=20'
 # list GUI programs
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono:regular:pixelsize=20'"
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -271,7 +266,7 @@ bindsym $mod+r mode "resize"
 # start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        position bottom
+        position top
         status_command i3status
         colors {
 		statusline	#FFFFFF
@@ -292,10 +287,9 @@ bar {
 }
 
 
-################
 # STARTUP PROGRAMS
 # Execute programs at startup
-################
+
 # Commented lines are not used.
 
 # set background color gray
@@ -350,27 +344,25 @@ exec --no-startup-id pasystray
 #exec --no-startup-id xfce4-power-manager
 
 
-################
 # KEYBINDS
 # Run programs and scripts by keypress
-################
 
-# CONTROL SCREEN
-# CONTROL BRIGHTNESS
+# Control Screen
+# Control Brigthness
 # increase brightness
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym $mod+Shift+plus exec xbacklight -inc 5
-# Decrease brightness
+# decrease brightness
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym $mod+Shift+minus exec xbacklight -dec 5
 
-# LOCK SCREEN
+# Lock Screen
 # lock screen with i3lock
 #bindsym $mod+Shift+w exec "i3lock && sleep 5 && xset dpms force off"
 # lock screen with lightdm
 #bindsym $mod+Shift+w exec "dm-tool lock"
 
-# MONITOR
+# Monitor
 # set default monitor. 
 bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto 
 #&& feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"

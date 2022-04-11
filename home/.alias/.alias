@@ -1,6 +1,9 @@
 alias addall='git add .'
+alias aliases='less ~/.alias/.alias'
 alias an='archnews'
 alias archnews='lynx https://archlinux.org/news/'
+alias cwifi='nmtui'
+alias double-ping='ping -c 10'
 alias downloadonly='sudo pacman -Syw' # download all Arch packages
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
 alias gitc='git commit'
@@ -11,6 +14,7 @@ alias gp='git pull'
 alias installaur='sudo pacman -U' # use pacman to install an individual package from an aur build
 alias la='ls -AX' # show all directories including hidden ones and sort by extension
 #alias linssid='swallow sudo linssid'
+alias list-wifi='nmcli dev wifi'
 alias livetraffic='vnstat --live'
 alias ll='ls -lAX' # show all directories and their permissions
 alias makeaur='makepkg -s'
@@ -30,18 +34,17 @@ alias myt='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download
 alias myupdate='yay -Syu' # update all ackages and AURs
 alias myvim='vim $HOME/.vimrc'
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
+alias myyt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias phpserver='php -S localhost:8080'
 alias restartnetworkmanager='sudo systemctl restart NetworkManager'
+alias short-ping='ping -c 5'
 alias simpleserver='python -m http.server'
 alias sortinplace='sort -o'
 alias sqllogin='mysql -u root -p'
 alias srca='source /home/voa/.alias'
 alias src='source'
+alias start='startx ~/.xinitrc'
 alias startxampp='sudo /opt/lampp/lampp start'
 alias stopxampp='sudo /opt/lampp/lampp stop'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
 alias ytdl='youtube-dl --external-downloader aria2c --all-subs --add-metadata'
-alias aliases='less ~/.alias/.alias'
-alias cwifi='nmtui'
-alias start='startx ~/.xinitrc'
-alias myyt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"

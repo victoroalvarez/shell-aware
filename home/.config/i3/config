@@ -66,7 +66,8 @@ set $mod Mod4
 # start a Terminal
 #bindsym $mod+Return exec terminator
 #bindsym $mod+Shift+Return exec terminator --working-directory=/home/voa/workspace
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Shift+Return exec xfce4-terminal
+bindsym $mod+Return exec urxvt
 
 # start file manager
 #bindsym $mod+backslash exec nautilus -w
@@ -335,7 +336,7 @@ exec --no-startup-id pasystray
 #exec --no-startup-id parcellite
 
 # picom
-#exec --no-startup-id picom -CGb -m 1.0
+exec --no-startup-id picom -CGb -m 1.0
 
 # execute wicd tray for Network Management
 #exec --no-startup-id wicd-gtk --tray

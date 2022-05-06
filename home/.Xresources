@@ -1,3 +1,6 @@
+! This file can be placed within the $HOME directory,
+! or at ~/.config/X11/.Xresources
+
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
@@ -6,3 +9,27 @@ Xft.antialias: 1
 Xft.rgba: rgb
 Xft.dpi: 157
 Xcursor.size: 32
+
+*.foreground: #C6C6C6
+*.background: #000000
+*.cursorColor: #444444
+
+! black 236 238
+*.color0: #303030
+*.color8: #444444
+! red 167
+*.color1: #d75f5f
+*.color9: #d75f5f
+! geen: 180
+*.color2: #87afd7
+URxvt*font: xft:DejaVuSansMono:size=14:antialias=true
+
+! No borders and hide scrollbar
+URxvt*borderLess: false
+URxvt*externalBorder: 0
+URxvt*internalBorder: 4
+URxvt*scrollBar: false
+
+! show more lines
+URxvt*saveLines: 5000
+

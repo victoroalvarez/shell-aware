@@ -15,6 +15,7 @@ This command takes everything inside home/ directory and symlinks it to their co
 * $HOME denotes the /home/myuser/ directory on a system.
 
 ## Change Log
+* 2022-05-05 11:47 pm AST. Add xinitrc file.
 * 2022-05-05 11:41 pm AST. Modify README file. Modify Xresources file. Add basic NeoVim configuration.
 * 2021-11-30 09:45 pm AST. Change Mod key back to Windows key. Modify i3 configuration and test successfully with Fedora Linux 35 i3wm Spin,
 * 2021-11-25 00:01 am AST. Change Mod key to Alt and test the system with it.

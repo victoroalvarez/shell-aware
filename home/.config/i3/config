@@ -66,8 +66,8 @@ set $mod Mod4
 # start a Terminal
 #bindsym $mod+Return exec terminator
 #bindsym $mod+Shift+Return exec terminator --working-directory=/home/voa/workspace
-bindsym $mod+Shift+Return exec xfce4-terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Shift+Return exec urxvt
 
 # start file manager
 #bindsym $mod+backslash exec nautilus -w
@@ -294,7 +294,7 @@ bar {
 # Commented lines are not used.
 
 # set background color gray
-#exec xsetroot -solid "#000000"
+exec hsetroot -solid "#000000"
 #exec hsetroot -solid '#4A5459'
 #exec hsetroot -solid '#39CCCC'
 #exec hsetroot -solid '#000000'
@@ -365,7 +365,7 @@ bindsym $mod+Shift+minus exec xbacklight -dec 5
 
 # Monitor
 # set default monitor. 
-bindsym $mod+Shift+m exec "xrandr --output eDP1 --auto 
+bindsym $mod+Shift+m exec xrandr --output eDP1 --auto 
 #&& feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"
 #bindsym $mod+m exec "xrandr --output eDP1 --off"
 # run config script for monitor

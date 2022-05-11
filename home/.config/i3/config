@@ -205,7 +205,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Key combinations for Lock, Shutdown and Restart. Press mod+Pause for menu. Press mod+BackSpace for lock only.
 # lock
-set $Locker i3lock && sleep 1
+#set $Locker i3lock -c 000000 -i ~/.local/pictures/locked_black.png && sleep 1
+set $Locker i3lock -c 000000 && sleep 1
+
 
 # Shutdown, Restart and Lock
 set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown

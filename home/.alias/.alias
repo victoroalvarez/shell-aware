@@ -49,3 +49,4 @@ alias startxampp='sudo /opt/lampp/lampp start'
 alias stopxampp='sudo /opt/lampp/lampp stop'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
 alias ytdl='youtube-dl --external-downloader aria2c --all-subs --add-metadata'
+alias gitstatus='git status'

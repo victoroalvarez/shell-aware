@@ -1,5 +1,5 @@
 # Victor's dotfiles
-These are a collection of dotfiles for my personal Debian Linux Desktop setup with i3WM.  These files are managed with GNU Stow. These files work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
+These are a collection of dotfiles for my personal [Debian Linux](https://debian.org) Desktop setup with i3WM.  These files are managed with GNU Stow. These files work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
 ## How are these files managed?
 To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.

@@ -6,6 +6,7 @@ alias cwifi='nmtui'
 alias double-ping='ping -c 10'
 alias downloadonly='sudo pacman -Syw' # download all Arch packages
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
+alias gitaddall='git add .'
 alias gitc='git commit'
 alias gitstat='git status'
 alias gp='git pull'

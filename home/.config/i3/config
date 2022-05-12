@@ -359,11 +359,13 @@ bindsym $mod+Shift+minus exec xbacklight -dec 5
 
 # Monitor
 # set default monitor. 
-bindsym $mod+Shift+m exec xrandr --output eDP1 --auto 
+#bindsym $mod+Shift+m exec xrandr --output eDP1 --auto 
+bindsym $mod+Shift+m exec ~/.screenlayout/laptop-single-screen.sh 
+bindsym $mod+Shift+p exec ~/.screenlayout/laptop-single-screen.sh 
 #&& feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg"
 #bindsym $mod+m exec "xrandr --output eDP1 --off"
 # run config script for monitor
-#bindsym $mod+Shift+n exec /home/voa/.screenlayout/tcl.sh
+bindsym $mod+Shift+n exec ~/.screenlayout/arzopa-second-screen.sh
 
 # launch xampp
 #bindsym $mod+Shift+a exec /opt/lampp/lampp start

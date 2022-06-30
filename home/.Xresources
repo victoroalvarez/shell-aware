@@ -7,7 +7,7 @@ Xft.hintstyle:  hintfull
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
-Xft.dpi: 157
+Xft.dpi: 104
 Xcursor.size: 32
 
 *.foreground: #C6C6C6

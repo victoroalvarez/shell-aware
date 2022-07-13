@@ -67,7 +67,8 @@ set $mod Mod4
 #bindsym $mod+Return exec terminator
 #bindsym $mod+Shift+Return exec terminator --working-directory=/home/voa/workspace
 bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+Shift+Return exec gnome-terminal
+#bindsym $mod+Shift+Return exec urxvt
 
 # start file manager
 #bindsym $mod+backslash exec nautilus -w
@@ -345,11 +346,11 @@ exec --no-startup-id pasystray
 # Control Screen
 # Control Brigthness
 # increase brightness
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym $mod+Shift+plus exec xbacklight -inc 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+#bindsym $mod+Shift+plus exec xbacklight -inc 5
 # decrease brightness
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-bindsym $mod+Shift+minus exec xbacklight -dec 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+#bindsym $mod+Shift+minus exec xbacklight -dec 5
 
 # Lock Screen
 # lock screen with i3lock
@@ -379,14 +380,14 @@ bindsym $mod+Shift+n exec ~/.screenlayout/arzopa-second-screen.sh
 bindsym $mod+p exec arandr
 
 # launch Google Chrome
-#bindsym $mod+Shift+o exec google-chrome-stable
+bindsym $mod+Shift+o exec google-chrome-stable
 
 # launch FireFox
 #bindsym $mod+o exec firefox-esr
 bindsym $mod+o exec firefox
 
 # Visual Studio Code
-#bindsym $mod+bracketleft exec code
+bindsym $mod+bracketleft exec code
 
 # launch Idea IDE
 #bindsym $mod+i exec /opt/idea/bin/idea.sh

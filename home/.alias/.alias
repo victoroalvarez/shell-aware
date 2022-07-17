@@ -14,6 +14,7 @@ alias gp='git pull'
 #alias ibniz='swallow ibniz'
 #alias idea='~/bin/idea-IC-203.7717.56/bin/./idea.sh'
 alias installaur='sudo pacman -U' # use pacman to install an individual package from an aur build
+alias jbtoolbox='/opt/jetbrains-toolbox-*/jetbrains-toolbox'
 alias la='ls -AX' # show all directories including hidden ones and sort by extension
 #alias linssid='swallow sudo linssid'
 alias list-wifi='nmcli dev wifi'

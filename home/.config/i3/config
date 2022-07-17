@@ -286,9 +286,7 @@ bar {
 
 # STARTUP PROGRAMS
 # Execute programs at startup
-
 # Commented lines are not used.
-
 # set background color gray
 exec hsetroot -solid "#000000"
 #exec hsetroot -solid '#4A5459'

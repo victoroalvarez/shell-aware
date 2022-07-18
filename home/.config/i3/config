@@ -1,10 +1,10 @@
 # i3wm Configuration
 # Victor O Alvarez
 # 2021, 2022
-#
 # NOTES:
 # * All CAPS denote a section of the document
-# Color Scheme:
+
+	# Color Scheme:
         # https://clrs.cc/      # Example color pallete
         #NAVY   #001f3f
         #BLUE   #0074D9
@@ -23,22 +23,19 @@
         #GRAY   #AAAAAA
         #SILVER #DDDDDD
 
-
 # i3 CONFIG FILE
 # See https://i3wm.org/docs/userguide.html for a complete reference
 
-# APPEARANCE: FONTS, COLORS and  BORDER
-
+# APPEARANCE: FONTS, COLORS & BORDER
 # focused window Colors
-# #0074D9 #0074D9 
 client.focused #0074D9 #0074D9 #FFFFFF 
 
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
 font pango:monospace 8
 
-# window Border
-# 1 pixel border
+# window Border. 1 pixel border
 for_window [class=".*"] border pixel 1
+
 # for_window [class=".*"] border pixel 0
 hide_edge_borders smart
 
@@ -46,44 +43,25 @@ hide_edge_borders smart
 floating_minimum_size 75 x 50
 floating_maximum_size 1024 x 1024
 
-# gaps
-#smart_gaps on
-#gaps inner 5
-#gaps outer 3
-
 # GUI CONTROL
-
-# mod Key. Uses Alt Key
+# mod Key. Uses Super Key
 set $mod Mod4
 
-# change gaps in realtime. Increase or decrease gaps
-#bindsym $mod+Shift+plus gaps inner current plus 5
-#bindsym $mod+Shift+minus gaps inner current minus 5
-
-# disable gaps. Reset value to zero
-#bindsym $mod+Shift+BackSpace gaps inner current toggle 0
-
 # start a Terminal
-#bindsym $mod+Return exec terminator
-#bindsym $mod+Shift+Return exec terminator --working-directory=/home/voa/workspace
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+Return exec gnome-terminal
-#bindsym $mod+Shift+Return exec urxvt
 
 # start file manager
-#bindsym $mod+backslash exec nautilus -w
-bindsym $mod+Shift+backslash exec pcmanfm
 bindsym $mod+backslash exec pcmanfm
-#bindsym $mod+z exec nautilus -w
-#bindsym $mod+Shift+z exec pcmanfm
-#bindsym $mod+backslash exec nautilus
+bindsym $mod+Shift+backslash exec nautilus -w
 
-# switch to next workspace
+# switch to next workspace. Left to right
 bindsym Mod1+Tab workspace next
 
 # run dmenu (program launcher)
 # list all programs
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'DejaVu Sans Mono:regular:pixelsize=20'
+
 # list GUI programs
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono:regular:pixelsize=20'"
 
@@ -94,7 +72,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # Mouse+$mod used to drag around floating windows
 floating_modifier $mod
 
-
 # use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -104,7 +81,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # kill focused window
 bindsym $mod+Shift+q kill
-#bindsym $mod+q kill
 
 # change focus
 #bindsym $mod+j focus left
@@ -118,20 +94,17 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -158,7 +131,6 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
-
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -199,16 +171,17 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# Key combinations for Lock, Shutdown and Restart. Press mod+Pause for menu. Press mod+BackSpace for lock only.
+# key combinations for Lock, Shutdown and Restart. Press mod+Pause for menu. Press mod+BackSpace for lock only
 # lock
 #set $Locker i3lock -c 000000 -i ~/.local/pictures/locked_black.png && sleep 1
 set $Locker i3lock -c 000000 && sleep 1
-
 
 # Shutdown, Restart and Lock
 set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
@@ -260,6 +233,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# make gnome-calendar a floating window
+for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
+
 # i3bar
 # start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -286,7 +262,7 @@ bar {
 
 # STARTUP PROGRAMS
 # Execute programs at startup
-# Commented lines are not used.
+
 # set background color gray
 exec hsetroot -solid "#000000"
 #exec hsetroot -solid '#4A5459'
@@ -296,28 +272,17 @@ exec hsetroot -solid "#000000"
 # blueman Applet
 exec --no-startup-id blueman-applet
 
-# compton
-#exec --no-startup-id compton --vsync opengl-swc --backend glx -f -G -I 0.09 -O 0.09 
-
-# conky
-#exec conky -d
-
 # dropbox
 #exec --no-startup-id dropbox
 #exec "sleep 10; dropbox;"
 
 # dunst
-#exec --no-startup-id dunst
-
-# clipit clipboard manager
-#exec --no-startup-id clipit
+exec --no-startup-id dunst
 
 # set Background with feh
 #exec --no-startup-id feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg
-
 #exec --no-startup-id feh --bg-fill /home/voa/Pictures/colin-carter-w1g2o4J_4Dg-unsplash.jpg
 #exec --no-startup-id feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif
-
 #exec feh --bg-fill /home/voa/Pictures/$mywallpaper
 
 # execute NetworkManager applet
@@ -327,36 +292,26 @@ exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 
 # parcellite clipboard manager
-#exec --no-startup-id parcellite
-
-# picom
-#exec --no-startup-id picom -CGb -m 1.0
+exec --no-startup-id parcellite
 
 # execute wicd tray for Network Management
 #exec --no-startup-id wicd-gtk --tray
 
-# XFCE4 power manager
-#exec --no-startup-id xfce4-power-manager
-
 # KEYBINDS
 # Run programs and scripts by keypress
 
-# Control Screen
-# Control Brigthness
-# increase brightness
+# increase screen brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 #bindsym $mod+Shift+plus exec xbacklight -inc 5
 # decrease brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym $mod+Shift+minus exec xbacklight -dec 5
 
-# Lock Screen
 # lock screen with i3lock
 #bindsym $mod+Shift+w exec "i3lock && sleep 5 && xset dpms force off"
 # lock screen with lightdm
 #bindsym $mod+Shift+w exec "dm-tool lock"
 
-# Monitor
 # set default monitor. 
 #bindsym $mod+Shift+m exec xrandr --output eDP1 --auto 
 bindsym $mod+Shift+m exec ~/.screenlayout/laptop-single-screen.sh 
@@ -366,13 +321,16 @@ bindsym $mod+Shift+p exec ~/.screenlayout/laptop-single-screen.sh
 # run config script for monitor
 bindsym $mod+Shift+n exec ~/.screenlayout/arzopa-second-screen.sh
 
+# launch calendar
+bindsym $mod+c exec gnome-calendar
+
 # launch xampp
 #bindsym $mod+Shift+a exec /opt/lampp/lampp start
 
 # screen shots
-#bindsym $mod+Print exec gnome-screenshot
+bindsym $mod+Print exec gnome-screenshot -i
 #bindsym Ctrl+Print exec gnome-screenshot -w
-#bindsym Print exec gnome-screenshot -i
+bindsym Print exec gnome-screenshot
 
 # launch arandr
 bindsym $mod+p exec arandr
@@ -384,14 +342,11 @@ bindsym $mod+Shift+o exec google-chrome-stable
 #bindsym $mod+o exec firefox-esr
 bindsym $mod+o exec firefox
 
-# Visual Studio Code
-bindsym $mod+bracketleft exec code
-
-# launch Idea IDE
-#bindsym $mod+i exec /opt/idea/bin/idea.sh
-
 # open Private Firefox session
 bindsym $mod+i exec firefox --private-window
+
+# visual studio code
+bindsym $mod+bracketleft exec code
 
 # launch Midnight Commander
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 
@@ -399,23 +354,9 @@ bindsym $mod+i exec firefox --private-window
 # launch Syncthing
 #bindsym $mod+Shift+s exec syncthing --browser-only
 
-# OLD CONFIGS
-# launch WICD without a tray for Network Management
-#bindsym $mod+c exec wicd-gtk --no-tray
-
 # python automation
 # bindsym $mod+Shift+h exec python3 /home/voa/workspace/bullets.py
 
-# launch Android Studio
-#bindsym $mod+Shift+s exec /opt/android-studio/bin/studio.sh
-
-# use amixer to control audio
-##bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 sset Master 5%+ && $refresh_i3status
-##bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 sset Master 5%- && $refresh_i3status
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# CONTROL Sound VOLUME
 # increase volume
 #bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ +10%
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%

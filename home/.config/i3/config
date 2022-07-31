@@ -340,9 +340,10 @@ bindsym $mod+p exec arandr
 # launch Google Chrome
 bindsym $mod+Shift+o exec google-chrome-stable
 
-# launch FireFox
+# launch or focus FireFox
 #bindsym $mod+o exec firefox-esr
 bindsym $mod+o exec firefox
+#bindsym $mod+Shift+o [class="Firefox"] focus
 
 # open Private Firefox session
 bindsym $mod+i exec firefox --private-window

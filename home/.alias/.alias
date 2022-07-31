@@ -34,7 +34,9 @@ alias myr='ssh voa@raspberrypi' # connect to server through ssh
 alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
 alias myserve='python -m http.server' # run SimpleHTTPServer on current directory
 alias mytraffic='vnstat --query' # Show network data consumption
-alias myt='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
+#alias myt='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
+alias myt='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
+alias myupdate='yay -Syu' # update all ackages and AURs
 alias myupdate='yay -Syu' # update all ackages and AURs
 alias myvim='vim $HOME/.vimrc'
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
@@ -54,4 +56,5 @@ alias startxampp='sudo /opt/lampp/lampp start'
 alias stopxampp='sudo /opt/lampp/lampp stop'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
 alias vw='view'
-alias ytdl='youtube-dl --external-downloader aria2c --all-subs --add-metadata'
+#alias ytdl='youtube-dl --external-downloader aria2c --all-subs --add-metadata'
+alias ytdl='yt-dlp --external-downloader aria2c --all-subs --add-metadata'

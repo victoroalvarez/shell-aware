@@ -299,6 +299,9 @@ exec --no-startup-id parcellite
 # execute wicd tray for Network Management
 #exec --no-startup-id wicd-gtk --tray
 
+#
+#exec --no-startup-id pcmanfm -d
+
 # KEYBINDS
 # Run programs and scripts by keypress
 

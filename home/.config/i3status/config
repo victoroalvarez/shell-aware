@@ -58,7 +58,7 @@ ethernet _first_ {
 
 battery all {
 	#format = "%status %percentage %remaining"
-	format = "B: %percentage"
+	format = "B: %status %percentage"
 }
 
 tztime local {

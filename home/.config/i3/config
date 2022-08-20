@@ -36,12 +36,13 @@ font pango:monospace 8
 # window Border. 1 pixel border
 for_window [class=".*"] border pixel 1
 
+#
 # for_window [class=".*"] border pixel 0
 hide_edge_borders smart
 
 # floating windows size
 floating_minimum_size 75 x 50
-floating_maximum_size 1024 x 1024
+floating_maximum_size 1024 x 640
 
 # GUI CONTROL
 # mod Key. Uses Super Key
@@ -282,9 +283,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id dunst
 
 # set Background with feh
-#exec --no-startup-id feh --bg-scale /home/voa/Pictures/pexels-irina-iriser-1366957.jpg
-#exec --no-startup-id feh --bg-fill /home/voa/Pictures/colin-carter-w1g2o4J_4Dg-unsplash.jpg
-#exec --no-startup-id feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif
+exec --no-startup-id feh --bg-scale /home/voa/wallpapers/jeremy-bezanger-LVek143HwJI-unsplash.jpg
 #exec feh --bg-fill /home/voa/Pictures/$mywallpaper
 
 # execute NetworkManager applet
@@ -299,8 +298,11 @@ exec --no-startup-id parcellite
 # execute wicd tray for Network Management
 #exec --no-startup-id wicd-gtk --tray
 
-#
-#exec --no-startup-id pcmanfm -d
+# start pcmanfm in the background
+exec --no-startup-id pcmanfm -d
+
+# run picom in the background
+exec --no-startup-id picom -b -c
 
 # KEYBINDS
 # Run programs and scripts by keypress

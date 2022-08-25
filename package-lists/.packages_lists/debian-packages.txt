@@ -8,6 +8,7 @@ cups
 curl
 dunst
 feh
+file-roller
 firefox-esr
 firmware-linux
 flatpak
@@ -26,6 +27,7 @@ pavumeter
 pcmanfm
 picom
 pulseaudio
+rar
 screen
 stow
 suckless-tools
@@ -34,6 +36,8 @@ tlp
 tlp-rdw
 tmux
 ufw
+unrar
+unzip
 vim
 wget
 xbacklight

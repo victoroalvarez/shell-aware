@@ -304,6 +304,9 @@ exec --no-startup-id pcmanfm -d
 # run picom in the background
 exec --no-startup-id picom -b -c
 
+# run syncthing daemon
+exec --no-startup-id syncthing -no-browser
+
 # KEYBINDS
 # Run programs and scripts by keypress
 
@@ -343,11 +346,11 @@ bindsym Print exec gnome-screenshot
 bindsym $mod+p exec arandr
 
 # launch Google Chrome
-bindsym $mod+Shift+o exec google-chrome-stable
+#bindsym $mod+Shift+o exec google-chrome-stable
 
 # launch or focus FireFox
-#bindsym $mod+o exec firefox-esr
-bindsym $mod+o exec firefox
+bindsym $mod+Shift+o exec firefox-esr
+bindsym $mod+o exec flatpak run org.mozilla.firefox
 #bindsym $mod+Shift+o [class="Firefox"] focus
 
 # open Private Firefox session
@@ -360,7 +363,7 @@ bindsym $mod+bracketleft exec code
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 
 
 # launch Syncthing
-#bindsym $mod+Shift+s exec syncthing --browser-only
+#bindsym $mod+Shift+s exec syncthing-gtk
 
 # python automation
 # bindsym $mod+Shift+h exec python3 /home/voa/workspace/bullets.py

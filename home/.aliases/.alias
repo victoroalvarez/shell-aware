@@ -1,4 +1,3 @@
-alias
 alias addall='git add .'
 alias aliases='less ~/.alias/.alias'
 alias an='archnews'
@@ -10,6 +9,7 @@ alias archnews='lynx https://archlinux.org/news/'
 alias cwifi='nmtui'
 alias double-ping='ping -c 10'
 alias downloadonly='sudo pacman -Syw' # download all Arch packages
+alias findfile='sudo find / -name'
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
 alias gitaddall='git add .'
 alias gitc='git commit'
@@ -41,8 +41,7 @@ alias mytmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download 
 alias mytraffic='vnstat --query' # Show network data consumption
 #alias myt='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
 alias myt='yt-dlp'
-#alias myupdate='yay -Syu' # update all ackages and AURs
-#alias myupdate='yay -Syu' # update all ackages and AURs
+alias myupgrade='sudo apt update; sudo apt full-upgrade; flatpak update'
 alias myvim='vim $HOME/.vimrc'
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
 alias myyt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"

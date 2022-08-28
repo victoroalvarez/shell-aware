@@ -346,10 +346,10 @@ bindsym Print exec gnome-screenshot
 bindsym $mod+p exec arandr
 
 # launch Google Chrome
-#bindsym $mod+Shift+o exec google-chrome-stable
+bindsym $mod+Shift+o exec google-chrome-stable
 
 # launch or focus FireFox
-bindsym $mod+Shift+o exec firefox-esr
+#bindsym $mod+Shift+o exec firefox-esr
 bindsym $mod+o exec flatpak run org.mozilla.firefox
 #bindsym $mod+Shift+o [class="Firefox"] focus
 
@@ -357,7 +357,7 @@ bindsym $mod+o exec flatpak run org.mozilla.firefox
 bindsym $mod+i exec firefox --private-window
 
 # visual studio code
-bindsym $mod+bracketleft exec code
+#bindsym $mod+bracketleft exec code
 
 # launch Midnight Commander
 #bindsym $mod+Shift+p exec xfce4-terminal -e mc 

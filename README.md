@@ -14,11 +14,17 @@ This command takes everything inside home/ directory and symlinks it to their co
 ## Conventions
 * $HOME denotes the /home/myuser/ directory on a system.
 
+## Install Packages List on Debian
+```
+xargs apt install -y < file-name.txt
+```
+
 ## Known Problems
 * A Clipboard manager program like Parcellite, its needed to improve functionality.
 * Bluetooth devices must be regularly removed and re-paired as new devices.
 
 ## Change Log
+* 2022-09-07 12:41 pm AST. Update ReadMe file with instructions on how to install packages list on debian.
 * 2022-07-18 07:13 am AST. Refactor i3 config files & replace bin directory. Move scripts from bin to .scripts.
 * 2022-05-05 11:47 pm AST. Add xinitrc file.
 * 2022-05-05 11:41 pm AST. Modify README file. Modify Xresources file. Add basic NeoVim configuration.

@@ -1,0 +1,4 @@
+Flatpak Help
+    $ flatpak list --app
+    $ flatpak uninstall org.gimp.GIMP
+

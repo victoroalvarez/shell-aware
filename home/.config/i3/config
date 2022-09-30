@@ -283,8 +283,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id dunst
 
 # set Background with feh
-exec --no-startup-id feh --bg-scale /home/voa/wallpapers/jeremy-bezanger-LVek143HwJI-unsplash.jpg
-#exec feh --bg-fill /home/voa/Pictures/$mywallpaper
+exec --no-startup-id feh --bg-scale /home/voa/Pictures/hidpi_jeremy-bezanger-LVek143HwJI-unsplash.jpg
 
 # execute NetworkManager applet
 exec --no-startup-id nm-applet
@@ -349,8 +348,8 @@ bindsym $mod+p exec arandr
 bindsym $mod+Shift+o exec google-chrome-stable
 
 # launch or focus FireFox
-#bindsym $mod+Shift+o exec firefox-esr
-bindsym $mod+o exec flatpak run org.mozilla.firefox
+bindsym $mod+o exec firefox-esr
+#bindsym $mod+o exec flatpak run org.mozilla.firefox
 #bindsym $mod+Shift+o [class="Firefox"] focus
 
 # open Private Firefox session

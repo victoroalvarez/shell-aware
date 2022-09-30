@@ -1,6 +1,5 @@
 arandr
-backlight
-blueman-applet
+blueman
 build-essential
 calibre
 conky
@@ -43,4 +42,4 @@ wget
 xbacklight
 xfce4-terminal
 xorg
-xorg-xbacklight
+xbacklight

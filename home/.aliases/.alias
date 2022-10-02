@@ -1,18 +1,19 @@
 alias addall='git add .'
-alias aliases='less ~/.alias/.alias'
 alias an='archnews'
 alias aptlist='apt list --upgradable -a'
 alias aptsearch='apt-cache search'
 alias aptupdate='sudo apt update'
 alias aptupgrade='sudo apt full-upgrade'
 alias archnews='lynx https://archlinux.org/news/'
+alias cdwd='cd /mnt/wdssd'
 alias cwifi='nmtui'
 alias disablewifi='nmcli radio wifi off'
 alias double-ping='ping -c 10'
 alias downloadonly='sudo pacman -Syw' # download all Arch packages
 alias editalias="vim ~/.aliases/.alias"
-alias editalias='vim .aliases/.alias'
 alias editfstab="sudo vim /etc/fstab"
+alias editi3status='vim ~/.config/i3status/config' # Edit i3status config
+alias editi3='vim ~/.config/i3/config' # edit i3wm's configuration
 alias enablewifi='nmcli radio wifi on'
 alias findfile='sudo find / -name'
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
@@ -35,8 +36,6 @@ alias mountvb='sudo mount /dev/nvme0n1p4 /mnt/virtualbox'
 alias myconky='vim ~/.config/conky/conky.conf'
 alias mydisk='sudo gnome-disks' # run Gnome Disk
 alias mydrives='cd /run/media/voa' # change directory to /run/media/voa/
-alias myi3s='vim ~/.config/i3status/config' # Edit i3status config
-alias myi3='vim ~/.config/i3/config' # edit i3wm's configuration
 #alias mynetbsd='ssh voa@192.168.122.162'
 alias myos='cat /etc/os-release' # show OS version
 alias mypicom='vim ~/.config/picom/picom.conf' # edit picom's configuration
@@ -45,12 +44,10 @@ alias mysdf='ssh sdf.org -i $HOME/.ssh/id_sdf' # login to sdf.org account
 alias myserve='python -m http.server' # run SimpleHTTPServer on current directory
 alias mytmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
 alias mytraffic='vnstat --query' # Show network data consumption
-#alias myt='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
-alias myt='yt-dlp'
+alias myt='youtube-dl --external-downloader aria2c --all-subs --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"' # download videos with mp4 video container
 alias myupgrade='sudo apt update; sudo apt full-upgrade; flatpak update'
 alias myvim='vim $HOME/.vimrc'
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
-alias myyt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias phpserver='php -S localhost:8080'
 alias restartnetworkmanager='sudo systemctl restart NetworkManager'
 alias runxampp='sudo /opt/lampp/manager-linux-x64.run'
@@ -67,7 +64,5 @@ alias startxampp='sudo /opt/lampp/lampp start'
 alias stopxampp='sudo /opt/lampp/lampp stop'
 alias testdunst='notify-send "Title" "NOW"' # test dunst's notifications
 alias visualdisk='flatpak run org.gnome.baobab'
-alias youtubearchive='yt-dlp --embed-chapters --xattrs --embed-metadata --write-subs'
-alias youtube-dl='yt-dlp'
-#alias ytdl='youtube-dl --external-downloader aria2c --all-subs --add-metadata'
-alias ytdl='yt-dlp --external-downloader aria2c --all-subs --add-metadata'
+alias youtubearchive='youtube-dl --embed-chapters --xattrs --embed-metadata --write-subs'
+alias ytdl='youtube-dl --external-downloader aria2c --all-subs --add-metadata'

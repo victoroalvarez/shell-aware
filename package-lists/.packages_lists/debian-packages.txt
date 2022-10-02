@@ -35,11 +35,13 @@ tlp
 tlp-rdw
 tmux
 ufw
+unclutter
 unrar
 unzip
 vim
 wget
 xbacklight
+xbacklight
+xclip
 xfce4-terminal
 xorg
-xbacklight

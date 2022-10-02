@@ -50,11 +50,11 @@ set $mod Mod4
 
 # start a Terminal
 bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Shift+Return exec gnome-terminal
+#bindsym $mod+Shift+Return exec gnome-terminal
 
 # start file manager
 bindsym $mod+backslash exec pcmanfm
-bindsym $mod+Shift+backslash exec nautilus -w
+bindsym $mod+Shift+backslash exec xfce4-terminal -e ranger
 
 # switch to next workspace. Left to right
 bindsym Mod1+Tab workspace next

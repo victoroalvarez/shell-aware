@@ -49,8 +49,9 @@ floating_maximum_size 1024 x 640
 set $mod Mod4
 
 # start a Terminal
-bindsym $mod+Return exec xfce4-terminal
+#bindsym $mod+Return exec xfce4-terminal
 #bindsym $mod+Shift+Return exec gnome-terminal
+bindsym $mod+Return exec terminator
 
 # start file manager
 bindsym $mod+backslash exec pcmanfm
@@ -273,7 +274,8 @@ exec hsetroot -solid "#000000"
 #exec hsetroot -solid '#000000'
 
 # blueman Applet
-exec --no-startup-id blueman-applet
+#exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-tray
 
 # dropbox
 #exec --no-startup-id dropbox

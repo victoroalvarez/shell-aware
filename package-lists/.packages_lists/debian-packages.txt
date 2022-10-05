@@ -6,6 +6,7 @@ conky
 cups
 curl
 dunst
+evince
 feh
 file-roller
 firefox-esr
@@ -26,6 +27,7 @@ pavumeter
 pcmanfm
 picom
 pulseaudio
+ranger
 rar
 screen
 stow

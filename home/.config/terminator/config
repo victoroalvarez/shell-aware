@@ -8,7 +8,6 @@
 [profiles]
   [[default]]
     background_darkness = 0.8
-    background_type = transparent
     cursor_blink = False
     cursor_color = "#aaaaaa"
     font = Monospace 12
@@ -30,6 +29,8 @@
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
     use_system_font = False
     bold_is_bright = True
+  [[New Profile]]
+    cursor_color = "#aaaaaa"
 [layouts]
   [[default]]
     [[[window0]]]

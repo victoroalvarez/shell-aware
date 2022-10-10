@@ -56,6 +56,7 @@ bindsym $mod+Return exec terminator
 # start file manager
 bindsym $mod+backslash exec pcmanfm
 bindsym $mod+Shift+backslash exec terminator -e ranger
+bindsym $mod+slash exec nautilus
 
 # switch to next workspace. Left to right
 bindsym Mod1+Tab workspace next
@@ -285,7 +286,7 @@ exec --no-startup-id blueman-tray
 exec --no-startup-id dunst
 
 # set Background with feh
-exec --no-startup-id feh --bg-scale /home/voa/Pictures/backgrounds/hidpi_jeremy-bezanger-LVek143HwJI-unsplash.jpg
+#exec --no-startup-id feh --bg-scale /home/voa/Pictures/backgrounds/hidpi_jeremy-bezanger-LVek143HwJI-unsplash.jpg
 
 # execute NetworkManager applet
 exec --no-startup-id nm-applet

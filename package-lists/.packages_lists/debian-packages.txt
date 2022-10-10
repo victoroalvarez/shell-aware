@@ -1,5 +1,4 @@
 arandr
-blueman
 build-essential
 calibre
 clang
@@ -28,6 +27,7 @@ network-manager-gnome
 ninja-build
 parcellite
 pasystray
+pavucontrol
 pavumeter
 pcmanfm
 picom

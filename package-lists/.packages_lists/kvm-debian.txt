@@ -1,0 +1,7 @@
+aqemu
+libvirt-daemon-system
+qemu-system
+virsh
+virtinst
+virt-manager
+virt-viewer

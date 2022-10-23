@@ -35,6 +35,7 @@ pavumeter
 pcmanfm
 picom
 pulseaudio
+python-is-python3
 ranger
 rar
 screen

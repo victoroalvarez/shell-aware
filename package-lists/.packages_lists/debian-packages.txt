@@ -28,6 +28,8 @@ network-manager-gnome
 ninja-build
 parcellite
 pasystray
+pasystray
+pavucontrol
 pavucontrol
 pavumeter
 pcmanfm
@@ -48,6 +50,7 @@ unrar
 unzip
 vim
 wget
+xbacklight
 xbacklight
 xbacklight
 xclip

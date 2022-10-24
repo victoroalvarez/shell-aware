@@ -1,6 +1,13 @@
 aqemu
+bridge-utils
+libvirt-daemon
 libvirt-daemon-system
+libvirt-daemon-system
+python3
+python3-pip
+qemu-kvm
 qemu-system
+qemu-utils
 virsh
 virtinst
 virt-manager

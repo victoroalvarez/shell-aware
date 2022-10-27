@@ -24,6 +24,7 @@ xargs apt install -y < file-name.txt
 * Bluetooth devices must be regularly removed and re-paired as new devices.
 
 ## Change Log
+* 2022-10-27 06:57 pm AST. Update i3 config to hide i3bar by default. Bar its shown when mod key its pressed.
 * 2022-09-07 12:41 pm AST. Update ReadMe file with instructions on how to install packages list on debian.
 * 2022-07-18 07:13 am AST. Refactor i3 config files & replace bin directory. Move scripts from bin to .scripts.
 * 2022-05-05 11:47 pm AST. Add xinitrc file.

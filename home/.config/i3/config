@@ -246,8 +246,8 @@ for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
 # finds out, if available)
 # use "mode hide" & "hidden_state" to hide i3bar
 bar {
-        mode hide
-	hidden_state hide
+        #mode hide
+	#hidden_state hide
 	position bottom
         status_command i3status
         colors {

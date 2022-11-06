@@ -238,6 +238,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# choose screen layout
+set $mode_display Config monitor resolution - Default config (h), Arzopa (j)
+mode "$mode_display" {
+	bindsym h exec --no-startup-id sh "$HOME/.screenlayout/home.sh", mode "default"
+	bindsym j exec --no-startup-id sh "$HOME/.screenlayout/equal-resolution-arzopa.sh", mode "default"
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+
+	bindsym Escape mode "default"
+}
+
+bindsym $mod+x mode "$mode_display"
+
 # make gnome-calendar a floating window
 for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
 

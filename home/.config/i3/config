@@ -261,7 +261,7 @@ for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
 bar {
         #mode hide
 	#hidden_state hide
-	position bottom
+	position top
         status_command i3status
         colors {
 		statusline	#FFFFFF

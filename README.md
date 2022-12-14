@@ -24,6 +24,8 @@ xargs apt install -y < file-name.txt
 * Bluetooth devices must be regularly removed and re-paired as new devices.
 
 ## Change Log
+* 2022-12-14 12:18 pm AST. Organize current code and delete old code from i3 config file.
+* 2022-12-13 11:59 pm AST. Delete fedora/ directory from repository.
 * 2022-10-27 06:57 pm AST. Update i3 config to hide i3bar by default. Bar its shown when mod key its pressed.
 * 2022-09-07 12:41 pm AST. Update ReadMe file with instructions on how to install packages list on debian.
 * 2022-07-18 07:13 am AST. Refactor i3 config files & replace bin directory. Move scripts from bin to .scripts.
@@ -35,4 +37,3 @@ xargs apt install -y < file-name.txt
 * 2021-05-25 10:48 pm AST. Create Development branch and first commit.
 * 2021-06-01 11:42 pm AST. Add Conky to display system info on desktop.
 * 2021-07-06 09:27 pm AST. Add Alt+Tab keybinding to switch between workspaces.
-

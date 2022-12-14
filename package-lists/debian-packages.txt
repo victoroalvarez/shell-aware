@@ -45,6 +45,7 @@ sudo
 tlp
 tlp-rdw
 tmux
+tree
 ufw
 unclutter
 unrar

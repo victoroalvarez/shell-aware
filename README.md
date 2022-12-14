@@ -1,5 +1,5 @@
 # Victor's dotfiles
-These are a collection of dotfiles for my personal [Debian Linux](https://debian.org) Desktop setup with i3WM.  These files are managed with GNU Stow. These files work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
+These are a collection of dotfiles & i3wm Mouse-less Development Environment setup for [Debian Linux](https://debian.org).  These files are managed with GNU Stow. These files work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
 ## How are these files managed?
 To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.
@@ -9,12 +9,14 @@ For example, after a new OS installation, to symlink files located on the reposi
 stow --target=$HOME home
 ```
 
-This command takes everything inside home/ directory and symlinks it to their corresponding locations on the $HOME directory of my user.
+This command takes everything inside home/ directory and symlinks it to their corresponding locations on the my user's $HOME directory.
 
 ## Conventions
 * $HOME denotes the /home/myuser/ directory on a system.
 
 ## Install Packages List on Debian
+Theres a list of required packages within the packages list directory. These packages are installed on Debian with the following command.
+
 ```
 xargs apt install -y < file-name.txt
 ```
@@ -24,6 +26,7 @@ xargs apt install -y < file-name.txt
 * Bluetooth devices must be regularly removed and re-paired as new devices.
 
 ## Change Log
+* 2022-12-14 07:25 am AST. Rename packages list files. Edit & improve README file.
 * 2022-12-14 12:18 pm AST. Organize current code and delete old code from i3 config file.
 * 2022-12-13 11:59 pm AST. Delete fedora/ directory from repository.
 * 2022-10-27 06:57 pm AST. Update i3 config to hide i3bar by default. Bar its shown when mod key its pressed.

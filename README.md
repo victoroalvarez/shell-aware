@@ -21,11 +21,18 @@ Theres a list of required packages within the packages list directory. These pac
 xargs apt install -y < file-name.txt
 ```
 
+## Directories
+* home - Contains dotfiles & configurations.
+* packages-lists - List of packages for required for Debian Linux & other Linux distributions.
+* screenshots - Screenshots of the desktop environment.
+* shellscripts - Shellscripts meant to be linked into the $HOME/bin directory.
+
 ## Known Problems
 * A Clipboard manager program like Parcellite, its needed to improve functionality.
 * Bluetooth devices must be regularly removed and re-paired as new devices.
 
 ## Change Log
+* 2022-12-16 11:24 am AST. Add script to change volume and visualize change with [dunst](https://wiki.archlinux.org/title/Dunst) notifications.
 * 2022-12-14 07:25 am AST. Rename packages list files. Edit & improve README file.
 * 2022-12-14 12:18 pm AST. Organize current code and delete old code from i3 config file.
 * 2022-12-13 11:59 pm AST. Delete fedora/ directory from repository.
@@ -40,3 +47,6 @@ xargs apt install -y < file-name.txt
 * 2021-05-25 10:48 pm AST. Create Development branch and first commit.
 * 2021-06-01 11:42 pm AST. Add Conky to display system info on desktop.
 * 2021-07-06 09:27 pm AST. Add Alt+Tab keybinding to switch between workspaces.
+
+## References & Links
+* [Dunst on Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.

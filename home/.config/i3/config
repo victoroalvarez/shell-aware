@@ -69,9 +69,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 # set volume to 40%
-bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
+#bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
 # set volume to 25%
-bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
+#bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
 # change volume with script
 #bindsym $mod+Shift+plus exec changeVolume 2dB+ unmute && $refresh_i3status
 #bindsym $mod+Shift+underscore exec changeVolume 2dB- unmute
@@ -244,7 +244,7 @@ bar {
 # background screen color gray
 exec hsetroot -solid "#000000"
 # blueman Applet
-exec --no-startup-id blueman-tray
+#exec --no-startup-id blueman-tray
 # dunst
 exec --no-startup-id dunst
 # NetworkManager applet
@@ -252,6 +252,8 @@ exec --no-startup-id nm-applet
 # parcellite clipboard manager
 exec --no-startup-id parcellite
 exec --no-startup-id pcmanfm -d
+# run pulseaudio
+exec --no-startup-id pulseaudio
 # pasystray for PulseAudio
 exec --no-startup-id pasystray
 # picom in the background
@@ -278,9 +280,9 @@ bindsym $mod+c exec gnome-calendar
 # Chrome Browser
 bindsym $mod+Shift+o exec google-chrome-stable
 # FireFox Browser
-bindsym $mod+o exec firefox-esr
+bindsym $mod+o exec firefox
 # Firefox's private session
-bindsym $mod+i exec firefox --private-window
+#bindsym $mod+i exec firefox --private-window
 # screenshots
 bindsym $mod+Print exec gnome-screenshot -i
 bindsym Print exec gnome-screenshot

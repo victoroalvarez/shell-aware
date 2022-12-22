@@ -1,0 +1,2 @@
+/etc/modprobe.d/alsa-base.conf
+/etc/X11/xorg.conf.d/20-intel.conf

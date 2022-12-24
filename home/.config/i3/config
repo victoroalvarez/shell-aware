@@ -29,6 +29,9 @@
 client.focused #0074D9 #0074D9 #FFFFFF 
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
 font pango:monospace 8
+# Start XDG autostart .desktop files using dex.
+exec --no-startup-id dex --autostart --environment i3
+
 # window Border. 1 pixel border
 for_window [class=".*"] border pixel 1
 # for_window [class=".*"] border pixel 0
@@ -69,9 +72,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 # set volume to 40%
-#bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
+bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
 # set volume to 25%
-#bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
+bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
 # change volume with script
 #bindsym $mod+Shift+plus exec changeVolume 2dB+ unmute && $refresh_i3status
 #bindsym $mod+Shift+underscore exec changeVolume 2dB- unmute
@@ -242,24 +245,24 @@ bar {
 # STARTUP PROGRAMS
 # Run programs at startup
 # background screen color gray
-exec hsetroot -solid "#000000"
+#exec hsetroot -solid "#000000"
 # blueman Applet
 #exec --no-startup-id blueman-tray
 # dunst
-exec --no-startup-id dunst
+#exec --no-startup-id dunst
 # NetworkManager applet
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 # parcellite clipboard manager
-exec --no-startup-id parcellite
-exec --no-startup-id pcmanfm -d
+#exec --no-startup-id parcellite
+#exec --no-startup-id pcmanfm -d
 # run pulseaudio
-exec --no-startup-id pulseaudio
+#exec --no-startup-id pulseaudio --start
 # pasystray for PulseAudio
-exec --no-startup-id pasystray
+#exec --no-startup-id pasystray
 # picom in the background
-exec --no-startup-id picom -b -c
+#exec --no-startup-id picom -b -c
 # syncthing daemon
-exec --no-startup-id syncthing -no-browser
+#exec --no-startup-id syncthing -no-browser
 
 # KEYBINDS
 # Run programs and scripts by keypress
@@ -278,7 +281,7 @@ bindsym $mod+p exec arandr
 # calendar
 bindsym $mod+c exec gnome-calendar
 # Chrome Browser
-bindsym $mod+Shift+o exec google-chrome-stable
+#bindsym $mod+Shift+o exec google-chrome-stable
 # FireFox Browser
 bindsym $mod+o exec firefox
 # Firefox's private session

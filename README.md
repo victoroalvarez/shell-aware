@@ -15,6 +15,7 @@ This command takes everything inside home/ directory and symlinks it to their co
 * $HOME denotes the /home/myuser/ directory on a system.
 
 ## Install Packages List on Debian
+Note: I currently use Arch Linux instead of Debian.
 Theres a list of required packages within the packages list directory. These packages are installed on Debian with the following command.
 
 ```
@@ -38,12 +39,13 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 
 ## Issues
 * A Clipboard manager program like Parcellite, its needed to improve functionality.
-* Bluetooth devices must be regularly removed and re-paired as new devices.
+* My current hardware has Bluetooth compability problems, & Bluetooth devices must be regularly removed and re-paired as new devices. Your hardware may be different.
 * I use firefox instead of the firefox-esr version available by default on Debian Stable. This recent version is named Firefox Stable and its available for many Unix-like systems through Mozilla's website. If you wish to use firefox-esr, rename all firefox references on i3 confile file and aliases with firefox-esr.
 * Audio drivers & alsa should be configured properly for laptops. These configuration depends on cpu and device manufacturer. I use an HP laptop with an Intel CPU and Intel audio.
 * Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
 
 ## Change Log
+* 2022-12-24 04:24 pm AST. Swith Linux Distribution from Debian Linux 11 to Arch Linux. Debian Stable Bullseye & my current hardware are not as compatible as previous hardware. Arch Linux its an alternative which allows me to work in other projects while I test improvements on Debian Stable. I will continue to test this setup on Debian Stable & Sid.
 * 2022-12-20 10:09 am AST. Remove firefox-esr references from i3 config file. I now download and install Firefox from Mozilla's website. This is a tar file which must be installes into the /opt or you home directory. Once properly configured, you may run it with i3-keybindings with the name 'firefox'.
 * 2022-12-16 11:24 am AST. Add script to change volume and visualize change with [dunst](https://wiki.archlinux.org/title/Dunst) notifications.
 * 2022-12-14 07:25 am AST. Rename packages list files. Edit & improve README file.

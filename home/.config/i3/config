@@ -31,7 +31,6 @@ client.focused #0074D9 #0074D9 #FFFFFF
 font pango:monospace 8
 # Start XDG autostart .desktop files using dex.
 exec --no-startup-id dex --autostart --environment i3
-
 # window Border. 1 pixel border
 for_window [class=".*"] border pixel 1
 # for_window [class=".*"] border pixel 0
@@ -162,7 +161,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # key combinations for Lock, Shutdown and Restart. Press mod+Pause for menu. Press mod+BackSpace for lock only
 # lock
 #set $Locker i3lock -c 000000 -i ~/.local/pictures/locked_black.png && sleep 1
-set $Locker i3lock -c 000000 && sleep 1
+set $Locker i3lock -c FFFFFF && sleep 1
 # Shutdown, Restart and Lock
 set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -205,7 +204,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 # choose screen layout
-set $mode_display Config monitor resolution - Default config (h), Arzopa (j)
+set $mode_display Config monitor resolution - Default config (h), Dual Arzopa (j)
 mode "$mode_display" {
 	bindsym h exec --no-startup-id sh "$HOME/.screenlayout/home.sh", mode "default"
 	bindsym j exec --no-startup-id sh "$HOME/.screenlayout/equal-resolution-arzopa.sh", mode "default"
@@ -245,15 +244,15 @@ bar {
 # STARTUP PROGRAMS
 # Run programs at startup
 # background screen color gray
-#exec hsetroot -solid "#000000"
+exec hsetroot -solid "#000000"
 # blueman Applet
 #exec --no-startup-id blueman-tray
 # dunst
-#exec --no-startup-id dunst
+exec --no-startup-id dunst
 # NetworkManager applet
 #exec --no-startup-id nm-applet
 # parcellite clipboard manager
-#exec --no-startup-id parcellite
+exec --no-startup-id parcellite
 #exec --no-startup-id pcmanfm -d
 # run pulseaudio
 #exec --no-startup-id pulseaudio --start
@@ -285,7 +284,7 @@ bindsym $mod+c exec gnome-calendar
 # FireFox Browser
 bindsym $mod+o exec firefox
 # Firefox's private session
-#bindsym $mod+i exec firefox --private-window
+bindsym $mod+i exec firefox --private-window
 # screenshots
-bindsym $mod+Print exec gnome-screenshot -i
-bindsym Print exec gnome-screenshot
+#bindsym $mod+Print exec gnome-screenshot -i
+#bindsym Print exec gnome-screenshot

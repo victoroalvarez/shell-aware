@@ -1,3 +1,5 @@
+alsa-tools
+alsa-tools-gui
 arandr
 blueman
 build-essential
@@ -55,9 +57,6 @@ unzip
 vim
 w3m
 wget
-wget
-xbacklight
-xbacklight
 xbacklight
 xclip
 xfce4-terminal

@@ -27,11 +27,24 @@ xargs apt install -y < file-name.txt
 * screenshots - Screenshots of the desktop environment.
 * shellscripts - Shellscripts meant to be linked into the $HOME/bin directory.
 
-## Known Problems
+## Add 'acentos y tildes' from the spanish language
+This can by achieve by running:
+
+```
+dpkg-reconfigure keyboard-configuration
+```
+
+In this console menu I choose US English keyboard. Thats the same English Qwerty Keyboard configuration, but once set it makes it really easy to input tildes.
+
+## Issues
 * A Clipboard manager program like Parcellite, its needed to improve functionality.
 * Bluetooth devices must be regularly removed and re-paired as new devices.
+* I use firefox instead of the firefox-esr version available by default on Debian Stable. This recent version is named Firefox Stable and its available for many Unix-like systems through Mozilla's website. If you wish to use firefox-esr, rename all firefox references on i3 confile file and aliases with firefox-esr.
+* Audio drivers & alsa should be configured properly for laptops. These configuration depends on cpu and device manufacturer. I use an HP laptop with an Intel CPU and Intel audio.
+* Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
 
 ## Change Log
+* 2022-12-20 10:09 am AST. Remove firefox-esr references from i3 config file. I now download and install Firefox from Mozilla's website. This is a tar file which must be installes into the /opt or you home directory. Once properly configured, you may run it with i3-keybindings with the name 'firefox'.
 * 2022-12-16 11:24 am AST. Add script to change volume and visualize change with [dunst](https://wiki.archlinux.org/title/Dunst) notifications.
 * 2022-12-14 07:25 am AST. Rename packages list files. Edit & improve README file.
 * 2022-12-14 12:18 pm AST. Organize current code and delete old code from i3 config file.

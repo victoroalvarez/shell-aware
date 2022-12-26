@@ -1,7 +1,9 @@
 # Victor's dotfiles
-These are a collection of dotfiles & i3wm Mouse-less Development Environment setup for [Debian Linux](https://debian.org).  These files are managed with GNU Stow. These files work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
+
+These are a collection of dotfiles & i3wm Mouse-less Development Environment setup for Arch Linux.  These files are managed with GNU Stow. These files work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
 ## How are these files managed?
+
 To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.
 For example, after a new OS installation, to symlink files located on the repository's home/ directory to the $HOME/ directory of my machine, I go to the root of this repository and type:
 
@@ -12,9 +14,11 @@ stow --target=$HOME home
 This command takes everything inside home/ directory and symlinks it to their corresponding locations on the my user's $HOME directory.
 
 ## Conventions
+
 * $HOME denotes the /home/myuser/ directory on a system.
 
 ## Install Packages List on Debian
+
 Note: I currently use Arch Linux instead of Debian.
 Theres a list of required packages within the packages list directory. These packages are installed on Debian with the following command.
 
@@ -23,12 +27,15 @@ xargs apt install -y < file-name.txt
 ```
 
 ## Directories
+
 * home - Contains dotfiles & configurations.
 * packages-lists - List of packages for required for Debian Linux & other Linux distributions.
 * screenshots - Screenshots of the desktop environment.
 * shellscripts - Shellscripts meant to be linked into the $HOME/bin directory.
 
-## Add 'acentos y tildes' from the spanish language
+## Add 'acentos y tildes' from the spanish language on Debian
+
+Note: I currently use Arch Linux & not Debian.
 This can by achieve by running:
 
 ```
@@ -38,6 +45,7 @@ dpkg-reconfigure keyboard-configuration
 In this console menu I choose US English keyboard. Thats the same English Qwerty Keyboard configuration, but once set it makes it really easy to input tildes.
 
 ## Issues
+
 * A Clipboard manager program like Parcellite, its needed to improve functionality.
 * My current hardware has Bluetooth compability problems, & Bluetooth devices must be regularly removed and re-paired as new devices. Your hardware may be different.
 * I use firefox instead of the firefox-esr version available by default on Debian Stable. This recent version is named Firefox Stable and its available for many Unix-like systems through Mozilla's website. If you wish to use firefox-esr, rename all firefox references on i3 confile file and aliases with firefox-esr.
@@ -45,7 +53,9 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
 
 ## Change Log
-* 2022-12-24 04:24 pm AST. Swith Linux Distribution from Debian Linux 11 to Arch Linux. Debian Stable Bullseye & my current hardware are not as compatible as previous hardware. Arch Linux its an alternative which allows me to work in other projects while I test improvements on Debian Stable. I will continue to test this setup on Debian Stable & Sid.
+
+* 2022-12-25 09:54 am AST. Add more references & links related to window managers, file manager & polkit auth agents setup from the Arch Linux Wiki.
+* 2022-12-24 04:24 pm AST. Switch Linux Distribution from Debian Linux 11 to Arch Linux. Debian Stable Bullseye & my current hardware are not as compatible as previous hardware. Arch Linux its an alternative which allows me to work in other projects while I test improvements on Debian Stable. I will continue to test this setup on Debian Stable & Sid.
 * 2022-12-20 10:09 am AST. Remove firefox-esr references from i3 config file. I now download and install Firefox from Mozilla's website. This is a tar file which must be installes into the /opt or you home directory. Once properly configured, you may run it with i3-keybindings with the name 'firefox'.
 * 2022-12-16 11:24 am AST. Add script to change volume and visualize change with [dunst](https://wiki.archlinux.org/title/Dunst) notifications.
 * 2022-12-14 07:25 am AST. Rename packages list files. Edit & improve README file.
@@ -64,4 +74,8 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * 2021-07-06 09:27 pm AST. Add Alt+Tab keybinding to switch between workspaces.
 
 ## References & Links
-* [Dunst on Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.
+
+* [Dunst - Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.
+* [Window Manager - Arch Wiki](https://wiki.archlinux.org/title/window_manager)
+* [File Manager Functionality - Arch Wiki](https://wiki.archlinux.org/title/File_manager_functionality)
+* [Polkit - Arch Wiki](https://wiki.archlinux.org/title/Polkit)

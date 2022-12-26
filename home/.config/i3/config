@@ -163,12 +163,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #set $Locker i3lock -c 000000 -i ~/.local/pictures/locked_black.png && sleep 1
 set $Locker i3lock -c FFFFFF && sleep 1
 # Shutdown, Restart and Lock
-set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
+#set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (Shift+e) logout, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym Shift+e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    #bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    #bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym Shift+r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
     # back to normal: Enter or Escape
@@ -243,12 +244,14 @@ bar {
 
 # STARTUP PROGRAMS
 # Run programs at startup
+# start lxsession as polkit graphical agent
+exec --no-startup-id /usr/bin/lxpolkit
 # background screen color gray
 exec hsetroot -solid "#000000"
 # blueman Applet
 #exec --no-startup-id blueman-tray
 # dunst
-exec --no-startup-id dunst
+exec --no-startup-id /usr/bin/dunst
 # NetworkManager applet
 #exec --no-startup-id nm-applet
 # parcellite clipboard manager

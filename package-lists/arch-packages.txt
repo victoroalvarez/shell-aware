@@ -1,6 +1,9 @@
+
 arandr
+aria2
 conky
 conky-manager
+curl
 dex
 dmenu
 dunst
@@ -16,6 +19,7 @@ iwd
 keepass
 keepass
 lxappearance
+lxsession
 man-db
 man-pages
 mpv
@@ -26,6 +30,7 @@ pasystray
 pavucontrol
 pcmanfm
 picom
+polkit
 pulseaudio
 pulseaudio-alsa
 ranger
@@ -35,8 +40,10 @@ stow
 sudo
 terminator
 ttf-dejavu
+ufw
 unclutter
 vim
+wget
 wget
 wireless_tools
 xclip

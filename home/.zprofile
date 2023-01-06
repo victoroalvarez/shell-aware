@@ -1,0 +1,5 @@
+#
+# ~/.zprofile
+#
+
+[[ -f ~/.zshrc ]] && . ~/.zshrc

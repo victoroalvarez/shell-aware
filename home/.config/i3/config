@@ -258,7 +258,10 @@ exec --no-startup-id /usr/bin/dunst
 #exec --no-startup-id nm-applet
 # parcellite clipboard manager
 exec --no-startup-id parcellite
-#exec --no-startup-id pcmanfm -d
+# run pcmanfm as Daemon
+exec --no-startup-id pcmanfm -d
+# fix firefox slow start
+exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 # run pulseaudio
 #exec --no-startup-id pulseaudio --start
 # pasystray for PulseAudio

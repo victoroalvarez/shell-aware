@@ -53,7 +53,8 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
 
 ## Change Log
-
+* 2023-01011 11:52 am AST. Add motd alias. It displays a message located at the file '/etc/motd'.
+* 2023-01-09 07:53 am AST. Add gitignore file. Add symlink to private aliases file.
 * 2023-01-04 09:19 pm AST. Add zsh & user configuration files.
 * 2022-12-25 09:54 am AST. Add more references & links related to window managers, file manager & polkit auth agents setup from the Arch Linux Wiki.
 * 2022-12-24 04:24 pm AST. Switch Linux Distribution from Debian Linux 11 to Arch Linux. Debian Stable Bullseye & my current hardware are not as compatible as previous hardware. Arch Linux its an alternative which allows me to work in other projects while I test improvements on Debian Stable. I will continue to test this setup on Debian Stable & Sid.
@@ -75,7 +76,6 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * 2021-07-06 09:27 pm AST. Add Alt+Tab keybinding to switch between workspaces.
 
 ## References & Links
-
 * [Dunst - Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.
 * [Window Manager - Arch Wiki](https://wiki.archlinux.org/title/window_manager)
 * [File Manager Functionality - Arch Wiki](https://wiki.archlinux.org/title/File_manager_functionality)

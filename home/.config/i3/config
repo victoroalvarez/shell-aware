@@ -1,6 +1,6 @@
 # i3wm Configuration
 # Victor O Alvarez Torres
-# 2021, 2022
+# 2021, 2022, 2023
 # NOTES:
 # * All CAPS denote a section of the document
 	# Color Scheme:
@@ -246,12 +246,12 @@ bar {
 
 # STARTUP PROGRAMS
 # Run programs at startup
-# start lxsession as polkit graphical agent
-exec --no-startup-id /usr/bin/lxpolkit
-# background screen color gray
-exec hsetroot -solid "#000000"
 # blueman Applet
 #exec --no-startup-id blueman-tray
+# background screen color gray
+exec hsetroot -solid "#000000"
+# start lxsession as polkit graphical agent
+exec --no-startup-id /usr/bin/lxpolkit
 # dunst
 exec --no-startup-id /usr/bin/dunst
 # NetworkManager applet
@@ -269,7 +269,9 @@ exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_B
 # picom in the background
 #exec --no-startup-id picom -b -c
 # syncthing daemon
-#exec --no-startup-id syncthing -no-browser
+exec --no-startup-id syncthing -no-browser
+# start terminator at boot
+exec --no-startup-id terminator
 
 # KEYBINDS
 # Run programs and scripts by keypress
@@ -288,7 +290,7 @@ bindsym $mod+p exec arandr
 # calendar
 bindsym $mod+c exec gnome-calendar
 # Chrome Browser
-#bindsym $mod+Shift+o exec google-chrome-stable
+bindsym $mod+Shift+o exec google-chrome-stable
 # FireFox Browser
 bindsym $mod+o exec firefox
 # Firefox's private session

@@ -1,4 +1,3 @@
-
 arandr
 aria2
 conky
@@ -47,5 +46,6 @@ wget
 wget
 wireless_tools
 xclip
+xdg-user-dirs
 xorg-xinit
 xss-lock

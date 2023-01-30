@@ -295,6 +295,7 @@ bindsym $mod+Shift+o exec google-chrome-stable
 bindsym $mod+o exec firefox
 # Firefox's private session
 bindsym $mod+i exec firefox --private-window
+bindsym $mod+Shift+i exec flatpak run com.github.micahflee.torbrowser-launcher
 # screenshots
 #bindsym $mod+Print exec gnome-screenshot -i
 #bindsym Print exec gnome-screenshot

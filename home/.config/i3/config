@@ -42,26 +42,34 @@ floating_maximum_size 1024 x 640
 # GUI CONTROL
 # mod Key. Uses Super Key
 set $mod Mod4
+
 # start a Terminal
+bindsym $mod+Return exec gnome-terminal
 #bindsym $mod+Return exec xfce4-terminal
-#bindsym $mod+Shift+Return exec gnome-terminal
-bindsym $mod+Return exec terminator
+#bindsym $mod+Return exec terminator
+
 # start file manager
 bindsym $mod+backslash exec pcmanfm
-bindsym $mod+Shift+backslash exec terminator -e ranger
-bindsym $mod+slash exec nautilus
+bindsym $mod+slash exec gnome-terminal -e ranger
+bindsym $mod+Shift+backslash exec nautilus
+
 # switch to next workspace. Left to right
 bindsym Mod1+Tab workspace next
+
 # run dmenu (program launcher)
 # list all programs
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'DejaVu Sans Mono:regular:pixelsize=20'
+
 # list GUI programs
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono:regular:pixelsize=20'"
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
 # Mouse+$mod used to drag around floating windows
 floating_modifier $mod
+
 # use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -70,21 +78,27 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 #bindsym XF86AudioLowerVolume exec ~/bin/changeVolume 2dB- unmute
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
 # set volume to 40%
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
+
 # set volume to 25%
 bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
+
 # change volume with script
 #bindsym $mod+Shift+plus exec changeVolume 2dB+ unmute && $refresh_i3status
 #bindsym $mod+Shift+underscore exec changeVolume 2dB- unmute
 #bindsym XF86AudioRaiseVolume exec ~/bin/changeVolume 2dB+ unmute
+
 # kill focused window
 bindsym $mod+Shift+q kill
+
 # change focus
 #bindsym $mod+j focus left
 #bindsym $mod+k focus down
 #bindsym $mod+l focus up
 #bindsym $mod+semicolon focus right
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -247,7 +261,8 @@ bar {
 # STARTUP PROGRAMS
 # Run programs at startup
 # blueman Applet
-#exec --no-startup-id blueman-tray
+exec --no-startup-id blueman-tray
+exec --no-startup-id blueman-applet
 # background screen color gray
 exec hsetroot -solid "#000000"
 # start lxsession as polkit graphical agent
@@ -255,23 +270,23 @@ exec --no-startup-id /usr/bin/lxpolkit
 # dunst
 exec --no-startup-id /usr/bin/dunst
 # NetworkManager applet
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 # parcellite clipboard manager
 exec --no-startup-id parcellite
 # run pcmanfm as Daemon
-exec --no-startup-id pcmanfm -d
+#exec --no-startup-id pcmanfm -d
 # fix firefox slow start
-exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
+#exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 # run pulseaudio
-#exec --no-startup-id pulseaudio --start
+exec --no-startup-id pulseaudio --start
 # pasystray for PulseAudio
-#exec --no-startup-id pasystray
+exec --no-startup-id pasystray
 # picom in the background
 #exec --no-startup-id picom -b -c
 # syncthing daemon
-exec --no-startup-id syncthing -no-browser
+#exec --no-startup-id syncthing -no-browser
 # start terminator at boot
-exec --no-startup-id terminator
+#exec --no-startup-id terminator
 
 # KEYBINDS
 # Run programs and scripts by keypress
@@ -295,7 +310,9 @@ bindsym $mod+Shift+o exec google-chrome-stable
 bindsym $mod+o exec firefox
 # Firefox's private session
 bindsym $mod+i exec firefox --private-window
-bindsym $mod+Shift+i exec flatpak run com.github.micahflee.torbrowser-launcher
+#bindsym $mod+Shift+i exec flatpak run com.github.micahflee.torbrowser-launcher
+bindsym $mod+Shift+i exec google-chrome-stable --incognito
+
 # screenshots
 #bindsym $mod+Print exec gnome-screenshot -i
 #bindsym Print exec gnome-screenshot

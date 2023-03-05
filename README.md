@@ -48,11 +48,11 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 
 * A Clipboard manager program like Parcellite, its needed to improve functionality.
 * Audio drivers & alsa should be configured properly for laptops. These configuration depends on cpu and device manufacturer. I use an HP laptop with an Intel CPU and Intel audio.
+* Capslock can be swaped with the CTRL key with this command runned as user. localectl set-x11-keymap "" "" "" "ctrl:swapcaps". All modifications can be seen at /usr/share/X11/xkb/rules/base.lst.
 * Fedora's @i3 package group includes lightdm by default.
 * I use firefox instead of the firefox-esr version available by default on Debian Stable. This recent version is named Firefox Stable and its available for many Unix-like systems through Mozilla's website. If you wish to use firefox-esr, rename all firefox references on i3 confile file and aliases with firefox-esr.
 * My current hardware has Bluetooth compability problems, & Bluetooth devices must be regularly removed and re-paired as new devices. Your hardware may be different.
 * Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
-* Capslock can be swaped with the CTRL key with this command runned as user. localectl set-x11-keymap "" "" "" "ctrl:swapcaps". All modifications can be seen at /usr/share/X11/xkb/rules/base.lst.
 
 ## Change Log
 * 2023-010-11 11:52 am AST. Add motd alias. It displays a message located at the file '/etc/motd'.

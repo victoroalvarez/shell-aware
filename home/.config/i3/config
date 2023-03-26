@@ -21,37 +21,43 @@
         #BLACK  #111111
         #GRAY   #AAAAAA
         #SILVER #DDDDDD
+
 # Victor's i3 CONFIG FILE
 # See https://i3wm.org/docs/userguide.html for a complete reference
+
+#INCLUDES
+# include keybinds, startup programs & configurations
+include $HOME/.config/i3/startup-programs.conf
+include $HOME/.config/i3/keybinds.conf
+include $HOME/.config/i3/audio-control.conf
 
 # APPEARANCE: FONTS, COLORS & BORDER
 # focused window Colors
 client.focused #0074D9 #0074D9 #FFFFFF 
+
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
 font pango:monospace 8
+
 # Start XDG autostart .desktop files using dex.
 exec --no-startup-id dex --autostart --environment i3
+
 # window Border. 1 pixel border
 for_window [class=".*"] border pixel 1
+
 # for_window [class=".*"] border pixel 0
 hide_edge_borders smart
+
 # floating windows size
 floating_minimum_size 75 x 50
 floating_maximum_size 1024 x 640
 
 # GUI CONTROL
+# set mod key & default keybinds
 # mod Key. Uses Super Key
 set $mod Mod4
 
 # start a Terminal
-#bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Return exec xfce4-terminal
-#bindsym $mod+Return exec terminator
-
-# start file manager
-bindsym $mod+backslash exec pcmanfm
-bindsym $mod+slash exec gnome-terminal -e ranger
-bindsym $mod+Shift+backslash exec nautilus
 
 # switch to next workspace. Left to right
 bindsym Mod1+Tab workspace next
@@ -70,26 +76,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # Mouse+$mod used to drag around floating windows
 floating_modifier $mod
 
-# use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-#bindsym XF86AudioRaiseVolume exec ~/bin/changeVolume 2dB+ unmute
-#bindsym XF86AudioLowerVolume exec ~/bin/changeVolume 2dB- unmute
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# set volume to 40%
-bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
-
-# set volume to 25%
-bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
-
-# change volume with script
-#bindsym $mod+Shift+plus exec changeVolume 2dB+ unmute && $refresh_i3status
-#bindsym $mod+Shift+underscore exec changeVolume 2dB- unmute
-#bindsym XF86AudioRaiseVolume exec ~/bin/changeVolume 2dB+ unmute
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -104,34 +90,45 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
 # split in horizontal orientation
 bindsym $mod+h split h
+
 # split in vertical orientation
 bindsym $mod+v split v
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
 # focus the parent container
 bindsym $mod+a focus parent
+
 # focus the child container
 #bindsym $mod+d focus child
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -144,6 +141,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -155,6 +153,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -166,13 +165,17 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-# key combinations for Lock, Shutdown and Restart. Press mod+Pause for menu. Press mod+BackSpace for lock only
+
+# Key combinations for Lock, Shutdown and Restart. Press mod+Pause for menu. Press mod+BackSpace for lock only
 # lock
 #set $Locker i3lock -c 000000 -i ~/.local/pictures/locked_black.png && sleep 1
 set $Locker i3lock -c FFFFFF && sleep 1
@@ -190,12 +193,15 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 # keyboard bind for Shutdown, Restart and Lock
 #bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+Shift+BackSpace mode "$mode_system"
+
 # keyboard bind for Lock
 bindsym $mod+BackSpace exec --no-startup-id $Locker
 bindsym $mod+l exec --no-startup-id $Locker
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -217,22 +223,31 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+
 bindsym $mod+r mode "resize"
+
 # choose screen layout
-set $mode_display Config Monitor Resolution - Default (h), Dual-Arzopa (j), Single-Arzopa (o), Single-Arzopa 720p (p)
+set $mode_display Config Monitor Resolution - Default (h), Dual-Dell (d), Dual-Dell-Top (t), Dual-Arzopa (j), Single-Arzopa (o), Single-Arzopa 720p (p)
 mode "$mode_display" {
 	bindsym h exec --no-startup-id sh "$HOME/.screenlayout/home.sh", mode "default"
 	bindsym j exec --no-startup-id sh "$HOME/.screenlayout/equal-resolution-arzopa.sh", mode "default"
 	bindsym o exec --no-startup-id sh "$HOME/.screenlayout/arzopa-only-1080p.sh", mode "default"
 	bindsym p exec --no-startup-id sh "$HOME/.screenlayout/arzopa-only-720p.sh", mode "default"
+	bindsym d exec --no-startup-id sh "$HOME/.screenlayout/dell-dual.sh", mode "default"
+	bindsym t exec --no-startup-id sh "$HOME/.screenlayout/dell-dual-top.sh", mode "default"
+
 	# back to normal: Enter or Escape
 	bindsym Return mode "default"
 
 	bindsym Escape mode "default"
 }
+
 bindsym $mod+x mode "$mode_display"
-# make gnome-calendar a floating window
+
+# make gnome-calendar and terminator floating windows
 for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
+for_window [class="Terminator" instance="terminator"] floating enable
+
 # i3bar
 # start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -257,63 +272,3 @@ bar {
 	# 12px or 16px size
 	font pango:monospace 14px
 }
-
-# STARTUP PROGRAMS
-# Run programs at startup
-# blueman Applet
-exec --no-startup-id blueman-tray
-exec --no-startup-id blueman-applet
-# background screen color gray
-exec hsetroot -solid "#000000"
-# start lxsession as polkit graphical agent
-exec --no-startup-id /usr/bin/lxpolkit
-# dunst
-exec --no-startup-id /usr/bin/dunst
-# NetworkManager applet
-exec --no-startup-id nm-applet
-# parcellite clipboard manager
-exec --no-startup-id parcellite
-# run pcmanfm as Daemon
-#exec --no-startup-id pcmanfm -d
-# fix firefox slow start
-#exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
-# run pulseaudio
-exec --no-startup-id pulseaudio --start
-# pasystray for PulseAudio
-exec --no-startup-id pasystray
-# picom in the background
-# exec --no-startup-id picom -b -c
-exec --no-startup-id picom
-# syncthing daemon
-#exec --no-startup-id syncthing -no-browser
-# start terminator at boot
-#exec --no-startup-id terminator
-
-# KEYBINDS
-# Run programs and scripts by keypress
-# screen brigthness
-# increase screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-# decrease brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-# set default monitor. 
-bindsym $mod+Shift+m exec ~/.screenlayout/laptop-single-screen.sh 
-bindsym $mod+Shift+p exec ~/.screenlayout/laptop-single-screen.sh 
-# run config script for monitor
-bindsym $mod+Shift+n exec ~/.screenlayout/arzopa-second-screen.sh
-# arandr for screen configuration
-bindsym $mod+p exec arandr
-# calendar
-bindsym $mod+c exec gnome-calendar
-# Chrome Browser
-bindsym $mod+Shift+o exec google-chrome-stable
-# FireFox Browser
-bindsym $mod+o exec firefox
-# Firefox's private session
-bindsym $mod+i exec firefox --private-window
-#bindsym $mod+Shift+i exec flatpak run com.github.micahflee.torbrowser-launcher
-bindsym $mod+Shift+i exec google-chrome-stable --incognito
-
-# screenshots
-#bindsym $mod+Print exec gnome-screenshot -i
-#bindsym Print exec gnome-screenshot

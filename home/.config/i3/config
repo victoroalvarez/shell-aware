@@ -30,6 +30,8 @@
 include $HOME/.config/i3/startup-programs.conf
 include $HOME/.config/i3/keybinds.conf
 include $HOME/.config/i3/audio-control.conf
+include $HOME/.config/i3/i3bar.conf
+include $HOME/.config/i3/screen-layout.conf
 
 # APPEARANCE: FONTS, COLORS & BORDER
 # focused window Colors
@@ -44,6 +46,12 @@ exec --no-startup-id dex --autostart --environment i3
 # window Border. 1 pixel border
 for_window [class=".*"] border pixel 1
 
+# normal borders
+#for_window [class=".*"] border normal
+
+# window title alignment
+title_align center
+
 # for_window [class=".*"] border pixel 0
 hide_edge_borders smart
 
@@ -53,21 +61,25 @@ floating_maximum_size 1024 x 640
 
 # GUI CONTROL
 # set mod key & default keybinds
-# mod Key. Uses Super Key
+# mod Key. Set Super Key as mod key
 set $mod Mod4
 
 # start a Terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec terminator
+#bindsym $mod+Return exec xfce4-terminal
 
 # switch to next workspace. Left to right
 bindsym Mod1+Tab workspace next
+bindsym Mod4+Tab workspace next
 
 # run dmenu (program launcher)
 # list all programs
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'DejaVu Sans Mono:regular:pixelsize=20'
-
 # list GUI programs
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono:regular:pixelsize=20'"
+#bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono:regular:pixelsize=20'"
+
+# run rofi (program launcher)
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -140,7 +152,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+#set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -152,7 +164,7 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+#bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -164,7 +176,7 @@ bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+#bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -226,49 +238,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# choose screen layout
-set $mode_display Config Monitor Resolution - Default (h), Dual-Dell (d), Dual-Dell-Top (t), Dual-Arzopa (j), Single-Arzopa (o), Single-Arzopa 720p (p)
-mode "$mode_display" {
-	bindsym h exec --no-startup-id sh "$HOME/.screenlayout/home.sh", mode "default"
-	bindsym j exec --no-startup-id sh "$HOME/.screenlayout/equal-resolution-arzopa.sh", mode "default"
-	bindsym o exec --no-startup-id sh "$HOME/.screenlayout/arzopa-only-1080p.sh", mode "default"
-	bindsym p exec --no-startup-id sh "$HOME/.screenlayout/arzopa-only-720p.sh", mode "default"
-	bindsym d exec --no-startup-id sh "$HOME/.screenlayout/dell-dual.sh", mode "default"
-	bindsym t exec --no-startup-id sh "$HOME/.screenlayout/dell-dual-top.sh", mode "default"
-
-	# back to normal: Enter or Escape
-	bindsym Return mode "default"
-
-	bindsym Escape mode "default"
-}
-
-bindsym $mod+x mode "$mode_display"
-
 # make gnome-calendar and terminator floating windows
 for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
-for_window [class="Terminator" instance="terminator"] floating enable
+#for_window [class="Terminator" instance="terminator"] floating enable
 
-# i3bar
-# start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# use "mode hide" & "hidden_state" to hide i3bar
-bar {
-        #mode hide
-	#hidden_state hide
-	position bottom
-        status_command i3status
-        colors {
-		statusline	#FFFFFF
-		separator	#AAAAAA
-		background	#000000
-
-		#                  border  bckgrnd text
-		focused_workspace  #AAAAAA #0074D9 #FFFFFF
-		active_workspace   #AAAAAA #AAAAAA #FFFFFF
-		inactive_workspace #AAAAAA #001f3f #DDDDDD
-		urgent_workspace   #AAAAAA #FF4136 #FFFFFF
-	}
-	tray_output primary
-	# 12px or 16px size
-	font pango:monospace 14px
-}

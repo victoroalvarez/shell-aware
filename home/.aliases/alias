@@ -91,7 +91,7 @@ alias upgrade='~/bin/fedora-upgrade-script.sh'
 alias visualdisk='flatpak run org.gnome.baobab'
 alias workspace='cd $HOME/workspace'
 alias youtubearchive='youtube-dl --embed-chapters --xattrs --embed-metadata --write-subs'
-alias youtubeaudio="youtube-dl --external-downloader aria2c -f 'bestaudio[ext=m4a]'"
+alias youtubeaudio="yt-dlp --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=m4a]'"
 alias youtubevideo="youtube-dl --external-downloader aria2c --all-subs --add-metadata --embed-metadata -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias youtube="yt-dlp --embed-metadata -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias zipstore='zip -Z store -r'

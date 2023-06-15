@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/voa/.config'
 let g:netrw_dirhist_3='/home/voa/.config/mpv'
 let g:netrw_dirhist_2='/home/voa/.config/pulse'
 let g:netrw_dirhist_1='/home/voa/.vim'

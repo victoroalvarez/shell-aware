@@ -64,10 +64,6 @@ floating_maximum_size 1024 x 640
 # mod Key. Set Super Key as mod key
 set $mod Mod4
 
-# start a Terminal
-bindsym $mod+Return exec terminator
-#bindsym $mod+Return exec xfce4-terminal
-
 # switch to next workspace. Left to right
 bindsym Mod1+Tab workspace next
 bindsym Mod4+Tab workspace next

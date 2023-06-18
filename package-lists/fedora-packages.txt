@@ -1,5 +1,4 @@
 alsamixergui
-anki
 arandr
 aria2
 attr
@@ -60,3 +59,5 @@ xfburn
 xfce4-terminal
 xfsprogs
 xrandr
+pipewire
+pipewire-pulseaudio

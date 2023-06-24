@@ -1,6 +1,6 @@
-# Victor's dotfiles
+# Shell Aware
 
-These are a collection of dotfiles & i3wm Mouse-less Development Environment setup for Arch Linux.  These files are managed with GNU Stow. These files work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
+These are a collection of dotfiles & i3wm Mouse-less Development Environment setup for Fedora Linux.  These files are managed with GNU Stow. They  work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
 ## How are these files managed?
 

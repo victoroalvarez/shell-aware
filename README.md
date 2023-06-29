@@ -2,6 +2,37 @@
 
 These are a collection of dotfiles & i3wm Mouse-less Development Environment setup for Fedora Linux.  These files are managed with GNU Stow. They  work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
+## Directory Tree
+.
+│   ├── .config
+│   │   ├── conky
+│   │   ├── dunst
+│   │   ├── i3
+│   │   ├── i3status
+│   │   ├── nvim
+│   │   ├── terminator
+│   │   └── xfce4
+│   │       ├── desktop
+│   │       ├── panel
+│   │       │   ├── launcher-17
+│   │       │   ├── launcher-18
+│   │       │   ├── launcher-19
+│   │       │   └── launcher-20
+│   │       ├── terminal
+│   │       └── xfconf
+│   │           └── xfce-perchannel-xml
+│   ├── .local
+│   │   └── pictures
+│   ├── .notes
+│   ├── .screenlayout
+│   ├── .scripts
+│   └── .vim
+├── package-lists
+├── root-files
+├── screenshots
+└── scripts
+    └── bash
+
 ## How are these files managed?
 
 To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.

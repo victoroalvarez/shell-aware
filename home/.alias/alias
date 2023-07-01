@@ -15,7 +15,7 @@ alias disablewifi='nmcli radio wifi off'
 alias double-ping='ping -c 10'
 alias download='aria2c -j 3 -c'
 alias downloadonly='sudo pacman -Syw' # download all Arch packages
-alias editalias="vim ~/.aliases/alias"
+alias editalias="vim ~/.alias/alias"
 alias editfstab="sudo vim /etc/fstab"
 alias editi3status='vim ~/.config/i3status/config' # Edit i3status config
 alias editi3='vim ~/.config/i3/config' # edit i3wm's configuration
@@ -71,9 +71,9 @@ alias showdiskid="ls -al /dev/disk/by-uuid/"
 alias shutdownlater='sudo shutdown +30'
 alias shutdownstilllater='sudo shutdown +60'
 alias simpleserver='python -m http.server'
-alias sortalias='sort -o ~/.aliases/alias ~/.aliases/alias'
+alias sortalias='sort -o ~/.alias/alias ~/.alias/alias'
 alias sortinplace='sort -o'
-alias sourcealias='source ~/.aliases/alias'
+alias sourcealias='source ~/.alias/alias'
 alias space="df -h |grep 'Filesystem\|nvme0n1p3'"
 alias sqllogin='mysql -u root -p'
 alias start='startx ~/.xinitrc'
@@ -95,5 +95,5 @@ alias youtubearchive="youtube-dl --embed-chapters --xattrs --embed-metadata --wr
 alias youtubeaudioarchive="youtube-dl --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=webm]'"
 alias youtubeaudio="youtube-dl --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=m4a]'"
 alias youtubevideo="youtube-dl --external-downloader aria2c -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
-alias youtube="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+alias youtube="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias zipstore='zip -Z store -r'

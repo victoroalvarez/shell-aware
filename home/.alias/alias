@@ -97,3 +97,5 @@ alias youtubeaudio="youtube-dl --embed-metadata --external-downloader aria2c -f 
 alias youtubevideo="youtube-dl --external-downloader aria2c -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias youtube="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias zipstore='zip -Z store -r'
+alias editkeybinds='vim .config/i3/keybinds.conf'
+alias editstartupprograms='vim .config/i3/startup-programs.conf'

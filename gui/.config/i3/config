@@ -35,6 +35,7 @@ include $HOME/.config/i3/screen-layout.conf
 
 # APPEARANCE: FONTS, COLORS & BORDER
 # focused window Colors
+#client.focused #B10DC9 #B10DC9 #FFFFFF
 client.focused #0074D9 #0074D9 #FFFFFF 
 
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
@@ -47,7 +48,7 @@ exec --no-startup-id dex --autostart --environment i3
 for_window [class=".*"] border pixel 1
 
 # normal borders
-#for_window [class=".*"] border normal
+for_window [class=".*"] border normal
 
 # window title alignment
 title_align center

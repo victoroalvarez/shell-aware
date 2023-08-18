@@ -1,10 +1,12 @@
 alias addall='git add .'
 alias an='archnews'
+alias aptinstall='sudo apt install'
 alias aptlist='apt list --upgradable -a'
 alias aptsearch='apt-cache search'
 alias aptupdate='sudo apt update'
 alias aptupgrade='sudo apt full-upgrade'
 alias archnews='lynx https://archlinux.org/news/'
+alias aria2c='aria2c -c -x 3'
 alias c='clear'
 alias cddotfiles='cd ~/projects/dotfiles'
 alias cdwd='cd /mnt/wdssd'
@@ -19,6 +21,8 @@ alias editalias="vim ~/.alias/alias"
 alias editfstab="sudo vim /etc/fstab"
 alias editi3status='vim ~/.config/i3status/config' # Edit i3status config
 alias editi3='vim ~/.config/i3/config' # edit i3wm's configuration
+alias editkeybinds='vim .config/i3/keybinds.conf'
+alias editstartupprograms='vim .config/i3/startup-programs.conf'
 alias enablewifi='nmcli radio wifi on'
 alias findfile='sudo find / -name'
 alias generatekey='echo "TIP: Name the key id_aneasyname."; ssh-keygen' # generate a ssh key
@@ -56,6 +60,7 @@ alias myt='youtube-dl --external-downloader aria2c --all-subs --add-metadata -f 
 alias myupgrade='sudo apt update; sudo apt full-upgrade; flatpak update'
 alias myvim='vim $HOME/.vimrc'
 alias mywallpaper='feh --bg-tile /home/voa/Pictures/patterns/cubes.xpm.gif'
+alias nocaps='setxkbmap -layout us -option ctrl:nocaps'
 alias pacman='pacman --color=auto'
 alias phpserver='php -S localhost:8080'
 alias pminstall='sudo pacman -S'
@@ -97,5 +102,3 @@ alias youtubeaudio="youtube-dl --embed-metadata --external-downloader aria2c -f 
 alias youtubevideo="youtube-dl --external-downloader aria2c -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias youtube="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias zipstore='zip -Z store -r'
-alias editkeybinds='vim .config/i3/keybinds.conf'
-alias editstartupprograms='vim .config/i3/startup-programs.conf'

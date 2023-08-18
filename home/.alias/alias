@@ -39,6 +39,7 @@ alias installaur='sudo pacman -U' # use pacman to install an individual package 
 alias jetbrains='/opt/jetbrains/jetbrains-toolbox'
 alias la='ls -AX' # show all directories including hidden ones and sort by extension
 #alias linssid='swallow sudo linssid'
+alias listprocesses='ps -e'
 alias list-wifi='nmcli dev wifi'
 alias livetraffic='vnstat --live'
 alias ll='ls -lAX' # show all directories and their permissions

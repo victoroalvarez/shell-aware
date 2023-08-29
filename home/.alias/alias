@@ -1,4 +1,6 @@
 alias addall='git add .'
+alias v='volume'
+alias volume='bash $HOME/bin/bash/showvolume.sh'
 alias an='archnews'
 alias aptinstall='sudo apt install'
 alias aptlist='apt list --upgradable -a'

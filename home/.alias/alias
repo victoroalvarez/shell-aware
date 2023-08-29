@@ -1,4 +1,5 @@
 alias addall='git add .'
+alias editnvim='nvim ~/.config/nvim/init.vim'
 alias v='volume'
 alias volume='bash $HOME/bin/bash/showvolume.sh'
 alias an='archnews'

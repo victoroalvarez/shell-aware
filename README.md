@@ -1,10 +1,15 @@
 # Shell Aware
+These are a collection of dotfiles & Mouse-less Development Environment setup for GNU/Linux.  These files are managed with GNU Stow. They work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
-These are a collection of dotfiles & i3wm Mouse-less Development Environment setup for Fedora Linux.  These files are managed with GNU Stow. They  work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
+## What Linux distros do you use?
+I mostly use Debian, but I also choose Fedora or Arch for newer hardware. These configurations should work with minimal modification on almost any contemporary Linux distribution.
 
 ## How are these files managed?
 
 To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.
+I first create directories where the files will be stored.
+Then I symlink the files with Stow.
+
 For example, after a new OS installation, to symlink files located on the repository's home/ directory to the $HOME/ directory of my machine, I go to the root of this repository and type:
 
 ```bash
@@ -12,6 +17,8 @@ stow --target=$HOME home
 ```
 
 This command takes everything inside home/ directory and symlinks it to their corresponding locations on the my user's $HOME directory.
+
+I repeat this process with the gui and scripts directories.
 
 ## Conventions
 
@@ -55,7 +62,8 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
 
 ## Change Log
-* 2023-010-11 11:52 am AST. Add motd alias. It displays a message located at the file '/etc/motd'.
+* 2023-08-29 10:15 pm AST. Test Sway as a replacement for i3wm.
+* 2023-10-11 11:52 am AST. Add motd alias. It displays a message located at the file '/etc/motd'.
 * 2023-01-09 07:53 am AST. Add gitignore file. Add symlink to private aliases file.
 * 2023-01-04 09:19 pm AST. Add zsh & user configuration files.
 * 2022-12-25 09:54 am AST. Add more references & links related to window managers, file manager & polkit auth agents setup from the Arch Linux Wiki.

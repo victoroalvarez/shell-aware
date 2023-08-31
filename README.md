@@ -5,7 +5,6 @@ These are a collection of dotfiles & Mouse-less Development Environment setup fo
 I mostly use Debian, but I also choose Fedora or Arch for newer hardware. These configurations should work with minimal modification on almost any contemporary Linux distribution.
 
 ## How are these files managed?
-
 To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.
 I first create directories where the files will be stored.
 Then I symlink the files with Stow.
@@ -21,11 +20,9 @@ This command takes everything inside home/ directory and symlinks it to their co
 I repeat this process with the gui and scripts directories.
 
 ## Conventions
-
 * $HOME denotes the /home/myuser/ directory on a system.
 
 ## Install Packages List on Debian
-
 Note: I currently use Arch Linux instead of Debian.
 Theres a list of required packages within the packages list directory. These packages are installed on Debian with the following command.
 
@@ -34,14 +31,12 @@ xargs apt install -y < file-name.txt
 ```
 
 ## Directories
-
 * home - Contains dotfiles & configurations.
 * packages-lists - List of packages for required for Debian Linux & other Linux distributions.
 * screenshots - Screenshots of the desktop environment.
 * shellscripts - Shellscripts meant to be linked into the $HOME/bin directory.
 
 ## Add 'acentos y tildes' from the spanish language on Debian
-
 Note: I currently use Arch Linux & not Debian.
 This can by achieve by running:
 
@@ -52,7 +47,6 @@ dpkg-reconfigure keyboard-configuration
 In this console menu I choose US English keyboard. Thats the same English Qwerty Keyboard configuration, but once set it makes it really easy to input tildes.
 
 ## Issues & Notes
-
 * A Clipboard manager program like Parcellite, its needed to improve functionality.
 * Audio drivers & alsa should be configured properly for laptops. These configuration depends on cpu and device manufacturer. I use an HP laptop with an Intel CPU and Intel audio.
 * Capslock can be swaped with the CTRL key with this command runned as user. localectl set-x11-keymap "" "" "" "ctrl:swapcaps". All modifications can be seen at /usr/share/X11/xkb/rules/base.lst.
@@ -87,6 +81,6 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 
 ## References & Links
 * [Dunst - Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.
-* [Window Manager - Arch Wiki](https://wiki.archlinux.org/title/window_manager)
 * [File Manager Functionality - Arch Wiki](https://wiki.archlinux.org/title/File_manager_functionality)
 * [Polkit - Arch Wiki](https://wiki.archlinux.org/title/Polkit)
+* [Window Manager - Arch Wiki](https://wiki.archlinux.org/title/window_manager)

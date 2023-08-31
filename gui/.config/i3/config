@@ -3,35 +3,12 @@
 # 2021, 2022, 2023
 # NOTES:
 # * All CAPS denote a section of the document
-	# Color Scheme:
-        # https://clrs.cc/      # Example color pallete
-        #NAVY   #001f3f
-        #BLUE   #0074D9
-        #AQUA   #7FDBFF
-        #TEAL   #39CCCC
-        #OLIVE  #3D9970
-        #GREEN  #2ECC40
-        #LIME   #01FF70
-        #YELLOW #FFDC00
-        #ORANGE #FF851B
-        #RED    #FF4136
-        #MAROON #85144b
-        #FUCHSIA#F012BE
-        #PURPLE #B10DC9
-        #BLACK  #111111
-        #GRAY   #AAAAAA
-        #SILVER #DDDDDD
 
 # Victor's i3 CONFIG FILE
 # See https://i3wm.org/docs/userguide.html for a complete reference
 
-#INCLUDES
-# include keybinds, startup programs & configurations
-include $HOME/.config/i3/startup-programs.conf
-include $HOME/.config/i3/keybinds.conf
-include $HOME/.config/i3/audio-control.conf
-include $HOME/.config/i3/i3bar.conf
-include $HOME/.config/i3/screen-layout.conf
+# INCLUDES
+include ~/.config/i3/i3bar.conf
 
 # APPEARANCE: FONTS, COLORS & BORDER
 # focused window Colors
@@ -250,66 +227,41 @@ mode "$mode_display" {
 }
 
 bindsym $mod+x mode "$mode_display"
-# make gnome-calendar and terminator floating windows
+
+# make gnome-calendar
 for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
-#for_window [class="Terminator" instance="terminator"] floating enable
 
-# Keybinds
-# use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-#bindsym XF86AudioRaiseVolume exec ~/bin/changeVolume 2dB+ unmute
-#bindsym XF86AudioLowerVolume exec ~/bin/changeVolume 2dB- unmute
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-#bindsym $mod+0 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-# set volume to 40%
-bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
-# set volume to 25%
-bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
-# change volume with script
-#bindsym $mod+Shift+plus exec changeVolume 2dB+ unmute && $refresh_i3status
-#bindsym $mod+Shift+underscore exec changeVolume 2dB- unmute
-#bindsym XF86AudioRaiseVolume exec ~/bin/changeVolume 2dB+ unmute
-#bindsym $mod+backslash exec pcmanfm
-#bindsym $mod+Shift+slash exec showvolume.sh
 
+# KEYBINDINGS
+#bindsym $mod+Print exec gnome-screenshot -i
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym $mod+Return exec terminator
+bindsym $mod+Shift+Return exec terminator
+bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
+bindsym $mod+Shift+o exec flatpak run com.google.Chrome
+bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
+bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
 bindsym $mod+c exec gnome-calendar
 bindsym $mod+i exec firefox --private-window
 bindsym $mod+o exec firefox
 bindsym $mod+p exec arandr
-#bindsym $mod+Print exec gnome-screenshot -i
-bindsym $mod+Return exec terminator
-#bindsym $mod+Shift+backslash exec nautilus
-#bindsym $mod+Shift+i exec flatpak run com.github.micahflee.torbrowser-launcher
-#bindsym $mod+Shift+m exec ~/.screenlayout/laptop-single-screen.sh
-#bindsym $mod+Shift+i exec google-chrome-stable --incognito
-#bindsym $mod+Shift+n exec ~/.screenlayout/arzopa-second-screen.sh
-bindsym $mod+u exec brave-browser
-#bindsym $mod+Shift+o exec google-chrome-stable
-bindsym $mod+Shift+o exec flatpak run com.google.Chrome
-bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
-#bindsym $mod+Shift+p exec ~/.screenlayout/laptop-single-screen.sh
-bindsym $mod+Shift+Return exec terminator
 bindsym $mod+slash exec gnome-terminal -e ranger
-#bindsym 0 xbacklight 100
-#bindsym Print exec gnome-screenshot
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym $mod+u exec brave-browser
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
-# Startup Programs
+# STARTUP PROGRAMS
 # exec --no-startup-id picom -b -c
 #exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 #exec --no-startup-id gnome-polkit
 #exec --no-startup-id pasystray
-#exec --no-startup-id pcmanfm -d
 #exec --no-startup-id pulseaudio --start
-#exec --no-startup-id syncthing -no-browser
-#exec --no-startup-id terminator
-#exec hsetroot -solid "#000000"
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 exec --no-startup-id /usr/bin/lxpolkit
@@ -317,5 +269,6 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id blueman-tray
 exec --no-startup-id nm-applet
 exec --no-startup-id parcellite
+exec --no-startup-id pcmanfm -d
 exec --no-startup-id picom
 exec --no-startup-id xbindkeys

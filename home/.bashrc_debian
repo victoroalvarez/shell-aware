@@ -120,3 +120,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# set CapsLock as CTRL
+#setxkbmap -layout us -option ctrl:swapcaps
+
+export PATH=$PATH:$HOME/bin/bash

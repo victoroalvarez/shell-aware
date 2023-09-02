@@ -1,5 +1,5 @@
 # Shell Aware
-These are a collection of dotfiles & Mouse-less Development Environment setup for GNU/Linux.  These files are managed with GNU Stow. They work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
+These are a collection of dotfiles & Mouse-less Development Environment setup for GNU/Linux. These files are managed with GNU Stow. They work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
 ## What Linux distros do you use?
 I mostly use Debian, but I also choose Fedora or Arch for newer hardware. These configurations should work with minimal modification on almost any contemporary Linux distribution.
@@ -18,6 +18,9 @@ stow --target=$HOME home
 This command takes everything inside home/ directory and symlinks it to their corresponding locations on the my user's $HOME directory.
 
 I repeat this process with the gui and scripts directories.
+
+## Which shell do you use?
+I use Bash. I'm also looking into ZShell and TCSH.
 
 ## Conventions
 * $HOME denotes the /home/myuser/ directory on a system.

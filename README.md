@@ -60,6 +60,7 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
 
 ## Change Log
+* 2023-09-08 09:38 am AST. Add default Sway config file.
 * 2023-09-03 06:54 am AST. Refactor and reorganize i3 configuration and aliases.
 * 2023-08-29 10:15 pm AST. Test Sway as a replacement for i3wm.
 * 2023-10-11 11:52 am AST. Add motd alias. It displays a message located at the file '/etc/motd'.

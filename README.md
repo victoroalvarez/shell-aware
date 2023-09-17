@@ -1,5 +1,5 @@
 # Shell Aware
-These are a collection of dotfiles & Mouse-less Development Environment setup for GNU/Linux. These files are managed with GNU Stow. They work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
+These are a collection of dotfiles & a Mouse-less Development Environment setup for GNU/Linux. The Mouseless Development setup uses i3WM and Sway. These files are managed with GNU Stow. They work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
 ## What Linux distros do you use?
 I mostly use Debian, but I also choose Fedora or Arch for newer hardware. These configurations should work with minimal modification on almost any contemporary Linux distribution.
@@ -18,6 +18,13 @@ stow --target=$HOME src
 This command takes everything inside home/ directory and symlinks it to their corresponding locations on the my user's $HOME directory.
 
 I repeat this process with the gui and scripts directories.
+
+## How to install these setup?
+From the project's root directory, type into your shell:
+
+```bash
+stow --target=$HOME src
+```
 
 ## Which shell do you use?
 I use Bash. I'm also looking into ZShell and TCSH.

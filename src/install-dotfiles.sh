@@ -10,5 +10,4 @@ mkdir $HOME/builds
 touch $HOME/.zsh_history
 
 # symlink /home and /scripts directories to $HOME & $HOME/bin on the user directory
-stow --target=$HOME home
-stow --target=$HOME/bin scripts
+stow --target=$HOME ../src

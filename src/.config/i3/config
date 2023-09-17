@@ -243,8 +243,8 @@ bindsym $mod+Shift+o exec flatpak run com.google.Chrome
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status
 bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
 bindsym $mod+c exec gnome-calendar
-bindsym $mod+i exec firefox --private-window
-bindsym $mod+o exec firefox
+bindsym $mod+i exec firefox-esr --private-window
+bindsym $mod+o exec firefox-esr
 bindsym $mod+p exec arandr
 bindsym $mod+slash exec gnome-terminal -e ranger
 bindsym $mod+u exec brave-browser

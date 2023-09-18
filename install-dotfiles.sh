@@ -9,5 +9,5 @@ mkdir $HOME/builds
 # Create zsh files
 touch $HOME/.zsh_history
 
-# symlink /home and /scripts directories to $HOME & $HOME/bin on the user directory
-stow --target=$HOME ../src
+# Symlink directories to $HOME
+stow --target=$HOME src

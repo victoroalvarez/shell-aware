@@ -6,18 +6,15 @@ I mostly use Debian, but I also choose Fedora or Arch for newer hardware. These 
 
 ## How are these files managed?
 To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.
-I first create directories where the files will be stored.
-Then I symlink the files with Stow.
+I first create directories where the files will be stored. Then I symlink the files with Stow.
 
-For example, after a new OS installation, to symlink files located on the repository's home/ directory to the $HOME/ directory of my machine, I go to the root of this repository and type:
+For example, after a new OS installation, to symlink files located on the repository's src/ directory to the $HOME/ directory of my machine, I go to the root of this repository and type:
 
 ```bash
 stow --target=$HOME src
 ```
 
-This command takes everything inside home/ directory and symlinks it to their corresponding locations on the my user's $HOME directory.
-
-I repeat this process with the gui and scripts directories.
+This command takes everything inside src/ directory and symlinks it to their corresponding locations on the my user's $HOME directory.
 
 ## How to install these setup?
 From the project's root directory, type into your shell:
@@ -33,7 +30,6 @@ I use Bash. I'm also looking into ZShell and TCSH.
 * $HOME denotes the /home/myuser/ directory on a system.
 
 ## Install Packages List on Debian
-Note: I currently use Arch Linux instead of Debian.
 Theres a list of required packages within the packages list directory. These packages are installed on Debian with the following command.
 
 ```
@@ -41,14 +37,11 @@ xargs apt install -y < file-name.txt
 ```
 
 ## Directories
-* home - Contains dotfiles & configurations.
-* packages-lists - List of packages for required for Debian Linux & other Linux distributions.
-* screenshots - Screenshots of the desktop environment.
-* shellscripts - Shellscripts meant to be linked into the $HOME/bin directory.
+* src - Contains dotfiles & configurations.
+* docs - Contains documentation and pictures.
 
 ## Add 'acentos y tildes' from the spanish language on Debian
-Note: I currently use Arch Linux & not Debian.
-This can by achieve by running:
+This can be achieve by running:
 
 ```
 dpkg-reconfigure keyboard-configuration

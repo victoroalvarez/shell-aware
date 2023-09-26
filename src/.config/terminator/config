@@ -2,7 +2,6 @@
   borderless = True
   extra_styling = False
   inactive_color_offset = 1.0
-  putty_paste_style = True
 [keybindings]
 [profiles]
   [[default]]

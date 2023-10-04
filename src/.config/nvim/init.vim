@@ -1,6 +1,11 @@
 " hi Normal ctermbg=Black
 colorscheme ron
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> Nop>
+noremap <Up> <Nop>
 set autoindent
+set clipboard+=unnamedplus
 set clipboard+=unnamedplus
 set expandtab
 set noswapfile

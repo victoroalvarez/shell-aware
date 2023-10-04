@@ -88,7 +88,9 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * 2021-07-06 09:27 pm AST. Add Alt+Tab keybinding to switch between workspaces.
 
 ## References & Links
+* [256 Colors Cheat Sheet](https://www.ditig.com/256-colors-cheat-sheet)
 * [Dunst - Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.
 * [File Manager Functionality - Arch Wiki](https://wiki.archlinux.org/title/File_manager_functionality)
 * [Polkit - Arch Wiki](https://wiki.archlinux.org/title/Polkit)
+* [Terminal Sexy](https://terminal.sexy/)
 * [Window Manager - Arch Wiki](https://wiki.archlinux.org/title/window_manager)

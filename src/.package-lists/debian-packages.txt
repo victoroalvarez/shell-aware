@@ -90,3 +90,4 @@ xbacklight
 xclip
 xfce4-terminal
 xorg
+xsel

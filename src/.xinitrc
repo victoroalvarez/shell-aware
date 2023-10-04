@@ -1,6 +1,9 @@
 # ~/.xinitrc
+urxvtd -o -q -f
 
-[ -f ~/.Xresources ] && xrdb -merge -I $HOME ~/.Xresources
+#[ -f $HOME/.config/X11/.Xresources ] && xrdb -merge -I $HOME ~/.config/X11/.Xresources
+
+xrdb -merge ~/.Xresources
 
 # invoke global X session script
 #. /etc/X11/Xsession

@@ -237,7 +237,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym $mod+Return exec terminator
-bindsym $mod+Shift+Return exec terminator
+bindsym $mod+Shift+Return exec urxvt
 bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
 bindsym $mod+Shift+o exec flatpak run com.google.Chrome
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 40% && $refresh_i3status

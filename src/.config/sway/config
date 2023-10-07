@@ -8,7 +8,7 @@ include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
 
 # SPECIFIC APP LAYOUTS
-for_window [app_id="kitty"] floating enable, resize set 800 600
+for_window [app_id="kitty"] floating enable, resize set 960 540
 
 # APPEARANCE
 client.focused #0074D9 #0074D9 #FFFFFF
@@ -125,17 +125,22 @@ bindsym $mod+Shift+c reload
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-#bindsym $mod+Shift+o exec flatpak run com.google.Chrome
-#bindsym $mod+o exec firefox-esr
+# Lock Screen
+bindsym $mod+l exec $locker
+bindsym $mod+Shift+l exec $locker
+
+#bindsym $mod+Shift+u flatpak run com.google.Chrome
 #bindsym $mod+p exec arandr
 #bindsym $mod+u exec brave-browser
+#bindsym $mod+u exec firefox-esr
 bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
-bindsym $mod+Shift+u flatpak run com.google.Chrome
+bindsym $mod+Shift+o exec flatpak run com.google.Chrome
 bindsym $mod+backslash exec pcmanfm
 bindsym $mod+c exec gnome-calendar
 bindsym $mod+i exec firefox-esr --private-window
+bindsym $mod+o exec firefox-esr
 bindsym $mod+slash exec gnome-terminal -e ranger
-bindsym $mod+u exec firefox-esr
+bindsym $mod+u exec obsidian
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
@@ -147,10 +152,10 @@ bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@
 # Moving around:
 
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    #bindsym $mod+$left focus left
+    #bindsym $mod+$down focus down
+    #bindsym $mod+$up focus up
+    #bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -158,10 +163,10 @@ bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    #bindsym $mod+Shift+$left move left
+    #bindsym $mod+Shift+$down move down
+    #bindsym $mod+Shift+$up move up
+    #bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down

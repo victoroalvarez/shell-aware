@@ -7,6 +7,7 @@
   [[default]]
     icon_bell = False
     background_darkness = 0.8
+    background_type = transparent
     cursor_fg_color = "#000000"
     cursor_bg_color = "#ffffff"
     font = Monospace 12

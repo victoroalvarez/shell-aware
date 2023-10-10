@@ -11,3 +11,6 @@ touch $HOME/.zsh_history
 
 # Symlink directories to $HOME
 stow --target=$HOME src
+
+# Install Debian software packages
+#sudo xargs apt install -y < ./src/.packages-lists/debian12-packages.txt

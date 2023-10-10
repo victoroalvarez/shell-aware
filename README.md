@@ -92,5 +92,6 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * [Dunst - Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.
 * [File Manager Functionality - Arch Wiki](https://wiki.archlinux.org/title/File_manager_functionality)
 * [Polkit - Arch Wiki](https://wiki.archlinux.org/title/Polkit)
+* [Sway - Debian Wiki](https://wiki.debian.org/sway)
 * [Terminal Sexy](https://terminal.sexy/)
 * [Window Manager - Arch Wiki](https://wiki.archlinux.org/title/window_manager)

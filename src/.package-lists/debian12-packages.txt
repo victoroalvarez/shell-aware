@@ -20,6 +20,7 @@ file-roller
 firmware-linux
 flatpak
 fonts-font-awesome
+gdb
 geany
 gedit
 git

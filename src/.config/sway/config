@@ -24,11 +24,15 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
-set $term_2 terminator
+set $term2 terminator
 # Locker
 set $locker swaylock
 # Backgrounds
 set $beach $HOME/Syncthing/Backgrounds/beach_lopez-robin-apax4M-4kFI-unsplash.jpg
+
+set $beach2 $HOME/Syncthing/Backgrounds/beach_adriel-kloppenburg-S1XAf3JxOLI-unsplash.jpg
+
+set $sanjuan $HOME/Syncthing/Backgrounds/san-juan_robert-v-ruggiero-XV5Osh0TOuc-unsplash.jpg
 
 # Application Launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -44,7 +48,7 @@ default_border pixel 1
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg #000000 solid_color
-output * bg $beach fill
+output * bg $sanjuan fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -106,7 +110,7 @@ bar {
 # KEY BINDINGS
 # Start a terminal
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec $term_2
+bindsym $mod+Shift+Return exec $term2
 
 # Kill focused window
 bindsym $mod+Shift+q kill

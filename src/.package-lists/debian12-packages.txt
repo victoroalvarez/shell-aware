@@ -53,6 +53,7 @@ pavucontrol
 pavumeter
 pcmanfm
 php
+php-curl
 picom
 pulseaudio
 python3-pip

@@ -136,12 +136,11 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 bindsym $mod+l exec $locker
 bindsym $mod+Shift+l exec $locker
 
+#bindsym $mod+Shift+o exec google-chrome
 #bindsym $mod+Shift+u flatpak run com.google.Chrome
 #bindsym $mod+p exec arandr
-#bindsym $mod+u exec brave-browser
-#bindsym $mod+u exec firefox-esr
 bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
-bindsym $mod+Shift+o exec flatpak run com.google.Chrome
+bindsym $mod+Shift+o exec flatpak run org.mozilla.firefox
 bindsym $mod+backslash exec pcmanfm
 bindsym $mod+c exec gnome-calendar
 bindsym $mod+i exec firefox-esr --private-window

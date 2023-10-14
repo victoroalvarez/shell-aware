@@ -9,6 +9,7 @@ mkdir $HOME/scripts
 
 # Create zsh files
 touch $HOME/.zsh_history
+touch $HOME/.zhistory
 
 # Symlink directories to $HOME
 stow --target=$HOME src

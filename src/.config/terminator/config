@@ -10,7 +10,7 @@
     background_type = transparent
     cursor_fg_color = "#000000"
     cursor_bg_color = "#ffffff"
-    font = Monospace 12
+    font = Monospace 11
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden

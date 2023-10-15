@@ -15,7 +15,7 @@ client.focused #0074D9 #0074D9 #FFFFFF
 font pango:monospace 8
 
 # VARIABLES
-# Logo key. Use Mod1 for Alt.
+# Mod4 ($mod) is Superkey (Logo key). Mod1 is Alt.
 set $mod Mod4
 # Home row direction keys, like vim
 set $left h
@@ -116,8 +116,8 @@ bindsym $mod+Shift+Return exec $term2
 bindsym $mod+Shift+q kill
 
 # Start your launcher
-bindsym $mod+d exec $menu
 bindsym $mod+Shift+d exec $menu_desktop
+bindsym $mod+d exec $menu
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -133,8 +133,15 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Lock Screen
-bindsym $mod+l exec $locker
 bindsym $mod+Shift+l exec $locker
+bindsym $mod+l exec $locker
+
+# take screenshots with Grimshot
+bindsym $mod+Ctrl+p exec grimshot save window
+bindsym $mod+Mod1+p exec grimshot save output
+bindsym $mod+Shift+p exec grimshot save area
+bindsym $mod+p exec grimshot save active
+
 
 #bindsym $mod+Shift+o exec google-chrome
 #bindsym $mod+Shift+u flatpak run com.google.Chrome

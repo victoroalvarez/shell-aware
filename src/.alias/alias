@@ -59,6 +59,7 @@ alias listfonts='fc-list'
 alias listprocesses='ps -e'
 alias list-wifi='nmcli dev wifi'
 alias livetraffic='vnstat --live'
+alias lll='ll | less'
 alias ll='ls -lAX' # show all directories and their permissions
 alias makeaur='makepkg -s'
 alias motd='cat /etc/motd'

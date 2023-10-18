@@ -5,7 +5,6 @@ blueman
 bridge-utils
 brightnessctl
 build-essential
-calibre
 clang
 clipman
 cmake
@@ -88,6 +87,5 @@ wl-clipboard
 wofi
 xbacklight
 xclip
-xfce4-terminal
 xorg
 xsel

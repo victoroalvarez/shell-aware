@@ -17,22 +17,24 @@ font pango:monospace 8
 # VARIABLES
 # Mod4 ($mod) is Superkey (Logo key). Mod1 is Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
 set $term kitty
 set $term2 terminator
+
 # Locker
 set $locker swaylock
+
 # Backgrounds
-set $beach $HOME/Syncthing/Backgrounds/beach_lopez-robin-apax4M-4kFI-unsplash.jpg
-
-set $beach2 $HOME/Syncthing/Backgrounds/beach_adriel-kloppenburg-S1XAf3JxOLI-unsplash.jpg
-
-set $sanjuan $HOME/Syncthing/Backgrounds/san-juan_robert-v-ruggiero-XV5Osh0TOuc-unsplash.jpg
+#set $beach $HOME/Syncthing/Backgrounds/beach_lopez-robin-apax4M-4kFI-unsplash.jpg
+#set $beach2 $HOME/Syncthing/Backgrounds/beach_adriel-kloppenburg-S1XAf3JxOLI-unsplash.jpg
+#set $sanjuan $HOME/Syncthing/Backgrounds/san-juan_robert-v-ruggiero-XV5Osh0TOuc-unsplash.jpg
 
 # Application Launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -48,7 +50,7 @@ default_border pixel 1
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg #000000 solid_color
-output * bg $sanjuan fill
+#output * bg $sanjuan fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -56,10 +58,10 @@ output * bg $sanjuan fill
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 # IDLE CONFIGURATION
-exec swayidle -w \
-	timeout 600 'swaylock -f -c 000000' \
-	timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-	before-sleep 'swaylock -f -c 000000'
+#exec swayidle -w \
+#	timeout 600 'swaylock -f -c 000000' \
+#	timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#	before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -150,8 +152,8 @@ bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
 bindsym $mod+Shift+o exec flatpak run org.mozilla.firefox
 bindsym $mod+backslash exec pcmanfm
 bindsym $mod+c exec gnome-calendar
-bindsym $mod+i exec firefox-esr --private-window
-bindsym $mod+o exec firefox-esr
+bindsym $mod+i exec firefox --private-window
+bindsym $mod+o exec firefox
 bindsym $mod+slash exec gnome-terminal -e ranger
 bindsym $mod+u exec obsidian
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-

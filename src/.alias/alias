@@ -52,6 +52,7 @@ alias homevmlist='ls -a ~/.local/share/libvirt/images/'
 alias inspectappid='swaymsg -t get_tree' # inspect app_id or class of a window with sway
 alias installaur='sudo pacman -U' # use pacman to install an individual package from an aur build
 alias installdebfile='sudo dpkg -i'
+alias installpacmanlist='sudo pacman -Syu - <'
 alias jetbrains='/opt/jetbrains/jetbrains-toolbox'
 alias la='ls -AX' # show all directories including hidden ones and sort by extension
 alias lesshistory='history |less'
@@ -86,6 +87,7 @@ alias nocaps='setxkbmap -layout us -option ctrl:nocaps'
 #alias pacman='pacman --color=auto'
 alias phpserver='php -S localhost:8080'
 alias pminstall='sudo pacman -S'
+alias pmsearch='pacman -Ss'
 alias pmsearch='pacman -Ss'
 alias readnetflix='less $HOME/text/netflix-codes.txt'
 alias restartnetworkmanager='sudo systemctl restart NetworkManager'

@@ -111,8 +111,9 @@ mode "$mode_system" {
 bindsym $mod+Shift+BackSpace mode "$mode_system"
 
 # Set Monitors
-set $mode_monitors System (o) External-Only, (p) All
+set $mode_monitors System (i) Laptop Monitor Only, (o) External-Only, (p) All
 mode "$mode_monitors" {
+    bindsym i output DP-1 disable, mode "default"
     bindsym o output eDP-1 disable, mode "default"
     bindsym p output eDP-1 enable, mode "default"
     bindsym Return mode "default"

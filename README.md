@@ -91,6 +91,7 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * [256 Colors Cheat Sheet](https://www.ditig.com/256-colors-cheat-sheet)
 * [Dunst - Arch Wiki](https://wiki.archlinux.org/title/Dunst) - Heres information regarding dunst and how to use it to display notifications and visualize volume changei through notifications onscreen.
 * [File Manager Functionality - Arch Wiki](https://wiki.archlinux.org/title/File_manager_functionality)
+* [How to Change CPU Clock Speeds-Frequencies in Linux Using cpupower](https://www.reddit.com/r/IntelligentGaming2020/comments/12700uw/how_to_change_cpu_clock_speeds_frequencies_in/)
 * [Polkit - Arch Wiki](https://wiki.archlinux.org/title/Polkit)
 * [Roll your own Linux Desktop Using Sway](https://www.dwarmstrong.org/sway/)
 * [Sway - Debian Wiki](https://wiki.debian.org/sway)

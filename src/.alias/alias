@@ -17,7 +17,9 @@ alias disablebluetooth='sudo systemctl disable bluetooth.service' # disable blue
 alias disableradio='disablebluetooth && disablewifi' # disable both wifi & bluetooth radios
 alias disablewifi='nmcli radio wifi off' # disable all radios
 alias doubleping='ping -c 10' # ping 10 times
+alias downloadarchupgrades='sudo pacman -Syuw'
 alias download='aria2c -j 3 -c'
+alias downloadaurupgrades='yay -Syuw'
 #alias downloadonly='sudo pacman -Syw' # download all Arch packages
 alias downloadtorrent='aria2c -d ~/Downloads/bt --seed-time=0'
 alias editalias="vim ~/.alias/alias" # edit alias files
@@ -90,9 +92,9 @@ alias nocaps='setxkbmap -layout us -option ctrl:nocaps'
 alias openwindows='virt-viewer --connect qemu:///session win10'
 #alias pacman='pacman --color=auto'
 alias phpserver='php -S localhost:8080'
-alias pminstall='sudo pacman -S'
+alias pinstall='sudo pacman -S'
 alias pmsearch='pacman -Ss'
-alias pmsearch='pacman -Ss'
+alias psearch='pacman -Ss'
 alias readnetflix='less $HOME/text/netflix-codes.txt'
 alias restartnetworkmanager='sudo systemctl restart NetworkManager'
 alias restartpulseaudio='systemctl --user restart pulseaudio.service'

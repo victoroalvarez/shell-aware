@@ -58,7 +58,7 @@ window#waybar.chromium {
 
 #workspaces button.focused {
     background-color: #0074D9;
-    box-shadow: inset 0 -3px #FFFFFF;
+   /* box-shadow: inset 0 -3px #FFFFFF;*/
 }
 
 #workspaces button.urgent {
@@ -106,7 +106,8 @@ window#waybar.chromium {
 }
 
 #clock {
-    background-color: #bbccdd;
+    color: #FFFFFF;
+    background-color: #000000;
 }
 
 #battery {

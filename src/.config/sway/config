@@ -35,6 +35,7 @@ set $locker swaylock -f -c 000000
 #set $beach $HOME/Syncthing/Backgrounds/beach_lopez-robin-apax4M-4kFI-unsplash.jpg
 #set $beach2 $HOME/Syncthing/Backgrounds/beach_adriel-kloppenburg-S1XAf3JxOLI-unsplash.jpg
 #set $sanjuan $HOME/Syncthing/Backgrounds/san-juan_robert-v-ruggiero-XV5Osh0TOuc-unsplash.jpg
+set $abstract1 $HOME/Syncthing/Backgrounds/macosx/11-0-Big-Sur-Color-Night.jpg
 
 # Application Launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -49,8 +50,9 @@ default_border pixel 1
 # OUTPUT CONFIGURATION
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg #000000 solid_color
+#output * bg #000000 solid_color
 #output * bg $sanjuan fill
+output * bg $abstract1 fill
 # Example configuration:
 #
 #

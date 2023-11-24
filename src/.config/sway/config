@@ -169,14 +169,12 @@ bindsym $mod+Mod1+p exec grimshot save output
 bindsym $mod+Shift+p exec grimshot save area
 bindsym $mod+p exec grimshot save active
 
-#bindsym $mod+Shift+o exec google-chrome
 #bindsym $mod+Shift+u flatpak run com.google.Chrome
 #bindsym $mod+p exec arandr
-bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
-bindsym $mod+Shift+o exec flatpak run org.mozilla.firefox
+bindsym $mod+Shift+o exec flatpak run com.google.Chrome
 bindsym $mod+backslash exec pcmanfm
 bindsym $mod+c exec gnome-calendar
-bindsym $mod+i exec firefox --private-window
+bindsym $mod+i exec flatpak run com.brave.Browser --incognito
 bindsym $mod+o exec firefox
 bindsym $mod+slash exec gnome-terminal -e ranger
 bindsym $mod+u exec obsidian

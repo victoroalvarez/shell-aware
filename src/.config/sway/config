@@ -18,26 +18,26 @@ font pango:monospace 8
 # Mod4 ($mod) is Superkey (Logo key). Mod1 is Alt.
 set $mod Mod4
 
-# Home row direction keys, like vim
+# home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
+# preferred terminal emulator
 set $term kitty
 set $term2 terminator
 
-# Locker
+# locker
 set $locker swaylock -f -c 000000
 
-# Backgrounds
+# backgrounds
 #set $beach $HOME/Syncthing/Backgrounds/beach_lopez-robin-apax4M-4kFI-unsplash.jpg
 #set $beach2 $HOME/Syncthing/Backgrounds/beach_adriel-kloppenburg-S1XAf3JxOLI-unsplash.jpg
 #set $sanjuan $HOME/Syncthing/Backgrounds/san-juan_robert-v-ruggiero-XV5Osh0TOuc-unsplash.jpg
 #set $abstract1 $HOME/Syncthing/Backgrounds/macosx/11-0-Big-Sur-Color-Night.jpg
 
-# Application Launcher
+# application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
@@ -54,20 +54,18 @@ output * bg #000000 solid_color
 #output * bg $sanjuan fill
 #output * bg $abstract1 fill
 # Example configuration:
-#
-#
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
 # Vertical Setup
 output eDP-1 position 0,1080
 output DP-1 resolution 1920x1080@60Hz position 0,0
 
-# Horizontal Setup
+# horizontal setup
 #output eDP-1 position 0,0
 #output DP-1 resolution 1920x1080@60Hz position 1366,0
 #output eDP-1 disable
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-# Set Workspaces
+# set workspaces
 workspace 1 output eDP-1
 workspace 2 output DP-1
 

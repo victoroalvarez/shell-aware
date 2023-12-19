@@ -1,10 +1,11 @@
 # Shell Aware
 These are a collection of dotfiles & a Mouse-less Development Environment setup for GNU/Linux. The Mouseless Development setup uses i3WM and Sway. These files are managed with GNU Stow. They work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
-## What Linux distros do you use?
-I mostly use Debian, but I also choose Fedora or Arch for newer hardware. These configurations should work with minimal modification on almost any contemporary Linux distribution.
+## Faq
+### What Linux distros do you use?
+I mostly use Arch Linux, but I also use Debian or Fedora for servers. These configurations should work with minimal modification on almost any contemporary Linux distribution.
 
-## How are these files managed?
+### How are these files managed?
 To manage these files I use GNU Stow. Stow helps me keep my dotfiles on one directory and symlink these files to their corresponding location on my $HOME directory.
 I first create directories where the files will be stored. Then I symlink the files with Stow.
 
@@ -16,14 +17,14 @@ stow --target=$HOME src
 
 This command takes everything inside src/ directory and symlinks it to their corresponding locations on the my user's $HOME directory.
 
-## How to install these setup?
+### How to install these setup?
 From the project's root directory, type into your shell:
 
 ```bash
 stow --target=$HOME src
 ```
 
-## Which shell do you use?
+### Which shell do you use?
 I use Bash. I'm also looking into ZShell and TCSH.
 
 ## Conventions
@@ -60,6 +61,8 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
 
 ## Change Log
+* 2023-12-18 09:19 pm AST. Update ReadMe & add comments to alias file.
+* 2023-12-06 10:38 pm AST. Create laptop branch.
 * 2023-09-17 10:17 am AST. Add Sway and Waybar configuration following Diego Sandoval's example.
 * 2023-09-15 09:09 pm AST. Refactor the project's directory structure.
 * 2023-09-08 09:38 am AST. Add default Sway config file.

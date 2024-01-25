@@ -17,6 +17,7 @@ alias disablebluetooth='sudo systemctl disable bluetooth.service' # Disable blue
 alias disableradio='disablebluetooth && disablewifi' # Disable both wifi & bluetooth radios
 alias disablewifi='nmcli radio wifi off' # Disable all radios
 alias doubleping='ping -c 10' # Ping 10 times
+alias downloadandinstallarch='sudo pacman -Syuw && sudo pacman -Syu' # download and install Arch's packages
 alias downloadarchupgrades='sudo pacman -Syuw' # download Arch's Pacman upgrades
 alias download='aria2c -j 3 -c' # download a file
 alias downloadaurupgrades='yay -Syuw' # download Arch AUR's upgrades

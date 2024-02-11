@@ -114,6 +114,7 @@ alias showdiskid="ls -al /dev/disk/by-uuid/"
 alias shutdownlater='sudo shutdown +30'
 alias shutdownstilllater='sudo shutdown +60'
 alias simpleserver='python -m http.server'
+alias softreboot='systemctl soft-reboot'
 alias sortalias='sort -o ~/.alias/alias ~/.alias/alias' # sort alias file
 alias sortinplace='sort -o'
 alias sourcealias='source ~/.alias/alias'

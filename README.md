@@ -61,6 +61,7 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * Some programs can be run at login by placing them on your .xinitrc instead of using a window-manager's configuration file. Unclutter is an example of such program. This way you would be able to run it on any window-manager.
 
 ## Change Log
+* 2024-04-07 05:54 pm AST. Add support for Mac OS with Amethyst and SKHD.
 * 2023-12-18 09:19 pm AST. Update ReadMe & add comments to alias file.
 * 2023-12-06 10:38 pm AST. Create laptop branch.
 * 2023-09-17 10:17 am AST. Add Sway and Waybar configuration following Diego Sandoval's example.

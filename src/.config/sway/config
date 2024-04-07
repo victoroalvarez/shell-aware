@@ -55,10 +55,11 @@ output * bg #000000 solid_color
 # Example configuration:
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
 # Vertical Setup
-output eDP-1 position 0,1080
+#output eDP-1 position 0,1080
 #output DP-1 resolution 1920x1080@60Hz position 0,0 # Arzopa
-output HDMI-A-1 resolution 2560x1080@60Hz position 0,0
 # horizontal setup
+#output HDMI-A-1 resolution 2560x1080@75Hz position 0,0
+#output HDMI-A-1 resolution 2560x1080@75Hz position 0,0
 #output eDP-1 position 0,0
 #output DP-1 resolution 1920x1080@60Hz position 1366,0
 #output eDP-1 disable

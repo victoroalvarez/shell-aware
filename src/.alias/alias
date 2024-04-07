@@ -147,6 +147,7 @@ alias workspace='cd $HOME/projects'
 alias youtubearchive="yt-dlp --embed-chapters --xattrs --embed-metadata --write-subs 'bestvideo[ext=webm]+bestaudio[ext=webm]'"
 alias youtubeaudioarchive="youtube-dl --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=webm]'"
 alias youtubeaudio="yt-dlp --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=m4a]'"
+alias youtubeogg="yt-dlp --embed-metadata --external-downloader aria2c -f 'bestaudio[ext=ogg]'"
 alias youtubeplaylist='yt-dlp --yes-playlist -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
 alias youtubevideo="yt-dlp --external-downloader aria2c -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias youtube="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"

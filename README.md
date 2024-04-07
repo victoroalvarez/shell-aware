@@ -1,5 +1,5 @@
 # Shell Aware
-These are a collection of dotfiles & a Mouse-less Development Environment setup for GNU/Linux. The Mouseless Development setup uses i3WM and Sway. These files are managed with GNU Stow. They work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
+These are a collection of dotfiles and a Mouse-less Development Environment setup for GNU/Linux & Mac OS. The Mouseless Development setup uses i3WM and Sway for Arch Linux. On Mac OS it uses Amethyst and SKHD. These files are managed with GNU Stow. They work for me and can serve as an example to you. Please don't use these files as they are, instead read them and adapt them to your needs.
 
 ## Faq
 ### What Linux distros do you use?

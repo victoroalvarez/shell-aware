@@ -67,7 +67,7 @@ output * bg #000000 solid_color
 
 # set workspaces
 workspace 1 output eDP-1
-workspace 2 output DP-1
+#workspace 2 output DP-1
 
 
 # IDLE CONFIGURATION

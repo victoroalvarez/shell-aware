@@ -314,3 +314,4 @@ exec --no-startup-id pasystray
 exec --no-startup-id pcmanfm -d
 exec --no-startup-id picom
 exec wl-paste -t text --watch clipman store --no-persist
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

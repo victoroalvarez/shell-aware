@@ -27,7 +27,6 @@ intel-ucode
 iwd
 keepass
 kitty
-light
 lxappearance-gtk3
 lynx
 man

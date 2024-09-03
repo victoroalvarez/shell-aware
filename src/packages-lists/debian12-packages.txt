@@ -16,7 +16,6 @@ dunst
 evince
 feh
 file-roller
-firmware-linux
 flatpak
 fonts-font-awesome
 gdb
@@ -28,7 +27,6 @@ hsetroot
 htop
 i3
 idle3
-intel-microcode
 libgtk-3-dev
 libnbd-bin
 light

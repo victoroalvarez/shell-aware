@@ -15,6 +15,3 @@ PROMPT="%n@%m ${NEWLINE}%# "
 # import aliases
 #alias ls='ls --color=auto'
 source $HOME/.alias/alias
-
-# Created by `pipx` on 2024-03-16 02:35:51
-export PATH="$PATH:/Users/voa/shell-aware/src/.local/bin"

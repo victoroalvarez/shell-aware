@@ -40,7 +40,6 @@ nano
 nbdkit
 net-tools
 network-manager
-network-manager-gnome
 ninja-build
 p7zip-full
 pandoc
@@ -56,7 +55,8 @@ pulseaudio
 python3-pip
 python-is-python3
 qemu-efi
-qemu-system libvirt-daemon-system
+qemu-system
+libvirt-daemon-system
 ranger
 rofi
 screen
@@ -69,8 +69,6 @@ swayidle
 swaylock
 terminator
 tldr
-tlp
-tlp-rdw
 tmux
 tree
 ufw

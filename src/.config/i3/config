@@ -1,10 +1,9 @@
-# i3wm Configuration
-# Victor O Alvarez Torres
+# Shell-Aware's i3wm Configuration
 # 2021, 2022, 2023
 # NOTES:
 # * All CAPS denote a section of the document
 
-# Victor's i3 CONFIG FILE
+# i3 CONFIG FILE
 # See https://i3wm.org/docs/userguide.html for a complete reference
 
 # INCLUDES

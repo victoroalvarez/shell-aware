@@ -10,7 +10,7 @@ bindkey "^[[3~" delete-char
 
 NEWLINE=$'\n'
 #PROMPT="%K{blue}%n@%m%k %B%F{cyan}%(4~|...|)%3~%F{white} ${NEWLINE}%# %b%f%k"
-PROMPT="%n@%m ${NEWLINE}%# "
+PROMPT="%n@%m %~ ${NEWLINE}%# "
 
 # import aliases
 #alias ls='ls --color=auto'

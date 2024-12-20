@@ -1,6 +1,7 @@
 adobe-source-code-pro-fonts
 arandr
 aria2
+autotiling
 blueman
 bluez
 brightnessctl
@@ -20,6 +21,7 @@ git
 gvfs
 hsetroot
 htop
+i3
 i3blocks
 i3lock
 i3status
@@ -71,6 +73,7 @@ wl-clipboard
 wofi
 xclip
 xdg-user-dirs
+xorg
 xorg-xinit
 xorg-xwayland
 xsel

@@ -4,6 +4,9 @@
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
 
+# Add Scripts to path
+export PATH=$HOME/shell-scripts:$PATH
+
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char

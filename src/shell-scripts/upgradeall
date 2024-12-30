@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Upgrade Arch Packages
+echo 'Upgrade Arch Packages'
+sudo pacman -Syu
+
+# Upgrade AURs
+echo 'Upgrade AUR Packages'
+sudo yay -Syu

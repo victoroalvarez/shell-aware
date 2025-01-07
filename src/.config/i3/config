@@ -20,10 +20,10 @@ font pango:monospace 8
 exec --no-startup-id dex --autostart --environment i3
 
 # window Border. 1 pixel border
-for_window [class=".*"] border pixel 1
+#for_window [class=".*"] border pixel 1
 
 # normal borders
-#for_window [class=".*"] border normal
+for_window [class=".*"] border normal
 
 # window title alignment
 title_align center
@@ -263,11 +263,11 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 exec --no-startup-id /usr/bin/lxpolkit
-exec --no-startup-id autotiling
-exec --no-startup-id blueman-applet
 exec --no-startup-id blueman-tray
-exec --no-startup-id nm-applet
 exec --no-startup-id parcellite
 exec --no-startup-id pcmanfm -d
 exec --no-startup-id picom
-exec --no-startup-id xbindkeys
+exec_always --no-startup-id autotiling --splitratio 1.61
+exec_always --no-startup-id blueman-applet
+exec_always --no-startup-id nm-applet
+exec_always --no-startup-id xbindkeys

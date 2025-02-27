@@ -154,5 +154,4 @@ alias youtubeogg="yt-dlp --embed-metadata --external-downloader aria2c -f 'besta
 alias youtubeplaylist='yt-dlp --yes-playlist -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
 alias youtubevideo="yt-dlp --external-downloader aria2c -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias youtube="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
-alias yt-dlp='yt-dlp --embed-metadata --embed-chapters'
 alias zipstore='zip -Z store -r'

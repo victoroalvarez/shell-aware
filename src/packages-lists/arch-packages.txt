@@ -78,4 +78,3 @@ xorg-xinit
 xorg-xwayland
 xsel
 xss-lock
-pulseaudio

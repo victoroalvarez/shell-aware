@@ -4,6 +4,9 @@
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
 
+# set CAPSLOCK KEY to CTRL
+setxkbmap -option ctrl:nocaps &
+
 # Add Scripts to path
 export PATH=$HOME/shell-scripts:$PATH
 

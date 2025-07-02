@@ -233,20 +233,21 @@ set $refresh_i3status killall -SIGUSR1 i3status
 
 # KEYBINDINGS
 #bindsym $mod+Print exec gnome-screenshot -i
+#bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
+#bindsym $mod+Shift+o exec flatpak run com.google.Chrome
+#bindsym $mod+c exec gnome-calendar
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+Return exec terminator
-bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
-bindsym $mod+Shift+o exec flatpak run com.google.Chrome
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 60% && $refresh_i3status
+bindsym $mod+Shift+u exec brave-browser
 bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
-bindsym $mod+c exec gnome-calendar
-bindsym $mod+i exec firefox-esr --private-window
+bindsym $mod+backslash exec thunar
+bindsym $mod+i exec firefox --private-window
 bindsym $mod+o exec firefox
 bindsym $mod+p exec arandr
-bindsym $mod+slash exec gnome-terminal -e ranger
-bindsym $mod+u exec brave-browser
+bindsym $mod+slash exec terminator -e ranger
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -255,18 +256,18 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # STARTUP PROGRAMS
+#exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 #exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 #exec --no-startup-id gnome-polkit
 #exec --no-startup-id pasystray
 #exec --no-startup-id picom
 #exec --no-startup-id pulseaudio --start
 exec --no-startup-id /usr/bin/dunst
-exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 exec --no-startup-id /usr/bin/lxpolkit
 exec --no-startup-id blueman-tray
 exec --no-startup-id parcellite
 exec --no-startup-id pcmanfm -d
-exec --no-startup-id picom -b -c
+exec --no-startup-id picom -bc
 exec_always --no-startup-id autotiling --splitratio 1.61
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id nm-applet

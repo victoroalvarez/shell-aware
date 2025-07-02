@@ -18,6 +18,7 @@ firefox
 flatpak
 foot
 git
+grim
 gvfs
 hsetroot
 htop
@@ -47,6 +48,7 @@ picom
 polkit
 ranger
 rxvt-unicode
+slurp
 sof-firmware
 stow
 sudo
@@ -55,6 +57,7 @@ swaybg
 swayidle
 swaylock
 terminator
+tlp
 tmux
 tree
 ttf-dejavu
@@ -67,6 +70,7 @@ vim
 w3m
 waybar
 wayland
+wemu
 wget
 wireless_tools
 wl-clipboard

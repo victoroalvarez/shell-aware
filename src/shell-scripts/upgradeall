@@ -2,8 +2,25 @@
 
 # Upgrade Arch Packages
 echo 'Upgrade Arch Packages'
+
 sudo pacman -Syu
+
+if [ $? -eq 0 ]; then
+	echo 'Upgraded Packages through Pacman.'
+else
+	echo 'Packages not Upgraded
+    exit 1'
+fi	
+
 
 # Upgrade AURs
 echo 'Upgrade AUR Packages'
-sudo yay -Syu
+
+yay -Syu
+
+if [ $? -eq 0 ]; then
+	echo 'Upgraded AUR packages with YAY.'
+else
+	echo 'Packages not Upgraded
+    exit 1'
+fi	

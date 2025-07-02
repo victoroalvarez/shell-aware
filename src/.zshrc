@@ -4,20 +4,26 @@
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
 
-# set CAPSLOCK KEY to CTRL
-setxkbmap -option ctrl:nocaps &
+export EDITOR='nvim' # set nvim as editor
+export VISUAL='nvim'
 
-# Add Scripts to path
-export PATH=$HOME/shell-scripts:$PATH
+autoload -Uz compinit; compinit # autocompletion
 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 
+#PROMPT="%n@%m %~ ${NEWLINE}%# "
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
 NEWLINE=$'\n'
-#PROMPT="%K{blue}%n@%m%k %B%F{cyan}%(4~|...|)%3~%F{white} ${NEWLINE}%# %b%f%k"
-PROMPT="%n@%m %~ ${NEWLINE}%# "
+PROMPT="%F{yellow}%n%f%F{yellow}@%f%F{yellow}%m%f:%F{blue}%~%f${NEWLINE}%F{blue}%#%f "
+SAVEHIST=10000
 
 # import aliases
-#alias ls='ls --color=auto'
-source $HOME/.alias/alias
+if [ -f $HOME/.alias/alias ]; then
+	source $HOME/.alias/alias
+fi
+
+# Add Scripts to path
+export PATH=$HOME/shell-scripts:$PATH

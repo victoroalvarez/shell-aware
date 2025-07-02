@@ -15,7 +15,7 @@ touch $HOME/.zhistory
 stow --target=$HOME src
 
 # Change default shell
-chsh -s /usr/bin/zsh
+#chsh -s /usr/bin/zsh
 
 # Install Debian software packages
 #sudo xargs apt install -y < ./src/.packages-lists/debian12-packages.txt

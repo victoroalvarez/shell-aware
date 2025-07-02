@@ -9,26 +9,24 @@ include /etc/sway/config.d/*
 # SPECIFIC APP LAYOUTS
 for_window [app_id="terminator"] floating enable, resize set 1024 576
 
-# APPEARANCE
+# APPEARANCE VARIABLES
 client.focused #0074D9 #0074D9 #FFFFFF
-font pango:monospace 8
+#font pango:monospace 8
+font pango: SourceCodePro Medium 8
 
 # VARIABLES
 # Mod4 ($mod) is Superkey (Logo key). Mod1 is Alt.
 set $mod Mod4
-
 # home row direction keys, like vim
-set $left h
 set $down j
-set $up k
+set $left h
 set $right l
+set $up k
 
-# preferred terminal emulator
-set $term kitty
-set $term2 terminator
-
-# locker
+set $terminal kitty
+set $terminal2 terminator
 set $locker swaylock -f -c 000000
+set $filemanager thunar
 
 # backgrounds
 #set $beach $HOME/Syncthing/Backgrounds/beach_lopez-robin-apax4M-4kFI-unsplash.jpg
@@ -56,6 +54,7 @@ output * bg #000000 solid_color
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
 # Vertical Setup
 #output eDP-1 position 0,1080
+#output HDMI-A-1 resolution 2560x1080@75Hz position 0,0
 #output DP-1 resolution 1920x1080@60Hz position 0,0 # Arzopa
 # horizontal setup
 #output HDMI-A-1 resolution 2560x1080@75Hz position 0,0
@@ -135,8 +134,8 @@ bar {
 
 # KEY BINDINGS
 # Start a terminal
-bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec $term2
+bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+Return exec $terminal
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -168,21 +167,20 @@ bindsym $mod+Mod1+p exec grimshot save output
 bindsym $mod+Shift+p exec grimshot save area
 bindsym $mod+p exec grimshot save active
 
-#bindsym $mod+Shift+u flatpak run com.google.Chrome
-#bindsym $mod+p exec arandr
-bindsym $mod+Shift+o exec flatpak run com.google.Chrome
-bindsym $mod+backslash exec pcmanfm
+# apps
+bindsym $mod+Shift+o exec obsidian
+bindsym $mod+backslash exec $filemanager
 bindsym $mod+c exec gnome-calendar
-bindsym $mod+i exec flatpak run com.brave.Browser --incognito
+bindsym $mod+i exec firefox --private-window
 bindsym $mod+o exec firefox
 bindsym $mod+slash exec gnome-terminal -e ranger
-bindsym $mod+u exec obsidian
+bindsym $mod+u exec brave
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # Volume Control
-bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1
+bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1
 
 # Moving around:
@@ -193,10 +191,10 @@ bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@
 #bindsym $mod+$up focus up
 #bindsym $mod+$right focus right
 # Or use $mod+[up|down|left|right]
-bindsym $mod+Left focus left
 bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Left focus left
 bindsym $mod+Right focus right
+bindsym $mod+Up focus up
 
 # Move the focused window with the same, but add Shift
 #bindsym $mod+Shift+$left move left
@@ -222,6 +220,7 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
+
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
@@ -275,24 +274,24 @@ bindsym $mod+minus scratchpad show
 
 # Resizing containers:
 mode "resize" {
-# left will shrink the containers width
-# right will grow the containers width
-# up will shrink the containers height
-# down will grow the containers height
-bindsym $left resize shrink width 10px
-bindsym $down resize grow height 10px
-bindsym $up resize shrink height 10px
-bindsym $right resize grow width 10px
+	# left will shrink the containers width
+	# right will grow the containers width
+	# up will shrink the containers height
+	# down will grow the containers height
+	bindsym $left resize shrink width 10px
+	bindsym $down resize grow height 10px
+	bindsym $up resize shrink height 10px
+	bindsym $right resize grow width 10px
 
-# Ditto, with arrow keys
-bindsym Left resize shrink width 10px
-bindsym Down resize grow height 10px
-bindsym Up resize shrink height 10px
-bindsym Right resize grow width 10px
+	# Ditto, with arrow keys
+	bindsym Left resize shrink width 10px
+	bindsym Down resize grow height 10px
+	bindsym Up resize shrink height 10px
+	bindsym Right resize grow width 10px
 
-# Return to default mode
-bindsym Return mode "default"
-bindsym Escape mode "default"
+	# Return to default mode
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 

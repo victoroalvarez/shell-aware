@@ -139,7 +139,6 @@ mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym Shift+e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    #bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym Shift+r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
     # back to normal: Enter or Escape
@@ -148,7 +147,6 @@ mode "$mode_system" {
 }
 
 # keyboard bind for Shutdown, Restart and Lock
-#bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+Shift+BackSpace mode "$mode_system"
 # keyboard bind for Lock
 bindsym $mod+BackSpace exec --no-startup-id $Locker
@@ -199,6 +197,7 @@ mode "$mode_display" {
 bindsym $mod+Print exec gnome-screenshot -i
 bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec $terminal
+bindsym $mod+Shift+o exec obsidian
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 60% && $refresh_i3status
 bindsym $mod+Shift+u exec brave-browser
 bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status

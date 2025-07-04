@@ -72,7 +72,6 @@ vim
 w3m
 waybar
 wayland
-wemu
 wget
 wireless_tools
 wl-clipboard

@@ -9,113 +9,92 @@
 # INCLUDES
 include ~/.config/i3/i3bar.conf
 
+
 # VARIABLES
+# set terminal
 set $terminal kitty
+# mod Key. Set Super Key as mod key
+set $mod Mod4
+# set locker
+set $Locker i3lock -c 000000 && sleep 1
+# set refresh_i3status
+set $refresh_i3status killall -SIGUSR1 i3status
+# make gnome-calendar float
+for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
+
 
 # APPEARANCE: FONTS, COLORS & BORDER
 # focused window Colors
 client.focused #0074D9 #0074D9 #FFFFFF 
-
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
 font pango:monospace 8
-
 # Start XDG autostart .desktop files using dex.
 exec --no-startup-id dex --autostart --environment i3
-
-# window Border. 1 pixel border
+# Window Border. 1 pixel border
 #for_window [class=".*"] border pixel 1
-
 # normal borders
 for_window [class=".*"] border normal
-
 # window title alignment
 title_align center
-
 # for_window [class=".*"] border pixel 0
 hide_edge_borders smart
-
 # floating windows size
 floating_minimum_size 75 x 50
 floating_maximum_size 1024 x 640
 
+
 # GUI CONTROL
 # set mod key & default keybinds
-# mod Key. Set Super Key as mod key
-set $mod Mod4
-
 # switch to next workspace from left to right
 bindsym Mod1+Tab workspace next
 bindsym Mod4+Tab workspace next
-
 # run dmenu (program launcher)
 # list all programs
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'DejaVu Sans Mono:regular:pixelsize=20'
 # list GUI programs
 #bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'DejaVu Sans Mono:regular:pixelsize=20'"
-
 # run rofi program launcher
 bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
-
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
 # Mouse+$mod used to drag around floating windows
 floating_modifier $mod
-
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
 # split in horizontal orientation
 bindsym $mod+h split h
-
 # split in vertical orientation
 bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
-
 # focus the child container
 #bindsym $mod+d focus child
-
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -127,8 +106,6 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-#set $ws10 "10"
-
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -139,8 +116,6 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
-#bindsym $mod+0 workspace number $ws10
-
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -151,23 +126,14 @@ bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
-#bindsym $mod+Shift+0 move container to workspace number $ws10
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
-
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
 # Key combinations for Lock, Shutdown and Restart. Press mod+Pause for menu. Press mod+BackSpace for lock only
-# lock
-#set $Locker i3lock -c 000000 -i ~/.local/pictures/locked_black.png && sleep 1
-set $Locker i3lock -c FFFFFF && sleep 1
 # Shutdown, Restart and Lock
-#set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 set $mode_system System (l) lock, (Shift+e) logout, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
@@ -184,12 +150,11 @@ mode "$mode_system" {
 # keyboard bind for Shutdown, Restart and Lock
 #bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+Shift+BackSpace mode "$mode_system"
-
 # keyboard bind for Lock
 bindsym $mod+BackSpace exec --no-startup-id $Locker
 bindsym $mod+l exec --no-startup-id $Locker
-
 # resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         # Pressing left will shrink the window’s width.
@@ -211,10 +176,9 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
 # choose screen layout
 set $mode_display Configure Monitor Resolution - Default (a), Dual (s), Triple (d), Portable (f)
+bindsym $mod+x mode "$mode_display"
 mode "$mode_display" {
 	bindsym a exec --no-startup-id sh "$HOME/.screenlayout/home.sh", mode "default"
 	bindsym s exec --no-startup-id sh "$HOME/.screenlayout/dual.sh", mode "default"
@@ -227,21 +191,12 @@ mode "$mode_display" {
 	bindsym Escape mode "default"
 }
 
-bindsym $mod+x mode "$mode_display"
-
-# make gnome-calendar
-for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
-
-set $refresh_i3status killall -SIGUSR1 i3status
 
 # KEYBINDINGS
-bindsym $mod+Print exec gnome-screenshot -i
-#bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
-#bindsym $mod+Shift+o exec flatpak run com.google.Chrome
 #bindsym $mod+c exec gnome-calendar
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-
+bindsym $mod+Print exec gnome-screenshot -i
 bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec $terminal
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 60% && $refresh_i3status
@@ -259,21 +214,20 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
+
 # STARTUP PROGRAMS
 #exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 #exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
-#exec --no-startup-id gnome-polkit
 #exec --no-startup-id pasystray
-#exec --no-startup-id picom
 #exec --no-startup-id pulseaudio --start
+#exec_always --no-startup-id autotiling --splitratio 1.61
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/lxpolkit
 exec --no-startup-id blueman-tray
+exec --no-startup-id flameshot
 exec --no-startup-id parcellite
 exec --no-startup-id pcmanfm -d
 exec --no-startup-id picom -bc
-exec --no-startup-id flameshot
-exec_always --no-startup-id autotiling --splitratio 1.61
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id xbindkeys

@@ -38,6 +38,7 @@ man-pages
 mpv
 nano
 networkmanager
+obsidian
 openssh
 pandoc
 pandoc

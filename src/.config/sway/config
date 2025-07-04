@@ -47,7 +47,7 @@ set $menu_desktop wofi --show drun
 # OUTPUT CONFIGURATION
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg #000000 solid_color
+#output * bg #000000 solid_color
 #output * bg $sanjuan fill
 #output * bg $abstract1 fill
 # Example configuration:
@@ -57,8 +57,9 @@ output * bg #000000 solid_color
 #output HDMI-A-1 resolution 2560x1080@75Hz position 0,0
 #output DP-1 resolution 1920x1080@60Hz position 0,0 # Arzopa
 # horizontal setup
+output HDMI-A-1 resolution 2560x1080@75Hz position 1366,0
 #output HDMI-A-1 resolution 2560x1080@75Hz position 0,0
-#output HDMI-A-1 resolution 2560x1080@75Hz position 0,0
+output eDP-1 position 0,0
 #output eDP-1 position 0,0
 #output DP-1 resolution 1920x1080@60Hz position 1366,0
 #output eDP-1 disable
@@ -297,20 +298,10 @@ bindsym $mod+r mode "resize"
 
 
 # STARTUP PROGRAMS
-#exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
-#exec --no-startup-id gnome-polkit
-#exec --no-startup-id nm-applet
-#exec --no-startup-id picom -b -c
-#exec --no-startup-id pulseaudio --start
-exec --no-startup-id /usr/bin/dunst
-exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
-exec --no-startup-id /usr/bin/lxpolkit
 exec --no-startup-id blueman-applet
 exec --no-startup-id blueman-tray
 exec --no-startup-id nm-applet
 exec --no-startup-id parcellite
 exec --no-startup-id pasystray
 exec --no-startup-id pcmanfm -d
-exec --no-startup-id picom
 exec wl-paste -t text --watch clipman store --no-persist
-exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

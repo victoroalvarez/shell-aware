@@ -9,6 +9,9 @@
 # INCLUDES
 include ~/.config/i3/i3bar.conf
 
+# VARIABLES
+set $terminal kitty
+
 # APPEARANCE: FONTS, COLORS & BORDER
 # focused window Colors
 client.focused #0074D9 #0074D9 #FFFFFF 
@@ -232,14 +235,15 @@ for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # KEYBINDINGS
-#bindsym $mod+Print exec gnome-screenshot -i
+bindsym $mod+Print exec gnome-screenshot -i
 #bindsym $mod+Shift+i exec flatpak run com.google.Chrome --incognito
 #bindsym $mod+Shift+o exec flatpak run com.google.Chrome
 #bindsym $mod+c exec gnome-calendar
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Shift+Return exec terminator
+
+bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+Return exec $terminal
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 60% && $refresh_i3status
 bindsym $mod+Shift+u exec brave-browser
 bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
@@ -268,6 +272,7 @@ exec --no-startup-id blueman-tray
 exec --no-startup-id parcellite
 exec --no-startup-id pcmanfm -d
 exec --no-startup-id picom -bc
+exec --no-startup-id flameshot
 exec_always --no-startup-id autotiling --splitratio 1.61
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id nm-applet

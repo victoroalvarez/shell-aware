@@ -17,6 +17,7 @@ feh
 firefox
 flatpak
 foot
+gimp
 git
 grim
 gvfs
@@ -26,10 +27,12 @@ i3
 i3blocks
 i3lock
 i3status
+inkscape
 intel-ucode
 iwd
 keepass
 kitty
+krita
 lxappearance-gtk3
 lynx
 man
@@ -50,6 +53,7 @@ picom
 polkit
 ranger
 rxvt-unicode
+shotwell
 slurp
 sof-firmware
 stow

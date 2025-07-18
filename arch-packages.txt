@@ -9,6 +9,8 @@ conky
 conky-manager
 cpupower
 cups
+cups
+cups-pdf
 curl
 dex
 dmenu

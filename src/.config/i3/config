@@ -201,6 +201,7 @@ bindsym $mod+Shift+o exec obsidian
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 60% && $refresh_i3status
 bindsym $mod+Shift+u exec brave-browser
 bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
+bindsym $mod+b exec google-chrome-stable
 bindsym $mod+backslash exec thunar
 bindsym $mod+i exec firefox --private-window
 bindsym $mod+o exec firefox

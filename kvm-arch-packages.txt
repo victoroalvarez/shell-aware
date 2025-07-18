@@ -1,0 +1,15 @@
+bridge-utils
+dmidecode
+dnsmasq
+edk2-ovmf
+guestfs-tools
+libosinfo
+libvirt
+openbsd-netcat
+qemu-img
+qemu-full
+swtpm
+vde2
+virt-install
+virt-manager
+virt-viewer

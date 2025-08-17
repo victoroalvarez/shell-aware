@@ -127,7 +127,7 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -175,12 +175,12 @@ mode "resize" {
 }
 
 # choose screen layout
-set $mode_display Configure Monitor Resolution - Default (a), Dual (s), Triple (d), Portable (f)
+set $mode_display Configure Monitor Resolution - Default (a), Single (s), Dual (d), Portable (f)
 bindsym $mod+x mode "$mode_display"
 mode "$mode_display" {
 	bindsym a exec --no-startup-id sh "$HOME/.screenlayout/home.sh", mode "default"
-	bindsym s exec --no-startup-id sh "$HOME/.screenlayout/dual.sh", mode "default"
-	bindsym d exec --no-startup-id sh "$HOME/.screenlayout/triple.sh", mode "default"
+	bindsym d exec --no-startup-id sh "$HOME/.screenlayout/dual.sh", mode "default"
+	bindsym s exec --no-startup-id sh "$HOME/.screenlayout/single.sh", mode "default"
 	bindsym f exec --no-startup-id sh "$HOME/.screenlayout/portable.sh", mode "default"
 
 	# back to normal: Enter or Escape
@@ -197,16 +197,19 @@ mode "$mode_display" {
 bindsym $mod+Print exec gnome-screenshot -i
 bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec $terminal
+bindsym $mod+Shift+a exec amarok
+bindsym $mod+Shift+backslash exec thunar
 bindsym $mod+Shift+o exec obsidian
 bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ 60% && $refresh_i3status
 bindsym $mod+Shift+u exec brave-browser
 bindsym $mod+Shift+underscore exec pactl set-sink-volume @DEFAULT_SINK@ 25% && $refresh_i3status
 bindsym $mod+b exec google-chrome-stable
 bindsym $mod+backslash exec thunar
+bindsym $mod+c exec google-chrome-stable
 bindsym $mod+i exec firefox --private-window
 bindsym $mod+o exec firefox
 bindsym $mod+p exec arandr
-bindsym $mod+slash exec terminator -e ranger
+bindsym $mod+slash exec kitty -e ranger
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -221,6 +224,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 #exec --no-startup-id pasystray
 #exec --no-startup-id pulseaudio --start
 #exec_always --no-startup-id autotiling --splitratio 1.61
+exec --no-startup-id $HOME/.dropbox-dist/dropboxd
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /usr/bin/lxpolkit
 exec --no-startup-id blueman-tray

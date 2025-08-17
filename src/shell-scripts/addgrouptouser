@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Add Group to user. $1 group & $2 user.
+sudo usermod -aG $1 $2

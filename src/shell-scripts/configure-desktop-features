@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo cat ./text-files-configurations/40-libinput.conf >> /usr/share/X11/xorg.conf.d/40-libinput.conf

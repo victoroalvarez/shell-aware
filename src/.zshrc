@@ -15,10 +15,10 @@ bindkey "^[[3~" delete-char
 
 #PROMPT="%n@%m %~ ${NEWLINE}%# "
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=10000
+HISTSIZE=1000
 NEWLINE=$'\n'
 PROMPT="%F{yellow}%n%f%F{yellow}@%f%F{yellow}%m%f:%F{blue}%~%f${NEWLINE}%F{blue}%#%f "
-SAVEHIST=10000
+SAVEHIST=1000
 
 # import aliases
 if [ -f $HOME/.alias/alias ]; then

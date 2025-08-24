@@ -6,11 +6,11 @@
 # i3 CONFIG FILE
 # See https://i3wm.org/docs/userguide.html for a complete reference
 
-# INCLUDES
+# --- INCLUDES
 include ~/.config/i3/i3bar.conf
 
 
-# VARIABLES
+# --- VARIABLES
 # set terminal
 set $terminal kitty
 # mod Key. Set Super Key as mod key
@@ -23,7 +23,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 for_window [class="Gnome-calendar" instance="gnome-calendar"] floating enable
 
 
-# APPEARANCE: FONTS, COLORS & BORDER
+# --- APPEARANCE: FONTS, COLORS & BORDER
 # focused window Colors
 client.focused #0074D9 #0074D9 #FFFFFF 
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
@@ -31,9 +31,9 @@ font pango:monospace 8
 # Start XDG autostart .desktop files using dex.
 exec --no-startup-id dex --autostart --environment i3
 # Window Border. 1 pixel border
-#for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 1
 # normal borders
-for_window [class=".*"] border normal
+#for_window [class=".*"] border normal
 # window title alignment
 title_align center
 # for_window [class=".*"] border pixel 0
@@ -43,7 +43,7 @@ floating_minimum_size 75 x 50
 floating_maximum_size 1024 x 640
 
 
-# GUI CONTROL
+# --- GUI CONTROL
 # set mod key & default keybinds
 # switch to next workspace from left to right
 bindsym Mod1+Tab workspace next
@@ -190,7 +190,7 @@ mode "$mode_display" {
 }
 
 
-# KEYBINDINGS
+# --- KEYBINDINGS
 #bindsym $mod+c exec gnome-calendar
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 5
@@ -218,7 +218,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 
-# STARTUP PROGRAMS
+# --- STARTUP PROGRAMS
 #exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 #exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 #exec --no-startup-id pasystray

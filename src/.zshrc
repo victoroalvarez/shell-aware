@@ -27,3 +27,4 @@ fi
 
 # Add Scripts to path
 export PATH=$HOME/shell-scripts:$PATH
+export PATH=$HOME/bin:$PATH

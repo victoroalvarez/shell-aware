@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo systemctl enable $1.service && sudo systemctl start $1.service

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo ufw allow SSH \
+	&& sudo ufw default deny \
+	&& sudo ufw enable
+

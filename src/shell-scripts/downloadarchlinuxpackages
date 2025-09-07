@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# download packages and then install them
+sudo pacman -Syuw && sudo pacman -Syu

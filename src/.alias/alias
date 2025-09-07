@@ -30,6 +30,7 @@ alias editi3status='vim ~/.config/i3status/config'
 alias editi3='vim ~/.config/i3/config' # edit vim config
 alias editkeybinds='vim .config/i3/keybinds.conf'
 alias editkitty='vim $HOME/.config/kitty/kitty.conf' # edit Kitty configuration
+alias editmirrors="sudo vim /etc/pacman.d/mirrorlist"
 alias editnvim='nvim ~/.config/nvim/init.vim' # edit neovim config
 alias editstartupprograms='vim .config/i3/startup-programs.conf'
 alias editsway='vim $HOME/.config/sway/config' # edit sway configuration

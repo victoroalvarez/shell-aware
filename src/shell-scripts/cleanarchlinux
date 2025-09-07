@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# clean pacman all packages but one past version
+sudo paccache -rk1
+
+# Remove orphaned packages
+sudo pacman -Qdtq | sudo pacman -Rns -

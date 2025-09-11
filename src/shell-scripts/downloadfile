@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# download file
+aria2c -d ~/Downloads/ -j 3 -c $1

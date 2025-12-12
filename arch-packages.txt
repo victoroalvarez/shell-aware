@@ -1,4 +1,6 @@
 adobe-source-code-pro-fonts
+rofi
+lxappearance
 amarok
 arandr
 aria2
@@ -40,7 +42,6 @@ iwd
 keepass
 kitty
 krita
-lxappearance-gtk3
 lynx
 man
 man-db
@@ -55,7 +56,6 @@ pandoc
 parcellite
 pasystray
 pavucontrol
-pcmanfm-gtk3
 picom
 polkit
 ranger

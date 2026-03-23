@@ -26,5 +26,5 @@ if [ -f $HOME/.alias/alias ]; then
 fi
 
 # Add Scripts to path
-export PATH=$HOME/shell-scripts:$PATH
+export PATH=$HOME/shellscripts:$PATH
 export PATH=$HOME/bin:$PATH

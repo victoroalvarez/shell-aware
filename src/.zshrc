@@ -17,7 +17,8 @@ bindkey "^[[3~" delete-char
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000
 NEWLINE=$'\n'
-PROMPT="%F{yellow}%n%f%F{yellow}@%f%F{yellow}%m%f:%F{blue}%~%f${NEWLINE}%F{blue}%#%f "
+#PROMPT="%F{yellow}%n%f%F{yellow}@%f%F{yellow}%m%f:%F{blue}%~%f${NEWLINE}%F{blue}%#%f "
+PROMPT="%F{white}%n%f%F{white}@%f%F{white}%m%f:%F{blue}%~%f${NEWLINE}%F{blue}%#%f "
 SAVEHIST=1000
 
 # import aliases

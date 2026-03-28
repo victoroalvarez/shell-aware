@@ -12,7 +12,7 @@ include ~/.config/i3/i3bar.conf
 
 # --- VARIABLES
 # set terminal
-set $terminal kitty
+set $terminal xfce4-terminal
 # mod Key. Set Super Key as mod key
 set $mod Mod1
 # set locker

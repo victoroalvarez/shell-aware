@@ -2,6 +2,8 @@
 # Default at: ~/.config/sway/config
 # Read `man 5 sway` for a complete reference.
 
+exec_always autotiling
+
 # INCLUDES
 include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
@@ -16,7 +18,7 @@ font pango: SourceCodePro Medium 8
 
 # VARIABLES
 # Mod4 ($mod) is Superkey (Logo key). Mod1 is Alt.
-set $mod Mod4
+set $mod Mod1
 # home row direction keys, like vim
 set $down j
 set $left h
@@ -164,7 +166,7 @@ bindsym $mod+l exec $locker
 
 # take screenshots with Grimshot
 bindsym $mod+Ctrl+p exec grimshot save window
-bindsym $mod+Mod1+p exec grimshot save output
+#bindsym $mod+Mod1+p exec grimshot save output
 bindsym $mod+Shift+p exec grimshot save area
 bindsym $mod+p exec grimshot save active
 
@@ -209,6 +211,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Workspaces:
+# Note: workspaces can have any name you want, not just numbers.
+# We just use 1-10 as the default.
 
 # Switch to workspace
 bindsym $mod+1 workspace number 1
@@ -233,8 +237,6 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
-# Note: workspaces can have any name you want, not just numbers.
-# We just use 1-10 as the default.
 
 # Layout stuff:
 

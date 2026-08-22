@@ -37,6 +37,7 @@ mpv
 nano
 networkmanager
 openssh
+otf-font-awesome
 parcellite
 pasystray
 pavucontrol
@@ -58,6 +59,7 @@ terminator
 tmux
 tree
 ttf-dejavu
+ttf-font-awesome
 ttf-font-awesome
 ttf-roboto-mono
 udisks2

@@ -1,11 +1,9 @@
 * {
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     /* otf-font-awesome is required to be installed to display icons */
     font-family: "Roboto Mono Medium", Helvetica, Arial, sans-serif;
-
     font-size: 10px;
-
     min-height: 0;
 }
 
@@ -38,10 +36,12 @@ window#waybar.chromium {
     box-shadow: inset 0 -3px transparent;
 }
 
+/*
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 -3px #FFFFFF;
 }
+*/
 
 #workspaces button.focused {
     background-color: #0074D9;

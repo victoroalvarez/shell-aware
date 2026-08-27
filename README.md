@@ -94,6 +94,7 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * 2026-08-22 05:47 pm AST. Test this dotfiles set on Asahi Alarm, with Arch Linux on Apple Silicon.
 * 2026-08-22 05:47 pm AST. Improve Sway, Waybar and Kitty configuration.
 * 2026-08-22 05:47 pm AST. Improve README file.
+* 2026-08-27 01:34 am AST. Change license from the Unlicense license to the BSD 3-Clause License.
 
 ## References & Links
 * [256 Colors Cheat Sheet](https://www.ditig.com/256-colors-cheat-sheet)

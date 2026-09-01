@@ -15,7 +15,8 @@ ShellAware's dotfiles work for me and can serve as an example to you. Please do 
 
 This is a list of ShellAware releases available through its release page.
 
-* [v1.9 - Current](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.zip)
+* [v1.9.1 - Current](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.1.zip)
+* [v1.9](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.zip)
 * [v1.8](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.8.zip)
 
 ## 4.0 Conventions

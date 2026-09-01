@@ -33,3 +33,4 @@
 * 2026-08-22 05:47 pm AST. Improve Sway, Waybar and Kitty configuration.
 * 2026-08-22 05:47 pm AST. Improve README file.
 * 2026-08-27 01:34 am AST. Change license from the Unlicense license to the BSD 3-Clause License.
+* 2026-09-01 01:55 pm AST. Re-organize ShellAware repository. Improve documentation. Update Changelog.

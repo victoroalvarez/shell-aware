@@ -7,7 +7,7 @@ ShellAware is a collection of dotfiles for a GNU/Linux Mouse-less Development En
 ## 2.0 How do I use this Setup?
 ShellAware's dotfiles work for me and can serve as an example to you. Please do not use these files as they are, instead:
 
-* Download a Release - [DOWNLOAD HERE](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.zip).
+* Download a Release - [DOWNLOAD HERE](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.1.zip)
 * Read the dotfiles and scripts.
 * And then adapt them as you wish into your own setup.
 

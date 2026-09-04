@@ -35,3 +35,4 @@
 * 2026-08-27 01:34 am AST. Change license from the Unlicense license to the BSD 3-Clause License.
 * 2026-09-01 01:55 pm AST. Re-organize ShellAware repository. Improve documentation. Update Changelog.
 * 2026-09-01 03:02 pm AST. Refactor ZSH configuration. Reorganize vimrc file.
+* 2026-09-04 07:04 am AST. Add test.sh script that test the correct syntax of all shellscripts located within the shellscripts/ directory.

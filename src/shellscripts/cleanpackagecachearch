@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Clean Package Manager Cache
+clean_pacman() {
+	echo "Clean Pacman package manager:"
+	if command -v paccache >/dev/null 2>&1; then
+		sudo paccache -r
+	else
+		echo "Arch Linux 'pacman-contrib' package is not installed."
+	fi
+}
+
+# Clean Pacman
+main() {
+	clean_pacman
+}
+
+# Run main function
+main

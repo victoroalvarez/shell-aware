@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Clean Package Manager Cache
+clean_pacman() {
+	echo "Clean Pacman package manager:"
+	sudo pacman -Sc
+}
+
+# Clean Yay Cache
+clean_yay() {
+	# Test if yay command can be run and then clean its cache.
+	if command -v yay >/dev/null 2>&1; then
+		echo "Clean Yay AUR Helper:"
+		yay -Sc
+	else
+		echo "Yay AUR Helper is not present."
+	fi
+}
+
+# Clean Pacman and Yay
+main() {
+	clean_pacman && clean_yay
+}
+
+# Run main function
+main

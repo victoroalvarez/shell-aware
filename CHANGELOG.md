@@ -40,4 +40,4 @@
 * 2026-09-04 09:37 pm AST. Debug and improve all shellscripts with shellcheck.
 * 2026-09-04 09:43 pm AST. Add listcommits alias to list the 5 recent Git commits in a repository.
 * 2026-09-05 05:33 pm AST. Add two shellscripts. cleanpackagecachearch and cleanpackagemanagercachearch. These two scripts help in pruning and cleaning installed packages on Arch Linux.
-
+* 2026-09-05 05:57 pm AST. Reorganize shellscripts. Move shellscripts/ from the scripts directory to the shellscripts directory. Delete the scripts/ directory.

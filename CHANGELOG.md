@@ -1,4 +1,5 @@
-# Change Log
+# Change Log - ShellAware
+
 * 2021-05-10 08:55 pm AST. Create Change Log to document edits, additions and removals.
 * 2021-05-25 10:48 pm AST. Create Development branch and first commit.
 * 2021-06-01 11:42 pm AST. Add Conky to display system info on desktop.
@@ -37,3 +38,4 @@
 * 2026-09-01 03:02 pm AST. Refactor ZSH configuration. Reorganize vimrc file.
 * 2026-09-04 07:04 am AST. Add test.sh script that test the correct syntax of all shellscripts located within the shellscripts/ directory.
 * 2026-09-04 09:37 pm AST. Debug and improve all shellscripts with shellcheck.
+* 2026-09-04 09:43 pm AST. Add listcommits alias to list the 5 recent Git commits in a repository.

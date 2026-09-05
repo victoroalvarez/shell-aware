@@ -64,6 +64,7 @@ alias jetbrains='/opt/jetbrains/jetbrains-toolbox'
 alias la='exa -a'
 alias lesshistory='history 0 | less'
 #alias linssid='swallow sudo linssid'
+alias listcommits="git log -n 5"
 alias listfonts='fc-list'
 alias listprocesses='ps -e'
 alias list-wifi='nmcli dev wifi'

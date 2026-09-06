@@ -4,10 +4,6 @@
 # Use autotiling. autotiling is a seperate software package.
 exec_always autotiling
 
-# INCLUDES
-include /etc/sway/config-vars.d/*
-include /etc/sway/config.d/*
-
 # SPECIFIC APP LAYOUTS
 for_window [app_id="terminator"] floating enable, resize set 1024 576
 
@@ -285,3 +281,7 @@ exec --no-startup-id parcellite
 exec --no-startup-id pasystray
 exec --no-startup-id pcmanfm -d
 exec wl-paste -t text --watch clipman store --no-persist
+
+
+# INCLUDES
+include /etc/sway/config.d/*

@@ -1,8 +1,8 @@
-# ShellAware
+# [ShellAware](https://victoroalvarez.github.io/shell-aware/)
 Mouseless Development Environment setup for GNU/Linux.
 
 ## 1.0 Introduction
-ShellAware is a collection of dotfiles for a GNU/Linux Mouse-less Development Environment setup. The ShellAware setup uses i3WM with Xorg and Sway with Wayland on Arch Linux. Its dotfiles are managed with GNU Stow. Dotfiles are stored in the src/ directory of this repository and then symlinked to the user's $HOME directory with the GNU Stow tool. These dotfiles work for me and can serve as an example to you. Please don't use these files as they are, instead: download a release, read the dotfiles and scripts and adapt them as you wish.
+[ShellAware](https://victoroalvarez.github.io/shell-aware/) is a collection of dotfiles for a GNU/Linux Mouse-less Development Environment setup. The ShellAware setup uses i3WM with Xorg and Sway with Wayland on Arch Linux. Its dotfiles are managed with GNU Stow. Dotfiles are stored in the src/ directory of this repository and then symlinked to the user's $HOME directory with the GNU Stow tool. These dotfiles work for me and can serve as an example to you. Please don't use these files as they are, instead: download a release, read the dotfiles and scripts and adapt them as you wish.
 
 ## 2.0 How do I use this Setup?
 ShellAware's dotfiles work for me and can serve as an example to you. Please do not use these files as they are, instead:
@@ -63,6 +63,7 @@ In this console menu I choose US English keyboard. Thats the same English Qwerty
 * [Polkit - Arch Wiki](https://wiki.archlinux.org/title/Polkit)
 * [Restart all services in Linux without rebooting kernel? - serverfault](https://serverfault.com/questions/963834/restart-all-services-in-linux-without-rebooting-kernel)
 * [Roll your own Linux Desktop Using Sway](https://www.dwarmstrong.org/sway/)
+* [ShellAware - Github Pages](https://victoroalvarez.github.io/shell-aware/)
 * [Sway - Debian Wiki](https://wiki.debian.org/sway)
 * [Terminal Sexy](https://terminal.sexy/)
 * [Window Manager - Arch Wiki](https://wiki.archlinux.org/title/window_manager)

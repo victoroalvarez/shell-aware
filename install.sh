@@ -3,9 +3,10 @@
 # Dotfiles install script for Linux
 
 # Create a /bin & /builds directory on $HOME directory
-mkdir $HOME/bin
-mkdir $HOME/builds
-mkdir $HOME/scripts
+mkdir -p $HOME/bin
+mkdir -p $HOME/builds
+mkdir -p $HOME/.local
+mkdir -p $HOME/.config
 
 # Create zsh files
 touch $HOME/.zsh_history

@@ -7,7 +7,7 @@ Mouseless Development Environment setup for GNU/Linux.
 ## 2.0 How do I use this Setup?
 ShellAware's dotfiles work for me and can serve as an example to you. Please do not use these files as they are, instead:
 
-* Download a Release - [DOWNLOAD HERE](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.1.zip)
+* Download a Release - [DOWNLOAD HERE](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.2.zip)
 * Read the dotfiles and scripts.
 * And then adapt them as you wish into your own setup.
 
@@ -15,7 +15,8 @@ ShellAware's dotfiles work for me and can serve as an example to you. Please do 
 
 This is a list of ShellAware releases available through its release page.
 
-* [v1.9.1 - Current](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.1.zip)
+* [v1.9.2 - Current](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.2.zip)
+* [v1.9.1](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.1.zip)
 * [v1.9](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.9.zip)
 * [v1.8](https://github.com/victoroalvarez/shell-aware/archive/refs/tags/v1.8.zip)
 

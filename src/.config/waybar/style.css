@@ -42,11 +42,6 @@ window#waybar.hidden {
     background-color: #FF4136;
 }
 
-#mode {
-    background-color: #FFFFFF;
-    color: #FFFFFF;
-    border-bottom: 3px solid #FFFFFF;
-}
 
 #clock,
 #battery,
@@ -155,3 +150,8 @@ label:focus {
 #idle_inhibitor.activated {
 }
 
+#mode {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-bottom: 3px solid #FFFFFF;
+}
